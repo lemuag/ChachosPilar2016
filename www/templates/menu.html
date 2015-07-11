@@ -1,0 +1,52 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  
+
+  <!--Contenido de la pagina central (no menu lateral) -->
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <!-- Esto parece ser la vista principal -->
+    <!-- Si, luego en el app.js se especifica que esto 
+    se rellenara con otro template -->
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <!--Contenido del menu lateral-->
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Left</h1>
+
+    </ion-header-bar>
+
+    <!-- ion-content es para listas con scroll -->
+    <ion-content>
+      <ion-list>
+      <ion-item menu-close href="#/app/eventList">
+          Ver todos
+        </ion-item>
+        <ion-item menu-close ng-click="login()">
+          Conciertos
+        </ion-item>
+        <ion-item menu-close href="#/app/search">
+          Infantiles
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          Mayores
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Charangas
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,24 @@
+[{
+  "id":1000,
+  "title":"Evento primero",
+  "day":"10",
+  "hour":"09:30",
+  "place_text":"Plaza de Navarra",
+  "place_long":"12.4333",
+  "place_lat":"12.55544",
+  "category":"infantil",
+  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "favorite":true
+},
+{
+  "id":1001,
+  "title":"Yonas broders",
+  "day":"10",
+  "hour":"09:30",
+  "place_text":"Plaza de Navarra",
+  "place_long":"12.4333",
+  "place_lat":"12.55544",
+  "category":"conciertos",
+  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "favorite":true
+}]

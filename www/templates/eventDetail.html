@@ -1,0 +1,42 @@
+<ion-view view-title="Ver evento" ng-init="init()">
+  <ion-content>
+    <div class="list card">
+
+  <div class="item item-thumbnail-left">
+    <img src="img/tioraro.png">
+   
+    <span class="tituloEvento">{{event.title}} (ID #{{event.id}})</span>
+    
+    <p><span  class="icon ion-calendar">   Día {{event.day}} - {{event.hour}}</p>
+     </i><p><span  class="icon ion-location">   {{event.place_text}}</p>
+  </div>
+ 
+  <div class="item item-body">
+    
+    <p>
+      {{event.description}}
+    </p>
+    <!--<img class="full-image" src="img/mapa.png">-->
+    <p>
+       
+      <a href="#" class="subdued">{{participantNumber}} Asistentes</a>
+
+<span>MAPA: Lat {{event.place_lat}}, Long {{event.place_long}}</span>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#" ng-click="addParticipant()">
+      <i id="textoAsistir" class="icon ion-thumbsup"></i>
+     {{ texto }}
+    </a>
+    <a class="tab-item" href="#" ng-click="favoriteEvent()">
+      <i class="icon ion-star"></i>
+      {{ textoFavorito }}
+    </a>
+   
+  </div>
+
+</div>
+  </ion-content>
+</ion-view>

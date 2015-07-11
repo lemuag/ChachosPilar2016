@@ -1,0 +1,16 @@
+/* Empty. Add your own CSS if you like */
+.tituloEvento{
+overflow: initial;
+    white-space: initial;
+}
+
+.littleDay{
+	font-size:70%;
+}
+.categoryLabel{
+	font-size:75%;
+}
+.button-day {
+    line-height: 1em;
+    
+}

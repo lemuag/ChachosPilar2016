@@ -1,0 +1,22 @@
+<ion-view view-title="{{listTitle}}">
+	<ion-content>
+
+		<div class="list card">
+			<!-- Importante, el array events debe estar ordenado -->
+			<div ng-repeat="day in events">
+				<div class="item item-divider" ng-if="day.length >0 ">
+		          <!--Cabecera de día -->
+		          Día {{day[0].day}}
+		        </div>
+
+		        <!-- Listado de eventos de ese día -->
+				<div ng-repeat="event in day" class="item item-thumbnail-left" ng-click="displayEvent(event.id)">
+					<img src="img/tioraro.png">
+					<h2>{{event.title}}</h2>
+					<p><span  class="icon ion-calendar">   Día {{event.day}} - {{event.hour}}</p>
+					</i><p><span  class="icon ion-location">   {{event.place_text}}</p>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

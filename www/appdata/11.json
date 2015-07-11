@@ -1,0 +1,24 @@
+[{
+  "id":1100,
+  "title":"Evento primero",
+  "day":"11",
+  "hour":"09:30",
+  "place_text":"Plaza de Navarra",
+  "place_long":"12.4333",
+  "place_lat":"12.55544",
+  "category":"infantil",
+  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "favorite":true
+},
+{
+  "id":1101,
+  "title":"Evento segundo",
+  "day":"11",
+  "hour":"09:30",
+  "place_text":"Plaza de Navarra",
+  "place_long":"12.4333",
+  "place_lat":"12.55544",
+  "category":"toros",
+  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "favorite":true
+}]
