@@ -14,6 +14,7 @@ Entre sus funcionalidades consta:
 
 Además, pretende ser la base para la creación de forma fácil de aplicaciones de fiestas de otros años / municipios.
 
+![Visualización de un evento](http://i.imgur.com/5902GdR.png)
 
 ## Tecnologías
 
