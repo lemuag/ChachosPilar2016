@@ -206,11 +206,11 @@ console.log($scope.day);
 
       if($scope.favorite){
         console.log("Favorito true: " + $scope.favorite);
-        $scope.textoFavorito = "Quitar favorito";
+        $scope.textoFavorito = "Favorito";
       }
       else{
         console.log("Favorito false: " + $scope.favorite);
-        $scope.textoFavorito = "Marcar favorito";
+        $scope.textoFavorito = "No favorito";
       }
 
 
@@ -224,6 +224,10 @@ console.log($scope.day);
 
 
 
+      $scope.launchMap = function(){
+        window.open("geo:" + $scope.event.place_long +"," + $scope.event.place_lat, "_system");
+      }
+
   EventService.get($scope.eventId,this.afterLoad);
 
       $scope.isFav = function(){
@@ -235,13 +239,13 @@ console.log($scope.day);
     if(!$scope.favorite){
       //Se pone como favorito
       FavoriteService.add($scope.eventId);
-      $scope.textoFavorito = "Quitar favorito"
+      $scope.textoFavorito = "Favorito"
       $ionicLoading.show({ template: 'Añadido a favoritos', noBackdrop: true, duration: 1000 });
     }
     else{
       //Se quita de favoritos
       FavoriteService.remove($scope.eventId);
-      $scope.textoFavorito = "Marcar favorito"
+      $scope.textoFavorito = "No favorito"
       $ionicLoading.show({ template: 'Borrado de favoritos', noBackdrop: true, duration: 1000 });
     }
     $scope.favorite = !$scope.favorite;

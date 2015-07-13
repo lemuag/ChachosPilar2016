@@ -6,8 +6,8 @@
     <img src="img/{{event.category}}.png">
     <span class="tituloEvento">{{event.title}} (ID #{{event.id}})</span>
     
-    <p><span  class="icon ion-calendar">   Día {{event.day}} - {{event.hour}}</p>
-     </i><p><span  class="icon ion-location">   {{event.place_text}}</p>
+    <p><span  class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</p>
+     </i><p><span  class="icon ion-location"></span>   {{event.place_text}}</p>
   </div>
  
   <div class="item item-body">
@@ -15,23 +15,32 @@
     <p>
       {{event.description}}
     </p>
-    <!--<img class="full-image" src="img/mapa.png">-->
-    <p>
-       
-      <a href="#" class="subdued">{{participantNumber}} Asistentes</a>
 
-<span>MAPA: Lat {{event.place_lat}}, Long {{event.place_long}}</span>
-    </p>
   </div>
+      <div class="row">
+        <div class="col" ng-click="launchMap()"><button class="button button-block button-positive">
+          <span class="icon ion-map"></span> Ver en mapa
+        </button>
+        </div>
+        <div class="col" ng-click="favoriteEvent()"><button class="button button-block button-positive fav-button">
 
-  <div class="item tabs tabs-secondary tabs-icon-left">
+          <img ng-show="!isFav(event.id)" class="fav-star-central" src="img/icon-fav-off.png"></span>
+          <img ng-show="isFav(event.id)" class="fav-star-central" src="img/icon-fav.png"></span>
+
+          {{ textoFavorito }}
+        </button>
+        </div>
+        </div>
+
+  <!--<div class="item tabs tabs-secondary tabs-icon-left">
     <a class="tab-item" href="#" ng-click="favoriteEvent()">
       <img ng-show="isFav(event.id)" class="fav-star-left" src="img/fav.png">
       <img ng-hide="isFav(event.id)" class="fav-star-left" src="img/fav-off.png">
       <span class="fav-text">{{ textoFavorito }}</span>
+
     </a>
    
-  </div>
+  </div>-->
 
 </div>
   </ion-content>

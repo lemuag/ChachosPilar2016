@@ -16,9 +16,17 @@ overflow: initial;
 }
 
 
+.fav-star-central {
+    max-width: 25px;
+    padding-top:8px;
+    padding-bottom:0px;
+    margin-top:0px;
+
+}
 .fav-star {
     max-width: 40px;
     float: right;
+
 }
 
 .fav-star-left{
@@ -31,3 +39,12 @@ overflow: initial;
     overflow: initial;
     white-space: initial;
 }
+
+
+.fav-button{
+    max-height:10px;
+    padding-top: 0px;
+
+}
+
+
