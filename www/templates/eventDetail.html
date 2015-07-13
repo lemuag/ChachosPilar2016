@@ -3,8 +3,7 @@
     <div class="list card">
 
   <div class="item item-thumbnail-left">
-    <img src="img/tioraro.png">
-   
+    <img src="img/{{event.category}}.png">
     <span class="tituloEvento">{{event.title}} (ID #{{event.id}})</span>
     
     <p><span  class="icon ion-calendar">   Día {{event.day}} - {{event.hour}}</p>
@@ -26,13 +25,10 @@
   </div>
 
   <div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#" ng-click="addParticipant()">
-      <i id="textoAsistir" class="icon ion-thumbsup"></i>
-     {{ texto }}
-    </a>
     <a class="tab-item" href="#" ng-click="favoriteEvent()">
-      <i class="icon ion-star"></i>
-      {{ textoFavorito }}
+      <img ng-show="isFav(event.id)" class="fav-star-left" src="img/fav.png">
+      <img ng-hide="isFav(event.id)" class="fav-star-left" src="img/fav-off.png">
+      <span class="fav-text">{{ textoFavorito }}</span>
     </a>
    
   </div>

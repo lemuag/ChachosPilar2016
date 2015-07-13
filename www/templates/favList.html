@@ -4,13 +4,13 @@
 		<div class="list card" >
 			<!-- Importante, el array events debe estar ordenado -->
 			<div ng-repeat="day in events">
-				<div class="item item-divider" ng-if="day.length >0 ">
+				<div class="item item-divider" ng-if="dayHasFav(day)">
 		          <!--Cabecera de día -->
 		          Día {{day[0].day}}
 		        </div>
 
 		        <!-- Listado de eventos de ese día -->
-				<div  ng-repeat="event in day" class="item item-thumbnail-left" ng-click="displayEvent(event.id)">
+				<div  ng-repeat="event in day" ng-show="isFav(event.id)"class="item item-thumbnail-left" ng-click="displayEvent(event.id)">
 
 
 					<img src="img/{{event.category}}.png">
@@ -30,5 +30,7 @@
 				</div>
 			</div>
 		</div>
+
+
 	</ion-content>
 </ion-view>

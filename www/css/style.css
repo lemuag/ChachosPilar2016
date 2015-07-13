@@ -14,3 +14,20 @@ overflow: initial;
     line-height: 1em;
     
 }
+
+
+.fav-star {
+    max-width: 40px;
+    float: right;
+}
+
+.fav-star-left{
+    max-width: 35px;
+    float:left;
+}
+
+.fav-text{
+    font-size: 140%;
+    overflow: initial;
+    white-space: initial;
+}

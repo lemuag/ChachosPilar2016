@@ -37,7 +37,7 @@ $scope.openCategory = function(c){
  
 }])
 
-.controller('EventListCtrl',function($scope,$stateParams,$state,EventService){
+.controller('EventListCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
   
 //Controlador de pantalla de listado de eventos
 //TO-DO: Load real data
@@ -54,6 +54,7 @@ console.log($scope.day);
   //Funcion de callback llamada cuando los datos se han cargado
   this.afterLoad = function(data){
    $scope.events = data;
+
   }
 
   //Se cargan 
@@ -91,7 +92,8 @@ console.log($scope.day);
 
   //Se obtienen los datos
   EventService.getList(cat_parameter,day_parameter,this.afterLoad);
-  
+
+
   
    
    //Muestra un evento concreto
@@ -102,13 +104,117 @@ console.log($scope.day);
    $scope.cuenta = 0;
 
 
+      $scope.isFav = function(id){
+        return FavoriteService.get(id);
+      }
+
+      $scope.toggleFav = function(id){
+        var current = FavoriteService.get(id);
+        if(current){
+          FavoriteService.remove(id);
+          $ionicLoading.show({ template: 'Borrado de favoritos', noBackdrop: true, duration: 1000 });
+        }
+        else{
+          FavoriteService.add(id);
+          $ionicLoading.show({ template: 'Añadido a favoritos', noBackdrop: true, duration: 1000 });
+        }
+      }
+
 })
 
-.controller('EventDetailCtrl',function($scope,$stateParams,$compile,EventService){
+    .controller('favListCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
+
+//Controlador de pantalla de listado de eventos
+//TO-DO: Load real data
+
+
+      $scope.listTitle = "Favoritos"
+      console.log($scope.day);
+
+
+      //Funcion de callback llamada cuando los datos se han cargado
+      this.afterLoad = function(data){
+       $scope.events = data;
+       /* var i;
+        var j;
+        for(i = 0; i < data.length; i++){
+          $scope.events[i] = new Array;
+          for (j = 0; j < data[i].length; j++){
+            if(FavoriteService.get(data[i][j].id)){
+              $scope.events[i].push(data[i][j]);
+            }
+          }
+        }*/
+
+      }
+
+
+
+      //Se obtienen los datos
+      EventService.getList("todas",-1,this.afterLoad);
+
+
+
+      //Muestra un evento concreto
+      $scope.displayEvent = function(id){
+        $state.go('app.eventDetail', {eventId:id})
+      };
+
+      $scope.cuenta = 0;
+
+      //Recibe un array de eventos de un dia
+      //Devuelve true si tiene un favorito
+      $scope.dayHasFav = function(day){
+        var has = false;
+        var i = 0;
+        for(i = 0; i < day.length; i++){
+          if (FavoriteService.get(day[i].id)){
+            has = true;
+          }
+        }
+        return has;
+      }
+
+
+
+
+      $scope.isFav = function(id){
+        return FavoriteService.get(id);
+      }
+
+      $scope.toggleFav = function(id){
+        var current = FavoriteService.get(id);
+        if(current){
+          FavoriteService.remove(id);
+          $ionicLoading.show({ template: 'Borrado de favoritos', noBackdrop: true, duration: 1000 });
+        }
+        else{
+          FavoriteService.add(id);
+          $ionicLoading.show({ template: 'Añadido a favoritos', noBackdrop: true, duration: 1000 });
+        }
+      }
+
+    })
+
+    .controller('EventDetailCtrl',function($scope,$stateParams,$compile,EventService,FavoriteService,$ionicLoading){
 
   //Controlador de pantalla de detalle de evento
- 
-  
+  $scope.eventId = parseInt($stateParams.eventId);
+
+  //Se obtiene si es favorito
+  $scope.favorite = FavoriteService.get($scope.eventId);
+
+      if($scope.favorite){
+        console.log("Favorito true: " + $scope.favorite);
+        $scope.textoFavorito = "Quitar favorito";
+      }
+      else{
+        console.log("Favorito false: " + $scope.favorite);
+        $scope.textoFavorito = "Marcar favorito";
+      }
+
+
+
    
   //Llamada tras obtener datos de evento
   this.afterLoad = function(data){
@@ -117,30 +223,26 @@ console.log($scope.day);
   }
 
 
-  $scope.participantNumber = 25;
-  $scope.eventId = $stateParams.eventId;
-  $scope.texto = "Asistir";
-  $scope.favorite = false;
-  $scope.textoFavorito = "Marcar como favorito";
 
   EventService.get($scope.eventId,this.afterLoad);
 
-  $scope.addParticipant = function(){
-    $scope.participantNumber++;
-    $scope.texto = "Dejar de asistir";
-  }
-
-  $scope.removeParticipant = function(){
-    $scope.participantNumber--;
-    
-  }
+      $scope.isFav = function(){
+        return FavoriteService.get($scope.eventId);
+      }
 
   $scope.favoriteEvent = function(){
+
     if(!$scope.favorite){
-      $scope.textoFavorito = "Quitar de favoritos"
+      //Se pone como favorito
+      FavoriteService.add($scope.eventId);
+      $scope.textoFavorito = "Quitar favorito"
+      $ionicLoading.show({ template: 'Añadido a favoritos', noBackdrop: true, duration: 1000 });
     }
     else{
-      $scope.textoFavorito = "Marcar como favorito"
+      //Se quita de favoritos
+      FavoriteService.remove($scope.eventId);
+      $scope.textoFavorito = "Marcar favorito"
+      $ionicLoading.show({ template: 'Borrado de favoritos', noBackdrop: true, duration: 1000 });
     }
     $scope.favorite = !$scope.favorite;
   }
