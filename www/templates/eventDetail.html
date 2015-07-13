@@ -4,22 +4,21 @@
 
   <div class="item item-thumbnail-left">
     <img src="img/{{event.category}}.png">
-    <span class="tituloEvento">{{event.title}} (ID #{{event.id}})</span>
+    <span class="tituloEvento">{{event.title}}</span>
     
     <p><span  class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</p>
      </i><p><span  class="icon ion-location"></span>   {{event.place_text}}</p>
   </div>
  
   <div class="item item-body">
-    
-    <p>
+    <span>
       {{event.description}}
-    </p>
+    </span>
 
   </div>
       <div class="row">
         <div class="col" ng-click="launchMap()"><button class="button button-block button-positive">
-          <span class="icon ion-map"></span> Ver en mapa
+          <span class="icon ion-map"></span> Ver mapa
         </button>
         </div>
         <div class="col" ng-click="favoriteEvent()"><button class="button button-block button-positive fav-button">

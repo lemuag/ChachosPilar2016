@@ -1,13 +1,13 @@
 [{
   "id":900,
-  "title":"Evento primero",
+  "title":"Primera corrida de feria",
   "day":"9",
-  "hour":"09:30",
-  "place_text":"Plaza de Navarra",
+  "hour":"18:30",
+  "place_text":"Plaza de Toros",
   "place_long":"12.4333",
   "place_lat":"12.55544",
-  "category":"infantil",
-  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "category":"toros",
+  "description":"Seis toros de la ganadería de Luis Algarra, para los diestros Sebastián Castella, Antonio Gaspar Paulita e Iván Fandiño.\n Organiza Albahaca y Plata, S.L.",
   "favorite":true
 },
 {

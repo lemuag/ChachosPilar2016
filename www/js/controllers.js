@@ -253,4 +253,55 @@ console.log($scope.day);
 
 
  
-});
+})
+
+
+    .controller('phonesCtrl',function($scope){
+
+      var proteccion = {
+            "name": "Proteccion",
+            "phones": [
+
+              {
+                "title": "Protección civil de Huesca",
+                "phone": "974221540"
+              },
+              {
+                "title": "Guardia Civil",
+                "phone": "062"
+              },
+              {
+                "title": "Numero tres",
+                "phone": "974528699"
+              }
+            ]
+          };
+
+
+      var informacion = {
+        "name": "Informacion",
+        "phones": [
+
+          {
+            "title": "Protección civil de Huesca",
+            "phone": "974221540"
+          },
+          {
+            "title": "Guardia Civil",
+            "phone": "062"
+          },
+          {
+            "title": "Numero tres",
+            "phone": "974528699"
+          }
+        ]
+      };
+
+
+      $scope.phones = [proteccion,informacion];
+
+
+
+    })
+
+;
