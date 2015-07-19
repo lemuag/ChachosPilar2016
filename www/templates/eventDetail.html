@@ -13,6 +13,15 @@
   <div class="item item-body">
     <span>
       {{event.description}}
+
+    </span>
+
+  </div>
+  <div class="item item-body" ng-show="event.bullfighters != undefined">
+    <span>
+      Toreros:
+     <button  ng-repeat="person in event.bullfighters" class="button button-block">{{person}}</button>
+      
     </span>
 
   </div>
@@ -29,6 +38,9 @@
           {{ textoFavorito }}
         </button>
         </div>
+        </div>
+        <div class="row">
+
         </div>
 
   <!--<div class="item tabs tabs-secondary tabs-icon-left">

@@ -1,4 +1,4 @@
-<ion-view view-title="Ver evento" ng-init="init()">
+<ion-view view-title="Teléfonos" ng-init="init()">
   <ion-content>
     <div class="list">
 
@@ -10,10 +10,10 @@
 
   </div>
 
-  <div ng-repeat="contact in section.phones" class="item item-button-right">
+  <div ng-repeat="contact in section.phones" class="item item-button-right" >
     <strong>{{contact.title}}</strong> <br/>
     {{contact.phone}}
-    <button class="button button-positive">
+    <button class="button button-positive" ng-click="call(contact.phone)">
       <i class="icon ion-ios-telephone"></i>
     </button>
   </div>

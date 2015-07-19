@@ -1,118 +1,27 @@
 <!--This view shows the main list of days. It is the main screen
   of the app -->
   <ion-view view-title="Pantalla principal">
+
   <ion-content>
-  <div class="card">
-   <div class="item item-divider">
-    Programa por días:
-  </div>
-  <div class="item item-text-wrap" style="padding:5px; align:center;">
-   <button class="button button-block button-large button-balanced" ng-click="openDay(-1)">
-    <span class="icon ion-calendar"  ng-click="openList()"></span> Todos los días
-  </button>
-
-  <div class="row" style="margin-top: -25px; align:center;">
-
-    <div class="col">
-      <button class="button button-block button-large button-balanced button-day" ng-click="openDay(8)">
-        <span class="littleDay">Sáb.</span><br/>
-        8
-      </button>
-    </div>
-
-    <div class="col">
-      <button class="button button-block button-large button-balanced button-day" ng-click="openDay(9)">
-        <span class="littleDay">Dom.</span><br/>
-        9
-      </button>
-    </div>
-
-    <div class="col">
-      <button class="button button-block button-large button-balanced button-day" ng-click="openDay(10)">
-       <span class="littleDay">Lun.</span><br/>
-       10
-     </button>
-   </div>
-
-   <div class="col">
-    <button class="button button-block button-large button-balanced button-day" ng-click="openDay(11)">
-     <span class="littleDay">Mar.</span><br/>
-     11
-   </button>
- </div>
-
-</div>
-
-<div class="row" style="margin-top: -30px;">
-
-  <div class="col">
-    <button class="button button-block button-large button-balanced button-day" ng-click="openDay(12)">
-      <span class="littleDay">Mié.</span><br/>
-      12
-    </button>
-  </div>
-
-  <div class="col">
-    <button class="button button-block button-large button-balanced button-day" ng-click="openDay(13)">
-     <span class="littleDay">Jue.</span><br/>
-     13
-   </button>
- </div>
-
- <div class="col">
-  <button class="button button-block button-large button-balanced button-day" ng-click="openDay(14)">
-   <span class="littleDay">Vie.</span><br/>
-   14    
- </button>
-</div>
-
-<div class="col">
-  <button class="button button-block button-large button-balanced button-day" ng-click="openDay(15)">
-   <span class="littleDay">Sáb.</span><br/>
-   15
- </button>
-</div>
-
-</div>
-</div>
-
-<div class="item item-divider">
-  Programa por categorías
-</div>
-
-<div class="item item-text-wrap">
-  <div class="row" style="margin-top: -30px;">
+</ion-nav-buttons>
+  <ul class="list">
+    <li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openGuide()">
+     PROGRAMA
+     <hr class="main-list-line" width="60%"/>
+    </li>
+    <li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openFavorites()">
+     FAVORITOS
+     <hr class="main-list-line" width="60%"/>
+    </li><li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openPhones()">
+     TELÉFONOS DE INTERÉS
+     <hr class="main-list-line" width="60%"/>
+    </li><li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openInfo()">
+     SOBRE LAS FIESTAS
+     <hr class="main-list-line" width="60%"/>
+    </li>
+</ul>
 
 
-   <div class="col">
-    <button class="button button-block button-large button-balanced" ng-click="openCategory('conciertos')">
-      <span class="categoryLabel">Conciertos</span>
-    </button>
-  </div>
-  <div class="col">
-    <button class="button button-block button-large button-balanced" ng-click="openCategory('infantil')">
-     <span class="categoryLabel">Infantil</span>
-   </button>
- </div>
-</div>
-<div class="row" style="margin-top: -30px;">
-
-
- <div class="col">
-  <button class="button button-block button-large button-balanced" ng-click="openCategory('toros')">
-    <span class="categoryLabel">Toros</span>
-  </button>
-</div>
-<div class="col">
-  <button class="button button-block button-large button-balanced" ng-click="openCategory('otros')">
-   <span class="categoryLabel">Otros</span>
- </button>
-</div>
-</div>
-</div>
-
-</div>
-</div>
 
 
 

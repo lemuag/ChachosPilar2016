@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('MainCtrl',["$scope","$stateParams","$state","$http","EventService",
+.controller('GuideCtrl',["$scope","$stateParams","$state","$http","EventService",
   function($scope,$stateParams,$state,$http,EventService){
 //Controlador de pantalla Main, que es la de inicio.
 
@@ -44,8 +44,10 @@ $scope.openCategory = function(c){
 
 $scope.day = $stateParams.day;
 $scope.category = $stateParams.category;
-$scope.listTitle = "Programa"
-console.log($scope.day);
+$scope.listTitle = "Programa";
+$scope.textoBusqueda = "";
+
+
 
   var day_defined
   var cat_defined;
@@ -53,6 +55,7 @@ console.log($scope.day);
   var cat_parameter;
   //Funcion de callback llamada cuando los datos se han cargado
   this.afterLoad = function(data){
+   $scope.allEvents = data;
    $scope.events = data;
 
   }
@@ -100,6 +103,49 @@ console.log($scope.day);
    $scope.displayEvent = function(id){
       $state.go('app.eventDetail', {eventId:id})
    };
+
+   //Encargado del filtrado en tiempo real
+   $scope.search = function(){
+
+      var temp = [[],[],[],[],[],[],[],[]];
+      var term = $scope.textoBusqueda;
+      term = standarize(term);
+      var i = 0;
+      for(i = 0; i < $scope.allEvents.length; i++){
+        var j = 0;
+        for(j=0;j < $scope.allEvents[i].length;j++){
+            var name = $scope.allEvents[i][j].title;
+            name = standarize(name);
+            if(name.includes(term)){
+              temp[i].push($scope.allEvents[i][j]);
+            }
+        }
+      }
+      $scope.events = temp;
+
+      
+   }
+
+   //Pasa a minusculas y quita caracteres especiales
+   var standarize = function(string){
+      var t = string;
+      t = t.toLowerCase();
+      t = t.replace(/á/g,"a");
+      t = t.replace(/é/g,"e");
+      t = t.replace(/í/g,"i");
+      t = t.replace(/ó/g,"o");
+      t = t.replace(/ú/g,"u");
+      t = t.replace(/à/g,"a");
+      t = t.replace(/è/g,"e");
+      t = t.replace(/ì/g,"i");
+      t = t.replace(/ò/g,"o");
+      t = t.replace(/ù/g,"u");
+      t = t.replace(/ñ/g,"n");
+      t = t.replace(/ü/g,"u");
+      t = t.replace(/ç/g,"c");
+      return t;
+
+   }
 
    $scope.cuenta = 0;
 
@@ -154,6 +200,20 @@ console.log($scope.day);
       EventService.getList("todas",-1,this.afterLoad);
 
 
+      $scope.hayFavoritos = function(day){
+        var has = false;
+        var i, j;
+        for(i = 0; $scope.events!= undefined && i < $scope.events.length; i++){
+
+          for(j=0; $scope.events[i] != undefined && j < $scope.events[i].length;j++){
+            if(FavoriteService.get($scope.events[i][j].id)){
+              has = true;
+            }
+          }
+
+        }
+        return has;
+      }
 
       //Muestra un evento concreto
       $scope.displayEvent = function(id){
@@ -258,50 +318,169 @@ console.log($scope.day);
 
     .controller('phonesCtrl',function($scope){
 
-      var proteccion = {
-            "name": "Proteccion",
+      var emergencias = {
+            "name": "Emergencias",
             "phones": [
 
-              {
-                "title": "Protección civil de Huesca",
-                "phone": "974221540"
-              },
               {
                 "title": "Guardia Civil",
                 "phone": "062"
               },
               {
-                "title": "Numero tres",
-                "phone": "974528699"
-              }
+                "title": "Policía Nacional",
+                "phone": "091"
+              },
+              {
+                "title": "Policía Local",
+                "phone": "092"
+              },
+              {
+                "title": "Protección Civil",
+                "phone": "974 221 540"
+              },
+              {
+                "title": "Bomberos",
+                "phone": "974 220 000"
+              },
+              {
+                "title": "Cruz Roja",
+                "phone": "974 221 186"
+              },
             ]
           };
 
 
-      var informacion = {
-        "name": "Informacion",
+      var hospitales = {
+        "name": "Hospitales y ambulatorios",
         "phones": [
 
           {
-            "title": "Protección civil de Huesca",
-            "phone": "974221540"
+            "title": "Hospital General San Jorge",
+            "phone": "974 247 000"
           },
           {
-            "title": "Guardia Civil",
-            "phone": "062"
+            "title": "Hospital Sagrado Corazón de Jesús",
+            "phone": "974 292 000"
           },
           {
-            "title": "Numero tres",
-            "phone": "974528699"
+            "title": "Clínica Santiago",
+            "phone": "974 220 600"
+          },
+          {
+            "title": "Centro de salud Pirineos",
+            "phone": "974 221 922"
+          },
+           {
+            "title": "Centro de salud Santo Grial",
+            "phone": "974 244 122"
+          },
+          {
+            "title": "Centro de salud Perpetuo Socorro",
+            "phone": "974 225 450"
+          },
+          {
+            "title": "Centro de salud Huesca Rural",
+            "phone": "974 228 672"
           }
         ]
       };
 
+      var transportes = {
+        "name": "Transportes",
+        "phones": [
 
-      $scope.phones = [proteccion,informacion];
+          {
+            "title": "RENFE",
+            "phone": "902 24 05 05"
+          },
+          {
+            "title": "Estación de autobuses",
+            "phone": "974 210 700"
+          },
+          {
+            "title": "Taxis",
+            "phone": "974 595 959"
+          }
+        ]
 
+
+      };
+
+      var informacion = {
+        "name": "Información",
+        "phones": [
+
+          {
+            "title": "Ayuntamiento de Huesca",
+            "phone": "974 292 100"
+          },
+          {
+            "title": "Turismo",
+            "phone": "974 292 170"
+          },
+          {
+            "title": "Fiestas (ayuntamiento)",
+            "phone": "974 292 130"
+          }
+        ]
+      }
+
+
+      $scope.phones = [emergencias,informacion,transportes,hospitales];
+
+      $scope.call = function(phone){
+
+        
+        window.open("tel: " + phone, "_system");
+      
+
+      }
 
 
     })
 
-;
+.controller('MainCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
+
+ 
+
+  $scope.openGuide = function(){
+    $state.go('app.guide');
+  };
+  $scope.openFavorites = function(){
+    $state.go('app.favList');
+  };
+  $scope.openPhones = function(){
+    $state.go('app.phones');
+  };
+ $scope.openInfo = function(){
+    $state.go('app.info');
+  };
+
+})
+
+.controller('infoCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
+
+
+var groups = [false,false,false,false,false];
+
+ $scope.toggleGroup = function(id){
+
+  
+  var i;
+  for(i=0;i<groups.length;i++){
+    if(i!=id){
+       groups[i] = false;
+    }
+    else{
+      groups[id] = !groups[id];
+    }
+  }
+
+ };
+
+ $scope.isGroupShown = function(id){
+
+  return groups[id];
+ }
+
+});

@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="true">
   
 
   <!--Contenido de la pagina central (no menu lateral) -->
@@ -7,8 +7,8 @@
       <ion-nav-back-button>
       </ion-nav-back-button>
 
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
         </button>
       </ion-nav-buttons>
 
@@ -22,29 +22,32 @@
   </ion-side-menu-content>
 
   <!--Contenido del menu lateral-->
-  <ion-side-menu side="left">
+  <ion-side-menu side="right">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Menú</h1>
 
     </ion-header-bar>
 
     <!-- ion-content es para listas con scroll -->
     <ion-content>
       <ion-list>
-      <ion-item menu-close href="#/app/eventList">
-          Ver todos
+      <ion-item menu-close href="#/app/main" class="item-icon-left">
+          <span class="icon ion-home"></span>Inicio
         </ion-item>
-        <ion-item menu-close ng-click="login()">
-          Conciertos
+      <ion-item menu-close href="#/app/guide" class="item-icon-left">
+          <span class="icon ion-ios-paper"></span>Programa
         </ion-item>
-        <ion-item menu-close href="#/app/favList">
-          Favoritos
+        <ion-item menu-close href="#/app/favList" class="item-icon-left">
+          <span class="icon ion-star"></span>Favoritos
         </ion-item>
-        <ion-item menu-close href="#/app/phones">
-          Telefonos
+        <ion-item menu-close href="#/app/phones" class="item-icon-left">
+          <span class="icon ion-ios-telephone"></span>Teléfonos
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Charangas
+        <ion-item menu-close href="#/app/info" class="item-icon-left">
+          <span class="icon ion-information-circled"></span>Sobre las fiestas
+        </ion-item>
+        <ion-item menu-close href="#/app/about" class="item-icon-left">
+          <span class="icon ion-iphone"></span>Acerca de la app
         </ion-item>
       </ion-list>
     </ion-content>

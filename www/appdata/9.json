@@ -8,7 +8,8 @@
   "place_lat":"12.55544",
   "category":"toros",
   "description":"Seis toros de la ganadería de Luis Algarra, para los diestros Sebastián Castella, Antonio Gaspar Paulita e Iván Fandiño.\n Organiza Albahaca y Plata, S.L.",
-  "favorite":true
+  "favorite":true,
+  "bullfighters": ["Juan José Padilla","Antonio Ferrera","Miguel Abellán"]
 },
 {
   "id":901,

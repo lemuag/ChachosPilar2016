@@ -1,6 +1,13 @@
 <ion-view view-title="{{listTitle}}">
 	<ion-content>
-
+<div id="search-bar">
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" id="search-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Filtrar eventos" ng-model="$parent.textoBusqueda" ng-change="search()">
+      </label>
+    </div>
+  </div>
 		<div class="list card" >
 			<!-- Importante, el array events debe estar ordenado -->
 			<div ng-repeat="day in events">

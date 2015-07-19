@@ -31,13 +31,24 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     controller: 'AppCtrl'
   })
 
-  //Pantalla principal, con los días, categorías, etc.
+
+//Pantalla principal, con las distintas opciones
  .state('app.main', {
     url: "/main",
     views: {
       'menuContent': {
         templateUrl: "templates/main.html",
         controller: 'MainCtrl',
+      }
+    }
+  })
+  //Pantalla principal de guía
+ .state('app.guide', {
+    url: "/guide",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/guide.html",
+        controller: 'GuideCtrl',
       }
     }
   })
@@ -83,6 +94,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
               'menuContent': {
                   templateUrl: "templates/phones.html",
                   controller: 'phonesCtrl'
+              }
+          }
+      })
+
+      .state('app.info', {
+          url: "/info",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/info.html",
+                  controller: 'infoCtrl'
               }
           }
       })

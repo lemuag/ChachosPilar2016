@@ -48,3 +48,32 @@ overflow: initial;
 }
 
 
+.main-list-item{
+
+  height: 23vh;
+  font-size:200%;
+  color: #FFFFFF;
+  font-weight:bold;
+  text-align: center;
+}
+
+
+.main-list-line{
+ height: 3px;
+ border: 0;
+background-color: #f00;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}

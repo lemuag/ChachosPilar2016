@@ -1,7 +1,7 @@
 <ion-view view-title="Favoritos">
 	<ion-content>
 
-		<div class="list card" >
+		<div class="list card" ng-show="hayFavoritos()">
 			<!-- Importante, el array events debe estar ordenado -->
 			<div ng-repeat="day in events">
 				<div class="item item-divider" ng-if="dayHasFav(day)">
@@ -29,6 +29,12 @@
 
 				</div>
 			</div>
+		</div>
+		<div class="card" ng-hide="hayFavoritos()">
+			  <div class="item item-text-wrap">
+			    No hay favoritos.
+			    Para añadir un evento como favorito, pulsa la pajarita que aparece en el mismo.
+			  </div>
 		</div>
 
 
