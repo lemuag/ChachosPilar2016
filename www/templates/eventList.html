@@ -11,29 +11,34 @@
 		<div class="list card" >
 			<!-- Importante, el array events debe estar ordenado -->
 			<div ng-repeat="day in events">
-				<div class="item item-divider" ng-if="day.length >0 ">
+				<div class="item item-divider  " ng-if="day.length >0 ">
 		          <!--Cabecera de día -->
 		          Día {{day[0].day}}
 		        </div>
 
 		        <!-- Listado de eventos de ese día -->
-				<div  ng-repeat="event in day" class="item item-thumbnail-left" ng-click="displayEvent(event.id)">
+				<div  ng-repeat="event in day" class="item elemento-lista-eventos" ng-click="displayEvent(event.id)">
 
-
-					<img src="img/{{event.category}}.png">
-
-
-
-					<h2>{{event.title}}</h2>
-					<div>
+					<div class="row">
+  					<div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
+  					<div class="col">
+  					<div>
 						<img ng-show="isFav(event.id)" class="fav-star" src="img/fav.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
 						<img ng-hide="isFav(event.id)" class="fav-star" src="img/fav-off.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
 					</div>
-					<p><span   class="icon ion-calendar">   Día {{event.day}} - {{event.hour}}</p>
-					</i><p><span  class="icon ion-location">   {{event.place_text}}</p>
+					<span class="tituloLista">{{event.title}}</span>
+					<br/>
+					<span class="horaLista"><span   class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
+					<br/><span class="horaLista"><span  class="icon ion-location"></span>   {{event.place_text}}</span>
+
+  </div>
+  
+</div>
 
 
+					<!--<img src="img/{{event.category}}.png"  style="width: 100px; height: 100px;">
 
+					
 				</div>
 			</div>
 		</div>

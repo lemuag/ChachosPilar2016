@@ -1,24 +1,89 @@
 [{
   "id":800,
-  "title":"Evento primero",
+  "title":"Torneo de Golf Ciudad de Huesca",
   "day":"8",
-  "hour":"09:30",
-  "place_text":"Plaza de Navarra",
+  "hour":"09:00",
+  "place_text":"Campo de Golf de Guara",
   "place_long":"12.4333",
   "place_lat":"12.55544",
-  "category":"infantil",
-  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "category":"otros",
+  "description":"Organiza Golf de Guara y Peñas Recreativas Oscenses",
   "favorite":true
 },
 {
   "id":801,
-  "title":"Evento segundo",
+  "title":"Talleres creativos infantiles",
   "day":"8",
-  "hour":"09:30",
-  "place_text":"Plaza de Navarra",
+  "hour":"10:00-13:30",
+  "place_text":"Porches de Galicia",
   "place_long":"12.4333",
   "place_lat":"12.55544",
-  "category":"toros",
-  "description":"Lorem ipsum no se como sigue tal y tal cosas en latin",
+  "category":"infantil",
+  "description":"Organiza Izas, la princesa guisante",
   "favorite":true
-}]
+},
+  {
+    "id": 802,
+    "title":"San Lorenzo y Entarachén con la República Centro Africana",
+    "day":"8",
+    "hour":"11:00-14:00 y 17:00-21:00",
+    "place_text":"Porches de Galicia",
+    "place_long":"12.4333",
+    "place_lat":"12.55544",
+    "category":"otros",
+    "description":"Escuelas por la reconciliación en República Centroafricana. Organiza Entarachén Vols.",
+    "favorite":true
+  },
+  {
+    "id": 803,
+    "title":"XVII Gran Carrera Pedestre al estilo del país",
+    "day":"8",
+    "hour":"20:30",
+    "place_text":"Porches de Galicia",
+    "place_long":"12.4333",
+    "place_lat":"12.55544",
+    "category":"otros",
+    "description":"Organiza Club Atletismo Huesca",
+    "favorite":true
+  },
+  {
+    "id": 804,
+    "title":"Concurso Nacional de Recortadores",
+    "day":"8",
+    "hour":"22:00",
+    "place_text":"Plaza de Toros",
+    "place_long":"12.4333",
+    "place_lat":"12.55544",
+    "category":"otros",
+    "description":"Organiza Club Atletismo Huesca",
+    "favorite":true
+  },
+  {
+    "id": 805,
+    "title":"Concierto de Kiko Veneno",
+    "day":"8",
+    "hour":"",
+    "place_text":"Palacio de Congresos - Sala Polivalente",
+    "place_long":"12.4333",
+    "place_lat":"12.55544",
+    "category":"conciertos",
+    "description":"Organizan Peñas Recreativas Oscenses",
+    "favorite":true
+  },
+  {
+    "id": 806,
+    "title":"Sesión de DJ's nacionales",
+    "day":"8",
+    "hour":"02:00-05:00",
+    "place_text":"Palacio de Congresos - Sala Polivalente",
+    "place_long":"12.4333",
+    "place_lat":"12.55544",
+    "category":"conciertos",
+    "description":"Organizan Peñas Recreativas Oscenses",
+    "favorite":true
+  }
+
+
+
+
+]

@@ -2,12 +2,18 @@
   <ion-content>
     <div class="list card">
 
-  <div class="item item-thumbnail-left">
-    <img src="img/{{event.category}}.png">
-    <span class="tituloEvento">{{event.title}}</span>
+  <div class="item elemento-lista-eventos">
+  <div class="row">
+            <div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
+            <div class="col"> <span class="tituloLista">{{event.title}}</span>
+            <br/>
     
-    <p><span  class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</p>
-     </i><p><span  class="icon ion-location"></span>   {{event.place_text}}</p>
+    <span class="horaLista"><span  class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
+    <br/>
+     </i><span class="horaLista"><span  class="icon ion-location"></span>   {{event.place_text}}</span></div>
+            </div>
+    
+    
   </div>
  
   <div class="item item-body">

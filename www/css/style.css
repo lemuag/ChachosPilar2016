@@ -4,8 +4,38 @@ overflow: initial;
     white-space: initial;
 }
 
+.tituloLista{
+    overflow: initial;
+    white-space: initial;
+    font-size:105%;
+}
+.horaLista{
+    overflow: initial;
+    white-space: initial;
+    font-size:87%;
+}
+@media screen and (max-width: 400px) { 
+.tituloLista{
+    overflow: initial;
+    white-space: initial;
+    font-size:90%;
+}
+.horaLista{
+    overflow: initial;
+    white-space: initial;
+    font-size:77%;
+}
+
+
+}
+
+
+
+
+
+
 .littleDay{
-	font-size:70%;
+	font-size:70%;   
 }
 .categoryLabel{
 	font-size:75%;
@@ -13,6 +43,22 @@ overflow: initial;
 .button-day {
     line-height: 1em;
     
+}
+
+
+.left-image{
+    max-width:100%;
+    max-height:100px;
+}
+
+
+
+.elemento-lista-eventos  {
+    overflow: inherit ;
+    text-overflow: inherit ;
+    white-space: normal ;
+    padding:0px;
+
 }
 
 
@@ -24,8 +70,10 @@ overflow: initial;
 
 }
 .fav-star {
-    max-width: 40px;
+    max-width: 9vw;
+    max-height:9vh;
     float: right;
+    border:10px;
 
 }
 
@@ -40,6 +88,12 @@ overflow: initial;
     white-space: initial;
 }
 
+
+.item-trns {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    color: white; 
+}
 
 .fav-button{
     max-height:10px;
@@ -76,4 +130,9 @@ background-color: #f00;
 .list .item.item-accordion.ng-hide-add,
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
+}
+
+.guide-background {
+  background: url(/img/guide.jpg) no-repeat center center fixed;
+  background-size: cover;
 }

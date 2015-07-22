@@ -1,0 +1,46 @@
+<!--This view shows the main list of days. It is the main screen
+  of the app -->
+  <ion-view view-title="Información">
+  <ion-content>
+  <div class="list card">
+
+  <a href="#" class="item item-icon-left" ng-click="toggleGroup(0)">
+    <i class="icon ion-ios-help-outline"></i>
+    ¿Quién fue San Lorenzo?
+  </a>
+
+ <ion-item class="item-accordion"
+           ng-show="isGroupShown(0)">
+        RELLENAR
+  </ion-item>
+  <a href="#" class="item item-icon-left" ng-click="toggleGroup(1)">
+    <i class="icon ion-ios-help-outline"></i>
+    Origen de las fiestas
+  </a>
+<ion-item class="item-accordion"
+           ng-show="isGroupShown(1)">
+        RELLENAR
+  </ion-item>
+  <a href="#" class="item item-icon-left" ng-click="toggleGroup(2)">
+   <i class="icon ion-ios-help-outline"></i>
+    Otra pregunta más
+  </a>
+<ion-item class="item-accordion"
+           ng-show="isGroupShown(2)">
+        RELLENAR
+  </ion-item>
+  <a href="#" class="item item-icon-left" ng-click="toggleGroup(3)">
+    <i class="icon ion-music-note"></i>
+    Lista de canciones
+  </a>
+<ion-item class="item-accordion"
+           ng-show="isGroupShown(3)">
+        RELLENAR
+  </ion-item>
+</div>
+
+
+
+
+</ion-content>
+</ion-view>

@@ -285,7 +285,8 @@ $scope.textoBusqueda = "";
 
 
       $scope.launchMap = function(){
-        window.open("geo:" + $scope.event.place_long +"," + $scope.event.place_lat, "_system");
+        //https://www.google.com/maps/preview/@-15.623037,18.388672,8z
+        window.open("http://maps.google.com/maps?q=loc:" + $scope.event.place_lat +"," + $scope.event.place_long , "_system");
       }
 
   EventService.get($scope.eventId,this.afterLoad);
