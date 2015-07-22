@@ -20,23 +20,20 @@
 				<div  ng-repeat="event in day" class="item elemento-lista-eventos" ng-click="displayEvent(event.id)">
 
 					<div class="row">
-  					<div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
-  					<div class="col">
-  					<div>
-						<img ng-show="isFav(event.id)" class="fav-star" src="img/fav.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
-						<img ng-hide="isFav(event.id)" class="fav-star" src="img/fav-off.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
-					</div>
-					<span class="tituloLista">{{event.title}}</span>
-					<br/>
-					<span class="horaLista"><span   class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
-					<br/><span class="horaLista"><span  class="icon ion-location"></span>   {{event.place_text}}</span>
+  						<div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
+  						<div class="col">
+  							<div>
+								<img ng-show="isFav(event.id)" class="fav-star" src="img/fav.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
+								<img ng-hide="isFav(event.id)" class="fav-star" src="img/fav-off.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
+							</div>
+							<span class="tituloLista">{{event.title}}</span>
+							<br/>
+							<span class="horaLista"><span   class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
+							<br/><span class="horaLista"><span  class="icon ion-location"></span>   {{event.place_text}}</span>
 
-  </div>
+  						</div>
   
-</div>
-
-
-					<!--<img src="img/{{event.category}}.png"  style="width: 100px; height: 100px;">
+					</div>
 
 					
 				</div>

@@ -1,42 +1,44 @@
-<ion-view view-title="Favoritos">
+<ion-view view-title="{{listTitle}}">
 	<ion-content>
 
-		<div class="list card" ng-show="hayFavoritos()">
+		<div class="list card"  ng-show="hayFavoritos()">
 			<!-- Importante, el array events debe estar ordenado -->
 			<div ng-repeat="day in events">
 				<div class="item item-divider" ng-if="dayHasFav(day)">
-		          <!--Cabecera de día -->
-		          Día {{day[0].day}}
-		        </div>
+					<!--Cabecera de día -->
+					Día {{day[0].day}}
+				</div>
 
-		        <!-- Listado de eventos de ese día -->
-				<div  ng-repeat="event in day" ng-show="isFav(event.id)"class="item item-thumbnail-left" ng-click="displayEvent(event.id)">
+				<!-- Listado de eventos de ese día -->
+				<div  ng-repeat="event in day" ng-show="isFav(event.id)" class="item elemento-lista-eventos" ng-click="displayEvent(event.id)">
 
+					<div class="row">
+						<div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
+						<div class="col">
+							<div>
+								<img ng-show="isFav(event.id)" class="fav-star" src="img/fav.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
+								<img ng-hide="isFav(event.id)" class="fav-star" src="img/fav-off.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
+							</div>
+							<span class="tituloLista">{{event.title}}</span>
+							<br/>
+							<span class="horaLista"><span   class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
+							<br/><span class="horaLista"><span  class="icon ion-location"></span>   {{event.place_text}}</span>
 
-					<img src="img/{{event.category}}.png">
+						</div>
 
-
-
-					<h2>{{event.title}}</h2>
-					<div>
-						<img ng-show="isFav(event.id)" class="fav-star" src="img/fav.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
-						<img ng-hide="isFav(event.id)" class="fav-star" src="img/fav-off.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
 					</div>
-					<p><span   class="icon ion-calendar">   Día {{event.day}} - {{event.hour}}</p>
-					</i><p><span  class="icon ion-location">   {{event.place_text}}</p>
-
 
 
 				</div>
 			</div>
 		</div>
 		<div class="card" ng-hide="hayFavoritos()">
-			  <div class="item item-text-wrap">
-			    No hay favoritos.
-			    Para añadir un evento como favorito, pulsa la pajarita que aparece en el mismo.
-			  </div>
+			<div class="item item-text-wrap">
+				No hay favoritos.
+				Para añadir un evento como favorito, pulsa la pajarita que aparece en el mismo.
+			</div>
 		</div>
-
-
 	</ion-content>
 </ion-view>
+
+<
