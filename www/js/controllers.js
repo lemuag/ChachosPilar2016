@@ -38,6 +38,7 @@ $scope.buscar = function(){
 
    $state.go('app.searchList', {term:$scope.filtro});
    $scope.buscarVisible = false;
+    $scope.filtro = "";
 }
 
 $scope.toggleSearch = function(){
