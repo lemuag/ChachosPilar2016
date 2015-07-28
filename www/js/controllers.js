@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$state) {
   
 
   // Create the login modal that we will use later
@@ -9,6 +9,30 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+
+        $scope.goMain = function(){
+            $state.go('app.main');
+        };
+
+        $scope.goGuide = function(){
+            $state.go('app.guide');
+        };
+
+        $scope.goFavList = function(){
+            $state.go('app.favList');
+        };
+
+        $scope.goPhones = function(){
+            $state.go('app.phones');
+        };
+
+        $scope.goInfo = function(){
+            $state.go('app.info');
+        };
+
+        $scope.goAbout = function(){
+            $state.go('app.about');
+        };
 
   
 })
