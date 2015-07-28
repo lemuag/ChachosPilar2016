@@ -4,13 +4,13 @@
 
   <div class="item elemento-lista-eventos">
   <div class="row">
-            <div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
-            <div class="col"> <span class="tituloLista">{{event.title}}</span>
+            <div class="col col-20"><img src="img/{{::event.category}}.png" class="left-image"></div>
+            <div class="col"> <span class="tituloLista">{{::event.title}}</span>
             <br/>
     
-    <span class="horaLista"><span  class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
+    <span class="horaLista"><span  class="icon ion-calendar"></span>   Día {{::event.day}} - {{::event.hour}}</span>
     <br/>
-     </i><span class="horaLista"><span  class="icon ion-location"></span>   {{event.place_text}}</span></div>
+     </i><span class="horaLista"><span  class="icon ion-location"></span>   {{::event.place_text}}</span></div>
             </div>
     
     
@@ -18,7 +18,7 @@
  
   <div class="item item-body">
     <span>
-      {{event.description}}
+      {{::event.description}}
 
     </span>
 

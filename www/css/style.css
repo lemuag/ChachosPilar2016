@@ -76,8 +76,8 @@ overflow: initial;
 
 }
 .fav-star {
-    max-width: 9vw;
-    max-height:9vh;
+    max-width: 70px;
+    max-height:40px;
     float: right;
     border:10px;
 
@@ -153,4 +153,27 @@ background-color: #f00;
   background-image: url(../img/albahaca.png);
    background-position: right bottom; /*Positioning*/
    background-repeat: no-repeat;
+}
+
+.my-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.my-list {
+    list-style: none;
+    font-size: 25px;
+    line-height: 62px;
+}
+
+.my-item, .my-item-divider {
+    height: 62px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.my-item-divider {
+    background-color: #eee;
 }
