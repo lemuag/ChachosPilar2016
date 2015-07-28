@@ -641,7 +641,6 @@ var groups = [false,false,false,false,false];
 
 .controller('aboutCtrl',function($scope,$stateParams,$state){
 
-
     $scope.mail = function(phone){
           
       window.open("mailto:ismaro.394@gmail.com", "_system");

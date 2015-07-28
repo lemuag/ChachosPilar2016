@@ -6,13 +6,13 @@
 
   <div class="item item-divider" ng-if="section.phones.length >0 ">
     <!--Cabecera de día -->
-    {{::section.name}}
+    {{section.name}}
 
   </div>
 
   <div ng-repeat="contact in section.phones" class="item item-button-right" >
-    <strong>{{::contact.title}}</strong> <br/>
-    {{::contact.phone}}
+    <strong>{{contact.title}}</strong> <br/>
+    {{contact.phone}}
     <button class="button button-positive" ng-click="call(contact.phone)">
       <i class="icon ion-ios-telephone"></i>
     </button>
