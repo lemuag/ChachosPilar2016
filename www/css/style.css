@@ -29,6 +29,15 @@ overflow: initial;
 
 }
 
+.textoInfo{
+    overflow: initial;
+    white-space: initial;
+    font-size:100%;
+}
+
+.colorSanLorenzo{
+    background-color:#00722d !important;
+ }
 
 
 .littleDay{
@@ -115,6 +124,10 @@ overflow: initial;
 background-color: #f00;
 }
 
+.search {
+    transition: 0.09s all linear;
+}
+
 .list .item.item-accordion {
   line-height: 38px;
   padding-top: 0;
@@ -130,6 +143,14 @@ background-color: #f00;
 }
 
 .guide-background {
-  background: url(/img/guide.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background: url(../img/albahaca.png);
+   background-position: right bottom; /*Positioning*/
+   background-repeat: no-repeat;
+  
+}
+
+.description-background {
+  background-image: url(../img/albahaca.png);
+   background-position: right bottom; /*Positioning*/
+   background-repeat: no-repeat;
 }

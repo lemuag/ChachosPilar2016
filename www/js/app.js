@@ -63,7 +63,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
-
+ .state('app.searchList', {
+      url: "/searchlist/:term",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/searchList.html",
+          controller: 'SearchListCtrl'
+        }
+      }
+    })
 
    //Pantalla de detalle de un evento
   .state('app.eventDetail', {
@@ -104,6 +112,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
               'menuContent': {
                   templateUrl: "templates/info.html",
                   controller: 'infoCtrl'
+              }
+          }
+      })
+
+      .state('app.about', {
+          url: "/about",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/about.html",
+                  controller: 'aboutCtrl'
               }
           }
       })

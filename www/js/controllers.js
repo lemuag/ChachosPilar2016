@@ -19,7 +19,8 @@ angular.module('starter.controllers', [])
   function($scope,$stateParams,$state,$http,EventService){
 //Controlador de pantalla Main, que es la de inicio.
 
-
+$scope.filtro = "";
+$scope.buscarVisible = false;
 /** Va a la pantalla de listado de eventos, mostrando los eventos del día concreto especificado.
   Puede indicarse -1 para todos los días, o un día de 8 a 15 */
 $scope.openDay = function(d){
@@ -33,7 +34,16 @@ $scope.openCategory = function(c){
 }
 
   
+$scope.buscar = function(){
 
+   $state.go('app.searchList', {term:$scope.filtro});
+   $scope.buscarVisible = false;
+}
+
+$scope.toggleSearch = function(){
+$scope.buscarVisible = !$scope.buscarVisible;
+
+}
  
 }])
 
@@ -107,21 +117,37 @@ $scope.textoBusqueda = "";
    //Encargado del filtrado en tiempo real
    $scope.search = function(){
 
+
+
       var temp = [[],[],[],[],[],[],[],[]];
       var term = $scope.textoBusqueda;
+
       term = standarize(term);
+
+      var n = 0;
       var i = 0;
       for(i = 0; i < $scope.allEvents.length; i++){
         var j = 0;
         for(j=0;j < $scope.allEvents[i].length;j++){
+          n++;
+
             var name = $scope.allEvents[i][j].title;
+            var place = $scope.allEvents[i][j].place_text;
             name = standarize(name);
-            if(name.includes(term)){
+            place = standarize(place);
+            if(name.indexOf(term)>-1 || place.indexOf(term)> -1){
+             
               temp[i].push($scope.allEvents[i][j]);
+            }
+            else{
+            
             }
         }
       }
       $scope.events = temp;
+     
+      
+
 
       
    }
@@ -256,6 +282,108 @@ $scope.textoBusqueda = "";
 
     })
 
+
+    .controller('SearchListCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading) {
+
+//Pasa a minusculas y quita caracteres especiales
+     var standarize = function(string){
+        var t = string;
+        t = t.toLowerCase();
+        t = t.replace(/á/g,"a");
+        t = t.replace(/é/g,"e");
+        t = t.replace(/í/g,"i");
+        t = t.replace(/ó/g,"o");
+        t = t.replace(/ú/g,"u");
+        t = t.replace(/à/g,"a");
+        t = t.replace(/è/g,"e");
+        t = t.replace(/ì/g,"i");
+        t = t.replace(/ò/g,"o");
+        t = t.replace(/ù/g,"u");
+        t = t.replace(/ñ/g,"n");
+        t = t.replace(/ü/g,"u");
+        t = t.replace(/ç/g,"c");
+        return t;
+
+   }
+  
+      var hayResultados = false;
+      $scope.term = $stateParams.term;
+      $scope.termArray = $scope.term.split(" ");
+      $scope.numberOfResults = 0;
+      //Estandarizamos el array
+      var j = 0;
+      for(j = 0; j < $scope.termArray.length; j++){
+        $scope.termArray[j] = standarize($scope.termArray[j]);
+      }
+
+      //Funcion de callback llamada cuando los datos se han cargado
+      this.afterLoad = function(data){
+       $scope.events = new Array;
+       //Realiza el filtrado
+       var day = 0;
+       for(day = 0; day < data.length; day++){
+        var ev = 0;
+        $scope.events.push([]);
+        for(ev = 0; ev < data[day].length; ev++){
+            //Aqui se mira cada evento
+
+            var has = 0;
+            var i = 0;
+            while( i < $scope.termArray.length){
+              var title = standarize(data[day][ev].title);
+              var place = standarize(data[day][ev].place_text);
+              if(title.indexOf($scope.termArray[i])> -1 || place.indexOf($scope.termArray[i]) > -1)
+                {
+                has++;
+              }
+              i++
+            }
+            if(has==$scope.termArray.length){
+              $scope.events[day].push(data[day][ev]);
+              hayResultados = true;
+              $scope.numberOfResults++;
+            }
+        }
+       }
+      }
+    
+      
+      //Se obtienen los datos
+      EventService.getList("todas",-1,this.afterLoad);
+
+      $scope.hayResultados = function(){
+          return hayResultados;
+      }
+
+      //Muestra un evento concreto
+      $scope.displayEvent = function(id){
+        $state.go('app.eventDetail', {eventId:id})
+      };
+
+      $scope.cuenta = 0;
+
+     
+
+      $scope.isFav = function(id){
+        return FavoriteService.get(id);
+      }
+
+      $scope.toggleFav = function(id){
+        var current = FavoriteService.get(id);
+        if(current){
+          FavoriteService.remove(id);
+          $ionicLoading.show({ template: 'Borrado de favoritos', noBackdrop: true, duration: 1000 });
+        }
+        else{
+          FavoriteService.add(id);
+          $ionicLoading.show({ template: 'Añadido a favoritos', noBackdrop: true, duration: 1000 });
+        }
+      }
+
+   
+
+
+    })
     .controller('EventDetailCtrl',function($scope,$stateParams,$compile,EventService,FavoriteService,$ionicLoading){
 
   //Controlador de pantalla de detalle de evento
@@ -484,4 +612,24 @@ var groups = [false,false,false,false,false];
   return groups[id];
  }
 
-});
+})
+
+.controller('aboutCtrl',function($scope,$stateParams,$state){
+
+
+    $scope.mail = function(phone){
+          
+      window.open("mailto:ismaro.394@gmail.com", "_system");
+    }
+    $scope.twitter = function(phone){
+          
+      window.open("https://twitter.com/ismaro3", "_system");
+    }
+    $scope.github= function(phone){
+          
+      window.open("https://github.com/ismaro3/sanLorenzo-ionic", "_system");
+    }
+
+
+})
+;

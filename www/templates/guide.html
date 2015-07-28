@@ -1,42 +1,61 @@
 <!--This view shows the main list of days. It is the main screen
   of the app -->
   <ion-view view-title="Programa">
+<ion-nav-bar class="bar-balanced colorSanLorenzo ">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+
+      <ion-nav-buttons side="right">
+     <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
   <ion-content class="guide-background "> 
   
+    <form  ng-submit="buscar()" ng-show="buscarVisible" class="search">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+  <input type="search" ng-model="$parent.filtro" placeholder="Buscar por título y/o lugar">
+</label>
+</form>
+    
   <div class="card item-trns">
    <div class="item item-divider">
     Programa por días:
   </div>
   <div class="item  item-text-wrap " style="padding:5px; align:center; ">
-   <button class="button button-block button-large button-balanced" ng-click="openDay(-1)">
+   <button class="button button-block button-large button-balanced colorSanLorenzo" ng-click="openDay(-1)">
     <span class="icon ion-calendar"  ng-click="openList()"></span> Todos los días
   </button>
 
   <div class="row" style="margin-top: -25px; align:center;">
 
     <div class="col">
-      <button class="button button-block button-large button-balanced button-day" ng-click="openDay(8)">
+      <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(8)">
         <span class="littleDay">Sáb.</span><br/>
         8
       </button>
     </div>
 
     <div class="col">
-      <button class="button button-block button-large button-balanced button-day" ng-click="openDay(9)">
+      <button class="button button-block button-large button-balanced button-day colorSanLorenzo"  ng-click="openDay(9)">
         <span class="littleDay">Dom.</span><br/>
         9
       </button>
     </div>
 
     <div class="col">
-      <button class="button button-block button-large button-balanced button-day" ng-click="openDay(10)">
+      <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(10)">
        <span class="littleDay">Lun.</span><br/>
        10
      </button>
    </div>
 
    <div class="col">
-    <button class="button button-block button-large button-balanced button-day" ng-click="openDay(11)">
+    <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(11)">
      <span class="littleDay">Mar.</span><br/>
      11
    </button>
@@ -47,28 +66,28 @@
 <div class="row" style="margin-top: -30px;">
 
   <div class="col">
-    <button class="button button-block button-large button-balanced button-day" ng-click="openDay(12)">
+    <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(12)">
       <span class="littleDay">Mié.</span><br/>
       12
     </button>
   </div>
 
   <div class="col">
-    <button class="button button-block button-large button-balanced button-day" ng-click="openDay(13)">
+    <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(13)">
      <span class="littleDay">Jue.</span><br/>
      13
    </button>
  </div>
 
  <div class="col">
-  <button class="button button-block button-large button-balanced button-day" ng-click="openDay(14)">
+  <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(14)">
    <span class="littleDay">Vie.</span><br/>
    14    
  </button>
 </div>
 
 <div class="col">
-  <button class="button button-block button-large button-balanced button-day" ng-click="openDay(15)">
+  <button class="button button-block button-large button-balanced button-day colorSanLorenzo" ng-click="openDay(15)">
    <span class="littleDay">Sáb.</span><br/>
    15
  </button>
@@ -86,12 +105,12 @@
 
 
    <div class="col">
-    <button class="button button-block button-large button-balanced" ng-click="openCategory('conciertos')">
+    <button class="button button-block button-large button-balanced colorSanLorenzo" ng-click="openCategory('conciertos')">
       <span class="categoryLabel">Conciertos</span>
     </button>
   </div>
   <div class="col">
-    <button class="button button-block button-large button-balanced" ng-click="openCategory('infantil')">
+    <button class="button button-block button-large button-balanced colorSanLorenzo" ng-click="openCategory('infantil')">
      <span class="categoryLabel">Infantil</span>
    </button>
  </div>
@@ -100,12 +119,12 @@
 
 
  <div class="col">
-  <button class="button button-block button-large button-balanced" ng-click="openCategory('toros')">
+  <button class="button button-block button-large button-balanced colorSanLorenzo" ng-click="openCategory('toros')">
     <span class="categoryLabel">Toros</span>
   </button>
 </div>
 <div class="col">
-  <button class="button button-block button-large button-balanced" ng-click="openCategory('otros')">
+  <button class="button button-block button-large button-balanced colorSanLorenzo" ng-click="openCategory('otros')">
    <span class="categoryLabel">Otros</span>
  </button>
 </div>
