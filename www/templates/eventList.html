@@ -17,7 +17,7 @@
 		        </div>
 
 		        <!-- Listado de eventos de ese día -->
-				<div  ng-repeat="event in ::day" class="item elemento-lista-eventos"  ng-click="displayEvent(event.id)">
+				<div  ng-repeat="event in ::day track by event.id" class="item elemento-lista-eventos"  ng-click="displayEvent(event.id)">
 
 					<div class="row">
   						<div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>

@@ -39,8 +39,8 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('GuideCtrl',["$scope","$stateParams","$state","$http","EventService",
-  function($scope,$stateParams,$state,$http,EventService){
+.controller('GuideCtrl',["$scope","$stateParams","$state","$http","EventService","$ionicLoading",
+  function($scope,$stateParams,$state,$http,EventService,$ionicLoading){
 //Controlador de pantalla Main, que es la de inicio.
 
 $scope.filtro = "";
@@ -48,18 +48,26 @@ $scope.buscarVisible = false;
 /** Va a la pantalla de listado de eventos, mostrando los eventos del día concreto especificado.
   Puede indicarse -1 para todos los días, o un día de 8 a 15 */
 $scope.openDay = function(d){
+    $ionicLoading.show({
+        template: 'Cargando...'
+    });
   $state.go('app.eventList',{day:d}); 
 };
 
 
 
 $scope.openCategory = function(c){
+    $ionicLoading.show({
+        template: 'Cargando...'
+    });
   $state.go('app.eventList',{category:c});
 }
 
   
 $scope.buscar = function(){
-
+    $ionicLoading.show({
+        template: 'Cargando...'
+    });
    $state.go('app.searchList', {term:$scope.filtro});
    $scope.buscarVisible = false;
     $scope.filtro = "";
@@ -92,6 +100,7 @@ $scope.textoBusqueda = "";
   this.afterLoad = function(data){
    $scope.allEvents = data;
    $scope.events = data;
+      $ionicLoading.hide();
 
   }
 
@@ -344,6 +353,7 @@ $scope.textoBusqueda = "";
       //Funcion de callback llamada cuando los datos se han cargado
       this.afterLoad = function(data){
        $scope.events = new Array;
+          $ionicLoading.hide();
        //Realiza el filtrado
        var day = 0;
        for(day = 0; day < data.length; day++){
@@ -370,6 +380,7 @@ $scope.textoBusqueda = "";
             }
         }
        }
+
       }
     
       

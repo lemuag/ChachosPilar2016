@@ -7,18 +7,40 @@ overflow: initial;
 .tituloLista{
     overflow: initial;
     white-space: initial;
-    font-size:105%;
+    font-size:100%;
+    color:#022e14;
+    font-weight:bold;
 }
 .horaLista{
     overflow: initial;
     white-space: initial;
     font-size:87%;
 }
+
+.horaDescripcion{
+    overflow: initial;
+    white-space: initial;
+    font-size:105%;
+
+}
+
+.tituloDescripcion{
+    overflow: initial;
+    white-space: initial;
+    font-size:105%;
+    font-weight:bold;
+
+
+}
+
 @media screen and (max-width: 400px) { 
 .tituloLista{
     overflow: initial;
     white-space: initial;
-    font-size:90%;
+    font-size:85%;
+    font-weight:bold;
+
+
 }
 .horaLista{
     overflow: initial;
@@ -26,6 +48,21 @@ overflow: initial;
     font-size:77%;
 }
 
+
+.horaDescripcion{
+    overflow: initial;
+    white-space: initial;
+    font-size:90%;
+
+}
+    .tituloDescripcion{
+        overflow: initial;
+        white-space: initial;
+        font-size:97%;
+        font-weight:bold;
+
+
+    }
 
 }
 
