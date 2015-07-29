@@ -177,3 +177,8 @@ background-color: #f00;
 .my-item-divider {
     background-color: #eee;
 }
+
+body .overflow-scroll {
+    overflow: auto;
+    overflow-x: hidden;
+}

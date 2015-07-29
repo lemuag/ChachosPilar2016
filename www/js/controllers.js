@@ -472,6 +472,10 @@ $scope.textoBusqueda = "";
 
     .controller('phonesCtrl',function($scope){
 
+        $scope.hola = [];
+        for(var i = 0; i < 100; i++){
+            $scope.hola.push("a" + i);
+        }
       var emergencias = {
             "name": "Emergencias",
             "phones": [
@@ -595,7 +599,7 @@ $scope.textoBusqueda = "";
 
 .controller('MainCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
 
- 
+
 
   $scope.openGuide = function(){
     $state.go('app.guide');
@@ -619,7 +623,7 @@ var groups = [false,false,false,false,false];
 
  $scope.toggleGroup = function(id){
 
-  
+
   var i;
   for(i=0;i<groups.length;i++){
     if(i!=id){
@@ -656,4 +660,11 @@ var groups = [false,false,false,false,false];
 
 
 })
+
+
+    .controller('testCtrl',function($scope,$stateParams,$state){
+
+
+
+    })
 ;

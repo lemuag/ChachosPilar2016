@@ -20,8 +20,23 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+
+        //El native scrolling solo se activa en Android 4.1+
+        if(ionic.Platform.isAndroid()){
+            var version = parseFloat(ionic.Platform.version());
+            //version = version.substr(0,3);
+            if(version >= 4.4){
+                $ionicConfigProvider.scrolling.jsScrolling(false);
+                //alert("Tienes android " + version + " y se activa native scrolling");
+            }
+            else{
+                //alert("Tienes android " + version + " y NO se activa native scrolling");
+            }
+        }
+
   $stateProvider
+
 
   //Contiene el menú lateral.
   .state('app', {
@@ -126,7 +141,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           }
       })
 
-
+      .state('app.test', {
+          url: "/test",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/test.html",
+                  controller: 'testCtrl'
+              }
+          }
+      })
 
   ;
   // if none of the above states are matched, use this as the fallback
