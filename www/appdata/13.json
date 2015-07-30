@@ -1,5 +1,5 @@
 [
-  {
+  {"isSeparator":false,
     "id": 1301,
     "title": "Pasacalles matinales hasta la Plaza de Toros",
     "day": "13",
@@ -10,7 +10,7 @@
     "category": "conciertos",
     "description": "Charangas Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1302,
     "title": "Suelta de vaquillas",
     "day": "13",
@@ -21,7 +21,7 @@
     "category": "toros",
     "description": "Organiza Albahaca y Plata, S.L. Colaboran: Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1303,
     "title": "Final del Campeonato de Rana para Mayores",
     "day": "13",
@@ -32,7 +32,7 @@
     "category": "otros",
     "description": "Organiza Hogar de Mayores del IASS."
   },
-  {
+  {"isSeparator":false,
     "id": 1304,
     "title": "Asociación Folclórica Estirpe de Aragonia",
     "day": "13",
@@ -43,7 +43,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1305,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "13",
@@ -54,7 +54,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1306,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "13",
@@ -67,7 +67,7 @@
 
 
   },
-  {
+  {"isSeparator":false,
     "id": 1307,
     "title": "Grupo Molto Vivace",
     "day": "13",
@@ -78,7 +78,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1309,
     "title": "Concentración de las charangas y “encierro” infantil",
     "day": "13",
@@ -89,7 +89,7 @@
     "category": "infantil",
     "description": "Plaza de San Lorenzo – Coso Bajo – Plaza Santo Domingo – Plaza de Toros. Organizan Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1310,
     "title": "Asociación Folclórica Estirpe de Aragonia",
     "day": "13",
@@ -100,7 +100,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1311,
     "title": "Grupo Folclórico Roldán del Altoaragón",
     "day": "13",
@@ -111,7 +111,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1312,
     "title": "Comparsa de Gigantes, Cabezudos y Caballicos",
     "day": "13",
@@ -122,7 +122,7 @@
     "category": "infantil",
     "description": "Acompañados por los Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 1313,
     "title": "Programa en directo “La mañana de Huesca”",
     "day": "13",
@@ -133,7 +133,7 @@
     "category": "otros",
     "description": "Organiza COPE Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1314,
     "title": "Programa “Huesca en fiestas”",
     "day": "13",
@@ -144,7 +144,7 @@
     "category": "otros",
     "description": "Organiza esRadio."
   },
-  {
+  {"isSeparator":false,
     "id": 1315,
     "title": "Programa laurentino",
     "day": "13",
@@ -155,7 +155,7 @@
     "category": "otros",
     "description": "Organiza Radio Huesca y Huesca Tv."
   },
-  {
+  {"isSeparator":false,
     "id": 1316,
     "title": "Programa de radio Fiestas de San Lorenzo",
     "day": "13",
@@ -166,7 +166,7 @@
     "category": "otros",
     "description": "Organiza Onda Cero Huesca"
   },
-  {
+  {"isSeparator":false,
     "id": 1317,
     "title": "Grupo Molto Vivace",
     "day": "13",
@@ -177,7 +177,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1318,
     "title": "Banda de Música de Huesca",
     "day": "13",
@@ -188,7 +188,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1319,
     "title": "Concentración de Charangas",
     "day": "13",
@@ -199,7 +199,7 @@
     "category": "conciertos",
     "description": "Organizan Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1320,
     "title": "Charanga Los Sidras",
     "day": "13",
@@ -210,7 +210,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa La Parrilla – Plaza de Toros"
   },
-  {
+  {"isSeparator":false,
     "id": 1321,
     "title": "Banda de Música de Huesca",
     "day": "13",
@@ -221,7 +221,7 @@
     "category": "conciertos",
     "description": "Plaza de Navarra – Plaza de Toros"
   },
-  {
+  {"isSeparator":false,
     "id": 1322,
     "title": "Reparto de la pócima laurentina",
     "day": "13",
@@ -232,7 +232,7 @@
     "category": "otros",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1323,
     "title": ". Parque infantil “Huesca Leyenda Viva”",
     "day": "13",
@@ -243,7 +243,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1324,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "13",
@@ -254,7 +254,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1325,
     "title": "Cuarta Corrida de Feria",
     "day": "13",
@@ -266,7 +266,7 @@
     "description": "Toros de la ganadería Vellosino. Organiza Albahaca y Plata, S.L.",
     "bullfighters": ["Miguel Abellán","Eduardo Gallo","Iván Fandiño"]
   },
-  {
+  {"isSeparator":false,
     "id": 1326,
     "title": "Teatro Griego. ANIMAHU",
     "day": "13",
@@ -277,7 +277,7 @@
     "category": "infantil",
     "description": "Compañía Proyecto Caravana, con el espectáculo infantil “El viaje de los trobadores”."
   },
-  {
+  {"isSeparator":false,
     "id": 1327,
     "title": "Sbandieratori Ducato Caetani",
     "day": "13",
@@ -288,7 +288,7 @@
     "category": "conciertos",
     "description": "Barrio de La Encarnación – Jardines exteriores del Centro Cultural del Matadero."
   },
-  {
+  {"isSeparator":false,
     "id": 1328,
     "title": "Orquesta LA DAMA",
     "day": "13",
@@ -299,7 +299,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1329,
     "title": "Salida de la Plaza de Toros",
     "day": "13",
@@ -310,7 +310,7 @@
     "category": "otros",
     "description": "Con la Banda de Música de Huesca y las Peñas Recreativas Oscenses con sus charangas."
   },
-  {
+  {"isSeparator":false,
     "id": 1330,
     "title": "Folclore aragonés",
     "day": "13",
@@ -321,7 +321,7 @@
     "category": "conciertos",
     "description": "ASOCIACIÓN FOLCLÓRICA ESTIRPE DE ARAGONIA."
   },
-  {
+  {"isSeparator":false,
     "id": 1331,
     "title": "Sbandieratori Ducato Caetani",
     "day": "13",
@@ -332,7 +332,7 @@
     "category": "conciertos",
     "description": "Parque San Martín – Plaza del Justicia"
   },
-  {
+  {"isSeparator":false,
     "id": 1332,
     "title": "Fiesta de la cerveza",
     "day": "13",
@@ -343,7 +343,7 @@
     "category": "otros",
     "description": "Organiza Peña Recreativa La Parrilla."
   },
-  {
+  {"isSeparator":false,
     "id": 1333,
     "title": "XVI Festival iberi@huesca.folk",
     "day": "13",
@@ -354,7 +354,7 @@
     "category": "conciertos",
     "description": "OLGA Y LOS MINISTRILES (Aragón) + KEPA JUNKERA + INVITADOS"
   },
-  {
+  {"isSeparator":false,
     "id": 1334,
     "title": "Charanga Los Sidras",
     "day": "13",
@@ -365,7 +365,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1335,
     "title": "LOS BISOÑOS",
     "day": "13",
@@ -376,7 +376,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1336,
     "title": "LA DAMA",
     "day": "13",
@@ -387,7 +387,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1337,
     "title": "ZADITH SHOW",
     "day": "13",
@@ -398,7 +398,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1338,
     "title": "Charanga Festival",
     "day": "13",
@@ -409,7 +409,7 @@
     "category": "conciertos",
     "description": "Porches de Galicia – Plaza San Antonio. De la Peña Recreativa 10 de Agosto."
   },
-  {
+  {"isSeparator":false,
     "id": 1339,
     "title": "Charanga Plin Floy",
     "day": "13",
@@ -420,7 +420,7 @@
     "category": "conciertos",
     "description": "Salón Jai-Alai – Plaza Santo Domingo. De la Peña Recreativa Alegría Laurentina."
   },
-  {
+  {"isSeparator":false,
     "id": 1340,
     "title": "Grupo Los 30",
     "day": "13",

@@ -34,6 +34,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
                 //alert("Tienes android " + version + " y NO se activa native scrolling");
             }
         }
+        //$ionicConfigProvider.views.transition('none');
 
   $stateProvider
 
@@ -153,5 +154,5 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
 
   ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/guide');
+  $urlRouterProvider.otherwise('/app/main');
 });

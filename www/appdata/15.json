@@ -1,5 +1,5 @@
 [
-  {
+  {"isSeparator":false,
     "id": 1501,
     "title": "Pasacalles matinales hasta la Plaza de Toros",
     "day": "15",
@@ -10,7 +10,7 @@
     "category": "conciertos",
     "description": "Recinto de Peñas Recreativas - Plaza Navarra. Charangas Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1502,
     "title": "Suelta de vaquillas",
     "day": "15",
@@ -21,7 +21,7 @@
     "category": "toros",
     "description": "Organiza Albahaca y Plata, S.L. Colaboran: Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1503,
     "title": "Fiesta homenaje a los mayores",
     "day": "15",
@@ -32,7 +32,7 @@
     "category": "otros",
     "description": "Almuerzo a base de migas. Entrega de premios de los diferentes juegos y campeonatos."
   },
-  {
+  {"isSeparator":false,
     "id": 1504,
     "title": "Sbandieratori Ducato Caetani (Italia)",
     "day": "15",
@@ -43,7 +43,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1505,
     "title": "64º Gran Premio “San Lorenzo” de Ciclismo",
     "day": "15",
@@ -54,7 +54,7 @@
     "category": "otros",
     "description": "Categoría élite y sub-23, de carácter nacional, por circuito urbano. Organiza Club Ciclista Oscense."
   },
-  {
+  {"isSeparator":false,
     "id": 1506,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "15",
@@ -65,7 +65,7 @@
     "category": "infantil",
     "description": "Avenida Martínez de Velasco."
   },
-  {
+  {"isSeparator":false,
     "id": 1507,
     "title": "Sbandieratori Ducato Caetani",
     "day": "15",
@@ -76,7 +76,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1508,
     "title": "Programa “Huesca en fiestas”",
     "day": "15",
@@ -87,7 +87,7 @@
     "category": "otros",
     "description": "Organiza esRadio."
   },
-  {
+  {"isSeparator":false,
     "id": 1509,
     "title": "Teatro Griego. ANIMAHU",
     "day": "15",
@@ -98,7 +98,7 @@
     "category": "infantil",
     "description": "Zangania y Chechare, “Sombrero de copa”."
   },
-  {
+  {"isSeparator":false,
     "id": 1510,
     "title": "Pasacalles. Charanga Los Sidras",
     "day": "15",
@@ -109,7 +109,7 @@
     "category": "conciertos",
     "description": "Charanga Los Sidras, de la Peña Recreativa La Parrilla."
   },
-  {
+  {"isSeparator":false,
     "id": 1511,
     "title": "Pasacalles. Charanga Plin Floy",
     "day": "15",
@@ -120,7 +120,7 @@
     "category": "conciertos",
     "description": "Charanga Plin Floy, de la Peña Recreativa Alegría Laurentina."
   },
-  {
+  {"isSeparator":false,
     "id": 1512,
     "title": "Pasacalles. Grupo Los 30",
     "day": "15",
@@ -131,7 +131,7 @@
     "category": "conciertos",
     "description": "Grupo Los 30, de la Peña Recreativa Los 30."
   },
-  {
+  {"isSeparator":false,
     "id": 1513,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "15",
@@ -142,7 +142,7 @@
     "category": "infantil",
     "description": "Avenida Martínez de Velasco."
   },
-  {
+  {"isSeparator":false,
     "id": 1514,
     "title": "Ofrenda de flores y frutos a san Lorenzo",
     "day": "15",
@@ -153,7 +153,7 @@
     "category": "otros",
     "description": "Con actuaciones de Danzantes de Huesca, Sbandieratori Ducato Caetani (Italia), Agrupación Folclórica Santa Cecilia, Asociación Folclórica Estirpe de Aragonia, Grupo Folclórico Roldán del Altoaragón, Grupo Folclórico San Lorenzo y Grupo Folclórico Elenco Aragonés, ofrendas particulares y la participación de Mairalesas y Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1515,
     "title": "Despedida al santo",
     "day": "15",
@@ -164,7 +164,7 @@
     "category": "otros",
     "description": "Concentración de las charangas de las Peñas Recreativas Oscenses en la plaza de San Lorenzo. Despedida al santo. Recorrerán Coso Bajo, Porches de Galicia y plaza de Navarra."
   },
-  {
+  {"isSeparator":false,
     "id": 1516,
     "title": "Traca final de fiestas",
     "day": "15",

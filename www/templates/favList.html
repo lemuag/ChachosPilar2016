@@ -1,10 +1,10 @@
 <ion-view view-title="{{listTitle}}">
 	<ion-content class="description-background">
 
-		<ion-list  ng-show="hayFavoritos()">
+		<div class="list"  ng-show="hayFavoritos()">
 			<!-- Importante, el array events debe estar ordenado -->
 			<div ng-repeat="day in ::events">
-				<div class="item item-divider" ng-if="dayHasFav(day)">
+				<div class="item item-divider tituloDia" ng-if="dayHasFav(day)">
 					<!--Cabecera de día -->
 					Día {{day[0].day}}
 				</div>
@@ -16,8 +16,7 @@
 						<div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
 						<div class="col">
 							<div>
-								<img ng-show="isFav(event.id)" class="fav-star" src="img/fav.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
-								<img ng-hide="isFav(event.id)" class="fav-star" src="img/fav-off.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
+								<img  class="fav-star" ng-src="img/fav-{{isFav(event.id)}}.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
 							</div>
 							<span class="tituloLista">{{event.title}}</span>
 							<br/>
@@ -31,7 +30,7 @@
 
 				</div>
 			</div>
-		</ion-list>
+		</div>
 		<div class="card" ng-hide="hayFavoritos()">
 			<div class="item item-text-wrap">
 				No hay favoritos.

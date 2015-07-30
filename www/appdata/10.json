@@ -1,5 +1,5 @@
 [
-  {
+  {"isSeparator":false,
     "id": 1001,
     "title": "Disparo de cohetes y bombas reales",
     "day": "10",
@@ -10,7 +10,7 @@
     "category": "otros",
     "description": "Por Pirotecnia Oscense."
   },
-  {
+  {"isSeparator":false,
     "id": 1002,
     "title": "Reparto de albahaca",
     "day": "10",
@@ -21,7 +21,7 @@
     "category": "otros",
     "description": "Reparto de albahaca desde la Narria de La Zaragozana."
   },
-  {
+  {"isSeparator":false,
     "id": 1003,
     "title": "Retransmisión en directo de la primera actuación de los Danzantes de Huesca",
     "day": "10",
@@ -32,7 +32,7 @@
     "category": "otros",
     "description": "Pantalla instalada para la retransmisión en directo de la\nprimera actuación de los Danzantes de Huesca. Organiza Aragón Tv."
   },
-  {
+  {"isSeparator":false,
     "id": 1004,
     "title": "1ª actuación de los Danzantes de Huesca",
     "day": "10",
@@ -43,7 +43,7 @@
     "category": "otros",
     "description": "Primera actuación de los Danzantes de Huesca, acompañados de la Banda de Música de Huesca, ejecutando sus tradicionales bailes en honor al santo."
   },
-  {
+  {"isSeparator":false,
     "id": 1005,
     "title": "Comparsa de Gigantes, Cabezudos y Caballicos",
     "day": "10",
@@ -54,7 +54,7 @@
     "category": "infantil",
     "description": "Salida desde el Ayuntamiento de la Comparsa de Gigantes, Cabezudos y Caballicos de Huesca, acompañados por los Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 1006,
     "title": "Solemne Procesión de san Lorenzo",
     "day": "10",
@@ -65,7 +65,7 @@
     "category": "otros",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1007,
     "title": "Programa especial Fiestas de San Lorenzo",
     "day": "10",
@@ -76,7 +76,7 @@
     "category": "otros",
     "description": "Organiza Aragón Radio."
   },
-  {
+  {"isSeparator":false,
     "id": 1008,
     "title": "Paseos a los niños y niñas en la Narria de La Zaragozana.",
     "day": "10",
@@ -87,7 +87,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1009,
     "title": "Parque infantil de animación “Huesca Leyenda Viva”",
     "day": "10",
@@ -98,7 +98,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1010,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "10",
@@ -109,7 +109,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1011,
     "title": "Sbandieratori Ducato Caetani (Italia)",
     "day": "10",
@@ -120,7 +120,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1012,
     "title": "Grupo Molto Vivace Vitoria – Gasteiz (Álava)",
     "day": "10",
@@ -131,7 +131,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1013,
     "title": "Programa en directo “La mañana de Huesca”",
     "day": "10",
@@ -142,7 +142,7 @@
     "category": "otros",
     "description": "Organiza COPE Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1014,
     "title": "Programa “Huesca en fiestas”",
     "day": "10",
@@ -153,7 +153,7 @@
     "category": "otros",
     "description": "Organiza esRadio."
   },
-  {
+  {"isSeparator":false,
     "id": 1015,
     "title": "Programa laurentino",
     "day": "10",
@@ -164,7 +164,7 @@
     "category": "otros",
     "description": "Organiza Radio Huesca y HuescaTv."
   },
-  {
+  {"isSeparator":false,
     "id": 1017,
     "title": "Programa de radio Fiestas de San Lorenzo",
     "day": "10",
@@ -175,7 +175,7 @@
     "category": "otros",
     "description": "Organiza Onda Cero Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1018,
     "title": "Pasacalles - Charanga Los Sidras",
     "day": "10",
@@ -186,7 +186,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa La Parrilla."
   },
-  {
+  {"isSeparator":false,
     "id": 1019,
     "title": "Pasacalles Vermú concierto",
     "day": "10",
@@ -197,7 +197,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa 10 de Agosto."
   },
-  {
+  {"isSeparator":false,
     "id": 1020,
     "title": "Pasacalles - Charanga Riau - Riau",
     "day": "10",
@@ -208,7 +208,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Zoiti."
   },
-  {
+  {"isSeparator":false,
     "id": 1021,
     "title": "Pasacalles - Grupo Los 30",
     "day": "10",
@@ -219,7 +219,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Los 30."
   },
-  {
+  {"isSeparator":false,
     "id": 1022,
     "title": "Comparsa de Gigantes, Cabezudos y Caballicos",
     "day": "10",
@@ -230,7 +230,7 @@
     "category": "infantil",
     "description": "Comparsa de Gigantes, Cabezudos y Caballicos de Huesca, acompañados por los Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 1023,
     "title": "Pasacalles - Grupo Molto Vivace",
     "day": "10",
@@ -241,7 +241,7 @@
     "category": "conciertos",
     "description": "Plaza Santo Domingo – Coso Bajo – Plaza San Antonio. Pasacalles. Grupo Molto Vivace Vitoria – Gasteiz (Álava)."
   },
-  {
+  {"isSeparator":false,
     "id": 1024,
     "title": "Programa especial Fiestas de San Lorenzo",
     "day": "10",
@@ -252,7 +252,7 @@
     "category": "otros",
     "description": "Organiza Aragón Radio."
   },
-  {
+  {"isSeparator":false,
     "id": 1025,
     "title": "Pasacalles - Charanga Los Sidras.",
     "day": "10",
@@ -263,7 +263,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa La Parrilla – Plaza de Toros. Pasacalles. Charanga Los\nSidras."
   },
-  {
+  {"isSeparator":false,
     "id": 1026,
     "title": "Pasacalles - Banda de Música de Huesca.",
     "day": "10",
@@ -274,7 +274,7 @@
     "category": "conciertos",
     "description": "Plaza de Navarra – Plaza de Toros. Pasacalles. Banda de Música de Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1027,
     "title": "Reparto de la pócima laurentina",
     "day": "10",
@@ -285,7 +285,7 @@
     "category": "otros",
     "description": ""
   },
-  {
+  {"isSeparator":false,
     "id": 1028,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "10",
@@ -296,7 +296,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1029,
     "title": "Gran Parque Infantil de Hinchables.",
     "day": "10",
@@ -307,7 +307,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1030,
     "title": "Primera Corrida de Feria",
     "day": "10",
@@ -319,7 +319,7 @@
     "description": "Toros de la ganadería de Juan\nManuel Criado. Organiza\nAlbahaca y Plata, S.L.",
     "bullfighters": ["Francisco Rivera \"Paquirri\"","El Fandi","Alberto López Simón"]
   },
-  {
+  {"isSeparator":false,
     "id": 1031,
     "title": "Paseos a los niños y niñas en la Narria de La Zaragozana.",
     "day": "10",
@@ -330,7 +330,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1032,
     "title": "Teatro Griego. ANIMAHU",
     "day": "10",
@@ -341,7 +341,7 @@
     "category": "infantil",
     "description": "Compañía El Negro y El Flaco, con el espectáculo infantil “Alquimia”."
   },
-  {
+  {"isSeparator":false,
     "id": 1033,
     "title": "Teatro Lírico de Zaragoza",
     "day": "10",
@@ -352,7 +352,7 @@
     "category": "infantil",
     "description": "Zarzuela: “Gigantes y Cabezudos”. Organiza Fundación Anselmo Pie Sopena."
   },
-  {
+  {"isSeparator":false,
     "id": 1034,
     "title": "Orquesta Nueva Alaska",
     "day": "10",
@@ -363,7 +363,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1035,
     "title": "Sbandieratori Ducato Caetani",
     "day": "10",
@@ -374,9 +374,9 @@
     "category": "conciertos",
     "description": "Actuación."
   },
-  {
+  {"isSeparator":false,
     "id": 1036,
-    "title": "Charangas - Salida de la Plaza de Toros",
+    "title": "Charangas - Salida Plaza de Toros",
     "day": "10",
     "hour": "20:30",
     "place_text":"Plaza de Toros",
@@ -385,7 +385,7 @@
     "category": "conciertos",
     "description": "Salida de la Plaza de Toros con la Banda de Música de Huesca y las Peñas\nRecreativas Oscenses con sus charangas."
   },
-  {
+  {"isSeparator":false,
     "id": 1037,
     "title": "Grupo folcrórico San Lorenzo",
     "day": "10",
@@ -396,7 +396,7 @@
     "category": "conciertos",
     "description": "Folclore aragonés."
   },
-  {
+  {"isSeparator":false,
     "id": 1038,
     "title": "Pasacalles - Grupo Molto Vivace",
     "day": "10",
@@ -407,7 +407,7 @@
     "category": "conciertos",
     "description": "Plaza del Justicia – Plaza San Pedro"
   },
-  {
+  {"isSeparator":false,
     "id": 1039,
     "title": "Fuegos Artificiales",
     "day": "10",
@@ -418,7 +418,7 @@
     "category": "otros",
     "description": "Por Pirotecnia Oscense."
   },
-  {
+  {"isSeparator":false,
     "id": 1040,
     "title": "XVI Festival iberi@huesca.folk",
     "day": "10",
@@ -429,7 +429,7 @@
     "category": "conciertos",
     "description": "Por MAYALDE (Castilla y León)."
   },
-  {
+  {"isSeparator":false,
     "id": 1041,
     "title": "Los Rebeldes",
     "day": "10",
@@ -440,7 +440,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1042,
     "title": "Nueva Alaska",
     "day": "10",
@@ -451,7 +451,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1043,
     "title": "Café Latino",
     "day": "10",
@@ -462,7 +462,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1044,
     "title": "La Raiz",
     "day": "10",
@@ -473,7 +473,7 @@
     "category": "conciertos",
     "description": "Organizan: Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1045,
     "title": "Charanga Chilindrón",
     "day": "10",
@@ -484,7 +484,7 @@
     "category": "conciertos",
     "description": "Organiza Peña Los Que Faltaban."
   },
-  {
+  {"isSeparator":false,
     "id": 1046,
     "title": "Charanga Riau - Riau",
     "day": "10",
@@ -495,7 +495,7 @@
     "category": "conciertos",
     "description": "Porches de Galicia – Plaza de Santo Domingo. Organiza Peña Recreativa Zoiti."
   },
-  {
+  {"isSeparator":false,
     "id": 1048,
     "title": "Pasacalles - Charanga Plin Floy",
     "day": "10",
@@ -506,7 +506,7 @@
     "category": "conciertos",
     "description": "Organiza Peña Recreativa Alegría Laurentina."
   },
-  {
+  {"isSeparator":false,
     "id": 1049,
     "title": "Sesión de Dj nacionales",
     "day": "10",

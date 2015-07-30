@@ -39,7 +39,7 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('GuideCtrl',["$scope","$stateParams","$state","$http","EventService","$ionicLoading",
+.controller('GuideCtrl',["$scope","$stateParams","$state","$http","EventService",
   function($scope,$stateParams,$state,$http,EventService,$ionicLoading){
 //Controlador de pantalla Main, que es la de inicio.
 
@@ -48,26 +48,20 @@ $scope.buscarVisible = false;
 /** Va a la pantalla de listado de eventos, mostrando los eventos del día concreto especificado.
   Puede indicarse -1 para todos los días, o un día de 8 a 15 */
 $scope.openDay = function(d){
-    $ionicLoading.show({
-        template: 'Cargando...'
-    });
+
   $state.go('app.eventList',{day:d}); 
 };
 
 
 
 $scope.openCategory = function(c){
-    $ionicLoading.show({
-        template: 'Cargando...'
-    });
+
   $state.go('app.eventList',{category:c});
 }
 
   
 $scope.buscar = function(){
-    $ionicLoading.show({
-        template: 'Cargando...'
-    });
+
    $state.go('app.searchList', {term:$scope.filtro});
    $scope.buscarVisible = false;
     $scope.filtro = "";
@@ -80,7 +74,7 @@ $scope.buscarVisible = !$scope.buscarVisible;
  
 }])
 
-.controller('EventListCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
+.controller('EventListCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading,$ionicScrollDelegate){
   
 //Controlador de pantalla de listado de eventos
 //TO-DO: Load real data
@@ -92,27 +86,46 @@ $scope.textoBusqueda = "";
 
 
 
+ $scope.current_day;
   var day_defined
   var cat_defined;
+
   var day_parameter;
   var cat_parameter;
   //Funcion de callback llamada cuando los datos se han cargado
   this.afterLoad = function(data){
    $scope.allEvents = data;
-   $scope.events = data;
+      $scope.current_day = 0;
+    $scope.events = [data[0]];
       $ionicLoading.hide();
 
   }
 
-  //Se cargan 
+  //Se cargan
+        $scope.subir = function(){
+            $ionicScrollDelegate.scrollTop(true);
+        }
 
-  
+        $scope.nextDay = function(){
+            $scope.current_day++;
+            $scope.events = [$scope.allEvents[$scope.current_day]];
+            $ionicScrollDelegate.resize()
+
+        }
+
+        $scope.previousDay = function(){
+            $scope.current_day--;
+            $scope.events = [$scope.allEvents[$scope.current_day]];
+            $ionicScrollDelegate.resize()
+        }
 
   day_defined = ($scope.day != undefined && $scope.day.length > 0 && $scope.day > 0);
+
   cat_defined = ($scope.category != undefined && $scope.category.length > 0 && $scope.category != "todas");
+        $scope.hayCat =cat_defined;
 
 
-  //Si el dia no ha sido definido, entonces se mostrarán todos
+        //Si el dia no ha sido definido, entonces se mostrarán todos
   if(day_defined){
     $scope.listTitle += " - Día " + $scope.day;
     day_parameter = $scope.day;
@@ -160,6 +173,8 @@ $scope.textoBusqueda = "";
 
       var n = 0;
       var i = 0;
+       var loaded = 0;
+       var limit = 2;
       for(i = 0; i < $scope.allEvents.length; i++){
         var j = 0;
         for(j=0;j < $scope.allEvents[i].length;j++){
@@ -169,18 +184,15 @@ $scope.textoBusqueda = "";
             var place = $scope.allEvents[i][j].place_text;
             name = standarize(name);
             place = standarize(place);
-            if(name.indexOf(term)>-1 || place.indexOf(term)> -1){
+            if((name.indexOf(term)>-1 || place.indexOf(term)> -1)){
              
               temp[i].push($scope.allEvents[i][j]);
+                loaded++;
             }
-            else{
-            
-            }
+
         }
       }
       $scope.events = temp;
-     
-      
 
 
       

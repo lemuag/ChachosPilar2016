@@ -1,5 +1,5 @@
 [
-  {
+  {"isSeparator":false,
     "id": 1101,
     "title": "Pasacalles matinales - Charangas Peñas Recreativas Oscenses",
     "day": "11",
@@ -10,7 +10,7 @@
     "category": "conciertos",
     "description": "Recinto de Peñas Recreativas - Plaza Navarra. Pasacalles matinales hasta la\nPlaza de Toros. Charangas Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1102,
     "title": "Suelta de vaquillas",
     "day": "11",
@@ -21,7 +21,7 @@
     "category": "toros",
     "description": "Organiza Albahaca y Plata, S.L.\nColaboran: Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1103,
     "title": "Tradicional Fiesta del Comercio Oscense",
     "day": "11",
@@ -32,7 +32,7 @@
     "category": "otros",
     "description": "Con degustación de productos de la tierra, a cargo de la Asociación de Empresarios de Comercio de Huesca, y homenaje a D. José Luis Estallo Lacasta, del establecimiento Ferretería Estallo, seguido de la actuación de los Danzantes de Huesca y de la Banda de Música de Huesca. Como es tradición, se realizará la apertura del Barril conmemorativo de la cerveza de San Lorenzo, a cargo de La Zaragozana."
   },
-  {
+  {"isSeparator":false,
     "id": 1104,
     "title": "Final del Campeonato de Hoyete para Mayores",
     "day": "11",
@@ -43,7 +43,7 @@
     "category": "otros",
     "description": "Organiza Hogar de Mayores del IASS."
   },
-  {
+  {"isSeparator":false,
     "id": 1105,
     "title": "Gran simultanea de ajedrez San Lorenzo",
     "day": "11",
@@ -54,7 +54,7 @@
     "category": "otros",
     "description": "XVIII Memorial. Organiza Club Ajedrez Jaque."
   },
-  {
+  {"isSeparator":false,
     "id": 1106,
     "title": "Paseos a los niños y niñas en la Narria de La Zaragozana.",
     "day": "11",
@@ -65,7 +65,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1107,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "11",
@@ -76,7 +76,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1108,
     "title": "Gran Parque Infantil de Hinchables.",
     "day": "11",
@@ -87,7 +87,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1109,
     "title": "Concentración de las charangas - Gran “encierro” infantil",
     "day": "11",
@@ -98,7 +98,7 @@
     "category": "infantil",
     "description": "Plaza de San Lorenzo – Coso Bajo – Plaza Santo Domingo – Plaza de Toros."
   },
-  {
+  {"isSeparator":false,
     "id": 1110,
     "title": "Danzantes de Huesca y Banda de Música de Huesca.",
     "day": "11",
@@ -109,7 +109,7 @@
     "category": "otros",
     "description": "Si descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1111,
     "title": "Grupo Molto Vivace",
     "day": "11",
@@ -120,7 +120,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1112,
     "title": "Agrupación Folclórica Santa Cecilia",
     "day": "11",
@@ -131,7 +131,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1113,
     "title": "Ronda parrillera con amigos",
     "day": "11",
@@ -142,7 +142,7 @@
     "category": "otros",
     "description": "A cargo de Toño Julve y colaboradores."
   },
-  {
+  {"isSeparator":false,
     "id": 1114,
     "title": "Pasacalles - Charanga Plin Floy",
     "day": "11",
@@ -153,7 +153,7 @@
     "category": "conciertos",
     "description": "Salón Jai Alai – Plaza Luis López Allué. De la Peña Recreativa Alegría Laurentina."
   },
-  {
+  {"isSeparator":false,
     "id": 1115,
     "title": "Pasacalles - Charanga Riau Riau",
     "day": "11",
@@ -164,7 +164,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Zoiti."
   },
-  {
+  {"isSeparator":false,
     "id": 1116,
     "title": "Comparsa de Gigantes, Cabezudos y Caballicos",
     "day": "11",
@@ -175,7 +175,7 @@
     "category": "infantil",
     "description": "Acompañados por los Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 1117,
     "title": "Programa en directo “La mañana de Huesca”",
     "day": "11",
@@ -186,7 +186,7 @@
     "category": "otros",
     "description": "Organiza COPE Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1118,
     "title": "Programa “Huesca en fiestas”",
     "day": "11",
@@ -197,7 +197,7 @@
     "category": "otros",
     "description": "Organiza esRadio."
   },
-  {
+  {"isSeparator":false,
     "id": 1119,
     "title": "Programa \"laurentino\"",
     "day": "11",
@@ -208,7 +208,7 @@
     "category": "otros",
     "description": "Organiza Radio Huesca y Huesca\nTv."
   },
-  {
+  {"isSeparator":false,
     "id":1120,
     "title": "Programa de radio Fiestas de San Lorenzo",
     "day": "11",
@@ -219,7 +219,7 @@
     "category": "otros",
     "description": "Organiza Onda Cero Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1121,
     "title": "Grupo Molto Vivace Vitoria",
     "day": "11",
@@ -230,7 +230,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1122,
     "title": "Danzantes y Banda de Música",
     "day": "11",
@@ -241,7 +241,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1123,
     "title": "Pasacalles - Grupo Los 30",
     "day": "11",
@@ -252,7 +252,7 @@
     "category": "conciertos",
     "description": "Organiza Peña Recreativa Los 30."
   },
-  {
+  {"isSeparator":false,
     "id": 1125,
     "title": "Danzantes junto con la Banda de Música",
     "day": "11",
@@ -263,7 +263,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1126,
     "title": "Grupo Molto Vivace",
     "day": "11",
@@ -274,7 +274,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1127,
     "title": "Grupo Folclórico San Lorenzo",
     "day": "11",
@@ -285,7 +285,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1128,
     "title": "Charanga Los Sidras",
     "day": "11",
@@ -296,7 +296,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa La Parrilla – Plaza de Toros."
   },
-  {
+  {"isSeparator":false,
     "id": 1129,
     "title": "Banda de Música de Huesca",
     "day": "11",
@@ -307,7 +307,7 @@
     "category": "conciertos",
     "description": "Plaza de Navarra – Plaza de Toros. Pasacalles."
   },
-  {
+  {"isSeparator":false,
     "id": 1130,
     "title": "Reparto de la pócima laurentina",
     "day": "11",
@@ -318,7 +318,7 @@
     "category": "otros",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1131,
     "title": "Grupo Folclórico Elenco Aragonés",
     "day": "11",
@@ -329,7 +329,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1132,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "11",
@@ -340,7 +340,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1133,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "11",
@@ -351,7 +351,7 @@
     "category": "infantil",
     "description": "Calle Pío XII"
   },
-  {
+  {"isSeparator":false,
     "id": 1134,
     "title": "No Toro Fest",
     "day": "11",
@@ -362,7 +362,7 @@
     "category": "conciertos",
     "description": "HAMMER + SELENE + The Altoaragón All Stars."
   },
-  {
+  {"isSeparator":false,
     "id": 1135,
     "title": "Segunda Corrida de Feria",
     "day": "11",
@@ -374,7 +374,7 @@
     "description": "Toros de la ganadería de El Pilar. Organiza Albahaca y Plata, S.L.",
     "bullfighters":["Juan José Padilla","José María Manzanares","Miguel Ángel Perera"]
   },
-  {
+  {"isSeparator":false,
     "id": 1136,
     "title": "Paseos a los niños y niñas en la Narria de La Zaragozana",
     "day": "11",
@@ -385,7 +385,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1137,
     "title": "Teatro Griego. ANIMAHU",
     "day": "11",
@@ -396,7 +396,7 @@
     "category": "infantil",
     "description": "Producciones Viridiana, con el espectáculo infantil “El Ingenioso Hidalgo”"
   },
-  {
+  {"isSeparator":false,
     "id": 1138,
     "title": "Pasacalles - Grupo Molto Vivace",
     "day": "11",
@@ -408,7 +408,7 @@
     "category": "conciertos",
     "description": "Plaza Lizana - Porches de Galicia – Plaza Concepción Arenal"
   },
-  {
+  {"isSeparator":false,
     "id": 1139,
     "title": "Orquesta TARANTELLA",
     "day": "11",
@@ -419,7 +419,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1140,
     "title": "Salida de la Plaza de Toros",
     "day": "11",
@@ -430,7 +430,7 @@
     "category": "otros",
     "description": "Con la Banda de Música de Huesca y las Peñas Recreativas Oscenses con sus charangas."
   },
-  {
+  {"isSeparator":false,
     "id": 1141,
     "title": "Folclore aragonés",
     "day": "11",
@@ -441,7 +441,7 @@
     "category": "conciertos",
     "description": "AGRUPACIÓN FOLCLÓRICA SANTA CECILIA."
   },
-  {
+  {"isSeparator":false,
     "id": 1142,
     "title": "XVI Festival iberi@huesca.folk",
     "day": "11",
@@ -452,7 +452,7 @@
     "category": "conciertos",
     "description": "EL NAÁN (Castilla y León) + MOSICAIRES (Aragón)."
   },
-  {
+  {"isSeparator":false,
     "id": 1143,
     "title": "Charanga Los Sidras",
     "day": "11",
@@ -463,7 +463,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa La Parrilla – Coso Alto. De la Peña Recreativa La Parrilla."
   },
-  {
+  {"isSeparator":false,
     "id": 1144,
     "title": "DASOUL + STARKYTCH DJ",
     "day": "11",
@@ -474,7 +474,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1145,
     "title": "TARANTELLA",
     "day": "11",
@@ -485,7 +485,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1146,
     "title": "DE GALA",
     "day": "11",
@@ -496,7 +496,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1147,
     "title": "Charanga Chilindrón",
     "day": "11",
@@ -507,7 +507,7 @@
     "category": "conciertos",
     "description": "Porches de Galicia – Plaza San Antonio. De la Peña Recreativa Los Que Faltaban."
   },
-  {
+  {"isSeparator":false,
     "id": 1148,
     "title": "Charanga Riau Riau",
     "day": "11",

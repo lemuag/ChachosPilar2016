@@ -2,30 +2,24 @@
   of the app -->
   <ion-view view-title="Pantalla principal">
 
-  <ion-content >
-</ion-nav-buttons>
-  <ul class="list">
-    <li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openGuide()">
-     PROGRAMA
-     <hr class="main-list-line" width="60%"/>
-    </li>
-    <li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openFavorites()">
-     FAVORITOS
-     <hr class="main-list-line" width="60%"/>
-    </li><li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openPhones()">
-     TELÉFONOS DE INTERÉS
-     <hr class="main-list-line" width="60%"/>
-    </li><li class="item main-list-item" style="background-image:url('/img/chupinazo.jpg');" ng-click="openInfo()">
-     SOBRE LAS FIESTAS
-     <hr class="main-list-line" width="60%"/>
-    </li>
-</ul>
-
-
-
-
+  <ion-content class="main-background" >
 
 
 
 </ion-content>
+      <div class="footer">
+
+          <ul class="list">
+              <li class="item main-list-item item-icon-left"  ng-click="openGuide()">
+                  <span class="icon ion-home"></span> PROGRAMA
+              </li>
+              <li class="item main-list-item item-icon-left"  ng-click="openFavorites()">
+                  <span class="icon ion-star"></span>FAVORITOS
+              </li><li class="item main-list-item item-icon-left" ng-click="openPhones()">
+              <span class="icon ion-ios-telephone"></span>TELÉFONOS DE INTERÉS
+          </li><li class="item main-list-item item-icon-left" ng-click="openInfo()">
+              <span class="icon ion-information-circled"></span>SOBRE LAS FIESTAS
+          </li>
+          </ul>
+      </div>
 </ion-view>

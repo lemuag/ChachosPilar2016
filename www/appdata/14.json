@@ -1,5 +1,5 @@
 [
-  {
+  {"isSeparator":false,
     "id": 1401,
     "title": "Pasacalles matinales hasta la Plaza de Toros",
     "day": "14",
@@ -10,7 +10,7 @@
     "category": "conciertos",
     "description": "Charangas Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1402,
     "title": "Suelta de vaquillas",
     "day": "14",
@@ -21,7 +21,7 @@
     "category": "toros",
     "description": "Organiza Albahaca y Plata, S.L. Colaboran: Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1403,
     "title": "Final del Torneo de Petanca “San Lorenzo” para Mayores",
     "day": "14",
@@ -32,7 +32,7 @@
     "category": "otros",
     "description": "Organiza Club Petanca Castillo de Loarre"
   },
-  {
+  {"isSeparator":false,
     "id": 1404,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "14",
@@ -43,7 +43,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1405,
     "title": "Gran Parque Infantil de Hinchables.",
     "day": "14",
@@ -54,7 +54,7 @@
     "category": "infantil",
     "description": "Parque de Torre Mendoza."
   },
-  {
+  {"isSeparator":false,
     "id": 1406,
     "title": "Concentración de las charangas y \"encierro\" infantil",
     "day": "14",
@@ -65,7 +65,7 @@
     "category": "conciertos",
     "description": "Plaza de San Lorenzo – Coso Bajo – Plaza Santo Domingo – Plaza de Toros. Organizan Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 1407,
     "title": "Grupo Los 30",
     "day": "14",
@@ -76,7 +76,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Los 30."
   },
-  {
+  {"isSeparator":false,
     "id": 1408,
     "title": "Comparsa de Gigantes, Cabezudos y Caballicos",
     "day": "14",
@@ -87,7 +87,7 @@
     "category": "infantil",
     "description": "Acompañados por los Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 1409,
     "title": "Programa en directo “La mañana de Huesca”",
     "day": "14",
@@ -98,7 +98,7 @@
     "category": "otros",
     "description": "Organiza COPE Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1410,
     "title": "Programa “Huesca en fiestas”",
     "day": "14",
@@ -109,7 +109,7 @@
     "category": "otros",
     "description": "Organiza esRadio."
   },
-  {
+  {"isSeparator":false,
     "id": 1411,
     "title": "Programa laurentino",
     "day": "14",
@@ -120,7 +120,7 @@
     "category": "otros",
     "description": "Organiza Radio Huesca y Huesca Tv."
   },
-  {
+  {"isSeparator":false,
     "id": 1412,
     "title": "Programa de radio Fiestas de San Lorenzo",
     "day": "14",
@@ -131,7 +131,7 @@
     "category": "otros",
     "description": "Organiza Onda Cero Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 1413,
     "title": "Sbandieratori Ducato Caetani",
     "day": "14",
@@ -142,7 +142,7 @@
     "category": "conciertos",
     "description": "Parque Puerta del Pirineo – Monumento a la Paz."
   },
-  {
+  {"isSeparator":false,
     "id": 1414,
     "title": "Pasacalles ANIMAHU",
     "day": "14",
@@ -153,7 +153,7 @@
     "category": "infantil",
     "description": "ANIMABUS, con el espectáculo “Circo”"
   },
-  {
+  {"isSeparator":false,
     "id": 1415,
     "title": "Charanga Riau - Riau",
     "day": "14",
@@ -164,7 +164,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Zoiti."
   },
-  {
+  {"isSeparator":false,
     "id": 1416,
     "title": "Charanga Plin Floy",
     "day": "14",
@@ -175,7 +175,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Alegría Laurentina."
   },
-  {
+  {"isSeparator":false,
     "id": 1417,
     "title": "Charanga Los Sidras",
     "day": "14",
@@ -186,7 +186,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa La Parrilla."
   },
-  {
+  {"isSeparator":false,
     "id": 1418,
     "title": "Charanga Chilindrón",
     "day": "14",
@@ -197,7 +197,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa Los Que Faltaban."
   },
-  {
+  {"isSeparator":false,
     "id": 1419,
     "title": "Camión Peña Recreativa 10 de Agosto.",
     "day": "14",
@@ -208,7 +208,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1420,
     "title": "Charanga Los Sidras",
     "day": "14",
@@ -219,7 +219,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa La Parrilla – Plaza de Toros"
   },
-  {
+  {"isSeparator":false,
     "id": 1421,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "14",
@@ -230,7 +230,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1422,
     "title": "Gran Parque Infantil de Hinchables.",
     "day": "14",
@@ -241,7 +241,7 @@
     "category": "infantil",
     "description": "Parque de Torre Mendoza."
   },
-  {
+  {"isSeparator":false,
     "id": 1423,
     "title": "Banda de Música de Huesca",
     "day": "14",
@@ -252,7 +252,7 @@
     "category": "conciertos",
     "description": "Plaza de Navarra – Plaza de Toros"
   },
-  {
+  {"isSeparator":false,
     "id": 1424,
     "title": "Reparto de la pócima laurentina",
     "day": "14",
@@ -263,7 +263,7 @@
     "category": "otros",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1425,
     "title": "Quinta Corrida de Feria",
     "day": "14",
@@ -275,7 +275,7 @@
     "description": "Seis toros de la ganadería de Benítez Cubero. Organiza Albahaca y Plata, S.L.",
     "bullfighters":["Fermín Bohórquez","Leonardo Hernández","Manuel Manzanares"]
   },
-  {
+  {"isSeparator":false,
     "id": 1426,
     "title": "Teatro Griego. ANIMAHU",
     "day": "14",
@@ -286,7 +286,7 @@
     "category": "infantil",
     "description": "Compañía Gromic Visual Comedy, con el espectáculo infantil “The magomicshow”"
   },
-  {
+  {"isSeparator":false,
     "id": 1427,
     "title": "IV Trobada de Gaiteros de Aragón",
     "day": "14",
@@ -297,7 +297,7 @@
     "category": "conciertos",
     "description": "Coso Alto – Coso Bajo – Plaza Catedral – Plaza San Antonio y llegada confluyendo en Porches de Galicia. Participantes: Tirurirus Free, Gaiteros del Somontano y Gigantes de la Peña Ferranca, Colla La Empajuzada (Híjar), Barfulaires de Ayerbe, Danzantes de Sabiñánigo, Banda Gaitas de Aragón y Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 1428,
     "title": "Espectáculo ANIMAHU",
     "day": "14",
@@ -308,7 +308,7 @@
     "category": "infantil",
     "description": "Compañía Los Herrerita, con el espectáculo infantil “The Flamingo’s”"
   },
-  {
+  {"isSeparator":false,
     "id": 1429,
     "title": "LA FANIA",
     "day": "14",
@@ -319,7 +319,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1430,
     "title": "Salida de la Plaza de Toros",
     "day": "14",
@@ -330,7 +330,7 @@
     "category": "otros",
     "description": "De Toros de las Peñas Recreativas Oscenses con sus charangas."
   },
-  {
+  {"isSeparator":false,
     "id": 1431,
     "title": "Folclore aragonés",
     "day": "14",
@@ -341,7 +341,7 @@
     "category": "conciertos",
     "description": "GRUPO FOLCLÓRICO ROLDÁN DEL ALTOARAGÓN."
   },
-  {
+  {"isSeparator":false,
     "id": 1432,
     "title": "Charanga Festival",
     "day": "14",
@@ -352,7 +352,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa 10 de Agosto – Porches de Galicia. De la Peña Recreativa 10 de Agosto."
   },
-  {
+  {"isSeparator":false,
     "id": 1433,
     "title": "Factoría de Percusión Ciudad de Huesca",
     "day": "14",
@@ -363,7 +363,7 @@
     "category": "conciertos",
     "description": "Plaza de Lizana – Coso Alto – Porches de Galicia – Coso Bajo – Plaza Santo Domingo"
   },
-  {
+  {"isSeparator":false,
     "id": 1434,
     "title": "PLATINUM THE LIVE ABBA TRIBUTE SHOW",
     "day": "14",
@@ -374,7 +374,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1435,
     "title": "LA FANIA",
     "day": "14",
@@ -385,7 +385,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1436,
     "title": "MAMBO SHOW",
     "day": "14",
@@ -396,7 +396,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 1437,
     "title": "Charanga Chilindrón",
     "day": "14",
@@ -407,7 +407,7 @@
     "category": "conciertos",
     "description": "Organiza Peña Recreativa Los Que Faltaban"
   },
-  {
+  {"isSeparator":false,
     "id": 1438,
     "title": "Grupo Los 30",
     "day": "14",
@@ -418,7 +418,7 @@
     "category": "conciertos",
     "description": "Organiza Peña Recreativa Los 30."
   },
-  {
+  {"isSeparator":false,
     "id": 1439,
     "title": "IV Trobada de Gaiteros de Aragón",
     "day": "14",

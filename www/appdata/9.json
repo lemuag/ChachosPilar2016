@@ -1,5 +1,5 @@
 [
-  {
+  {"isSeparator":false,
     "id": 901,
     "title": "Imposición de la pañoleta de las Fiestas de San Lorenzo a san Juan Bosco",
     "day": "9",
@@ -10,7 +10,7 @@
     "category": "otros",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 902,
     "title": "Programa especial Fiestas de San Lorenzo",
     "day": "9",
@@ -21,7 +21,7 @@
     "category": "otros",
     "description": "Organiza Aragón Radio"
   },
-  {
+  {"isSeparator":false,
     "id": 903,
     "title": "Izado de las banderas de Francia y España",
     "day": "9",
@@ -32,7 +32,7 @@
     "category": "otros",
     "description": "Acto de izado de las banderas nacionales de Francia y España por parte de los Alcaldes de las ciudades de Tarbes y Huesca. Interpretación de los respectivos himnos a cargo de la Banda de Música\nde Huesca."
   },
-  {
+  {"isSeparator":false,
     "id": 904,
     "title": "Recepción de autoridades, discursos y entrega de la Parrilla de Oro “San Lorenzo 2015”",
     "day": "9",
@@ -43,7 +43,7 @@
     "category": "otros",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 905,
     "title": "Pantalla para retransmisión del cohete anunciador",
     "day": "9",
@@ -54,7 +54,7 @@
     "category": "otros",
     "description": "Pantalla instalada para la retransmisión en directo del disparo del cohete anunciador del comienzo de las fiestas. Organiza Aragón TV.."
   },
-  {
+  {"isSeparator":false,
     "id": 906,
     "title": "Lectura del pregón y disparo del cohete anunciador del comienzo de fiestas (Chupinazo)",
     "day": "9",
@@ -65,7 +65,7 @@
     "category": "otros",
     "description": "Con dicho disparo se da comienzo a las fiestas de San Lorenzo. ¡Cuidado con el vino!"
   },
-  {
+  {"isSeparator":false,
     "id": 907,
     "title": "Cabalgata Pregón de Fiestas",
     "day": "9",
@@ -76,7 +76,7 @@
     "category": "otros",
     "description": "Con salida desde la plaza de la Catedral, recorrerá Coso Alto y Porches de Galicia y finalizará en la plaza de Navarra. Participarán las Peñas Recreativas Oscenses y la Banda de Música de Huesca y Batucada Sambalá."
   },
-  {
+  {"isSeparator":false,
     "id": 908,
     "title": "Sbandieratori Ducato Caetani (Italia)",
     "day": "9",
@@ -87,7 +87,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 909,
     "title": "Saludo al santo y colocación de la pañoleta.",
     "day": "9",
@@ -98,7 +98,7 @@
     "category": "otros",
     "description": "A cargo de Carlos y Katia Aznar, de la Peña Recreativa Los Que Faltaban, e interpretación del saludo al santo por la Banda de Música de Huesca y la Coral de Santo Domingo. Organizan Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 910,
     "title": "Animación musical",
     "day": "9",
@@ -109,7 +109,7 @@
     "category": "conciertos",
     "description": "Organizan: Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 911,
     "title": "Pasacalles",
     "day": "9",
@@ -120,7 +120,7 @@
     "category": "conciertos",
     "description": "Charangas Peñas Recreativas Oscenses"
   },
-  {
+  {"isSeparator":false,
     "id": 912,
     "title": "Gran Parque Infantil de Hinchables",
     "day": "9",
@@ -131,7 +131,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 913,
     "title": "Becerrada de las Peñas Recreativas Oscenses",
     "day": "9",
@@ -142,7 +142,7 @@
     "category": "toros",
     "description": "Organizan Albahaca y Plata, S.L. y Peñas Recreativas Oscenses."
   },
-  {
+  {"isSeparator":false,
     "id": 914,
     "title": "Paseos a los niñ@s en la Narria de La Zaragozana",
     "day": "9",
@@ -153,7 +153,7 @@
     "category": "infantil",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 915,
     "title": "Comparsa de Gigantes, Cabezudos y Caballicos y los Gigantes de Sena",
     "day": "9",
@@ -164,7 +164,7 @@
     "category": "infantil",
     "description": "Salida desde el Ayuntamiento de la Comparsa de Gigantes, Cabezudos y Caballicos de Huesca y los Gigantes de Sena (Huesca), acompañados por los Gaiters de Tierra Plana."
   },
-  {
+  {"isSeparator":false,
     "id": 916,
     "title": "Teatro Griego. ANIMAHU",
     "day": "9",
@@ -175,7 +175,7 @@
     "category": "infantil",
     "description": "Compañía de Maese Villarejo, con el espectáculo infantil “Las aventuras de Gorgorito”."
   },
-  {
+  {"isSeparator":false,
     "id": 917,
     "title": "Pasacalles  - Sbandieratori Ducato Caetani",
     "day": "9",
@@ -186,7 +186,7 @@
     "category": "conciertos",
     "description": "Sbandieratori Ducato Caetani (Italia)."
   },
-  {
+  {"isSeparator":false,
     "id": 918,
     "title": "Terraza de Comedias - Actuación musical",
     "day": "9",
@@ -197,7 +197,7 @@
     "category": "conciertos",
     "description": "Actuación musical. Animabus DJ “Solo temazos”. Organiza Terraza de las Comedias."
   },
-  {
+  {"isSeparator":false,
     "id": 919,
     "title": "Orquesta Magnum",
     "day": "9",
@@ -208,7 +208,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 920,
     "title": "Charangas de las Peñas Recreativas",
     "day": "9",
@@ -219,7 +219,7 @@
     "category": "conciertos",
     "description": "Salida de la Plaza de Toros de las Peñas Recreativas Oscenses con sus charangas."
   },
-  {
+  {"isSeparator":false,
     "id": 921,
     "title": "Solemnes Completas",
     "day": "9",
@@ -230,7 +230,7 @@
     "category": "conciertos",
     "description": "Solemnes Completas, interpretadas por la Coral Oscense, el Coro Ars Nova y el Coro Ars Musicae, acompañados por la Orquesta de Cámara de Huesca. Dirigirán don Conrado Betrán y don Antonio Viñuales."
   },
-  {
+  {"isSeparator":false,
     "id": 922,
     "title": "Movistar TV- Tour Cine de Verano",
     "day": "9",
@@ -241,7 +241,7 @@
     "category": "otros",
     "description": "Fiesta del cine."
   },
-  {
+  {"isSeparator":false,
     "id": 923,
     "title": "Sbandieratori Ducato Caetani",
     "day": "9",
@@ -252,7 +252,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 924,
     "title": "Pasacalles Batucada Sambalá",
     "day": "9",
@@ -263,7 +263,7 @@
     "category": "conciertos",
     "description": "Recorrido: Plaza Inmaculada – Porches de Galicia – Plaza Concepción Arenal – Plaza\nSan Antonio"
   },
-  {
+  {"isSeparator":false,
     "id": 925,
     "title": "Noche de Rumbas",
     "day": "9",
@@ -274,7 +274,7 @@
     "category": "conciertos",
     "description": "Actuación. SON COMO SON + DJ BABY. Colabora: Peña Flamenca Bajañí."
   },
-  {
+  {"isSeparator":false,
     "id": 926,
     "title": "Ronda a San Lorenzo",
     "day": "9",
@@ -285,7 +285,7 @@
     "category": "conciertos",
     "description": "Ronda a san Lorenzo a cargo de Agrupación Folclórica Santa Cecilia y Asociación Folclórica Estirpe de Aragonia."
   },
-  {
+  {"isSeparator":false,
     "id": 927,
     "title": "Pasacalles - Charanga Los Sidras",
     "day": "9",
@@ -296,7 +296,7 @@
     "category": "conciertos",
     "description": "Local Peña Recreativa La Parrilla - Coso Alto. Organiza Peña Recreativa La Parrilla."
   },
-  {
+  {"isSeparator":false,
     "id": 928,
     "title": "Concierto Huecco",
     "day": "9",
@@ -307,7 +307,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 929,
     "title": "Orquesta Magnum",
     "day": "9",
@@ -318,7 +318,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 930,
     "title": "Orquesta Solistas",
     "day": "9",
@@ -329,7 +329,7 @@
     "category": "conciertos",
     "description": "Sin descripción."
   },
-  {
+  {"isSeparator":false,
     "id": 931,
     "title": "Pasacalles - Charanga Riau-Riau",
     "day": "9",
@@ -340,7 +340,7 @@
     "category": "conciertos",
     "description": "Porches de Galicia - Calle Padre Huesca – Plaza Alfonso I el Batallador. Organiza Peña Recreativa Zoiti."
   },
-  {
+  {"isSeparator":false,
     "id": 932,
     "title": "Grupo Los 30",
     "day": "9",

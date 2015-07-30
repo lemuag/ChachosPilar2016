@@ -126,7 +126,6 @@ module.service('EventService',['$http','$q',function($http,$q){
 	
 		//todo: procesamiento
 		console.log(category);
-
 		var previous_data = new Array();
 		if(day!= -1){
 			//Partimos de los datos de solo un día
@@ -168,6 +167,7 @@ module.service('EventService',['$http','$q',function($http,$q){
 			//No hay categoría, no se filtra nada.
 			return_function(previous_data);
 		}
+		return data;
 		
 	}
 
