@@ -91,6 +91,9 @@ overflow: initial;
     
 }
 
+.card .item-text-wrap{
+    background:rgba(255,255,255,0.95);
+}
 
 .left-image{
     max-width:100%;
@@ -189,7 +192,7 @@ background-color: #f00;
     background: url(../img/guide.jpg);
     background-position: left top; /*Positioning*/
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:100% 100%;
 
 }
 .guide-background {
@@ -236,7 +239,7 @@ body .overflow-scroll {
 .footer {
     position:fixed;
     width:100%;
-    bottom:195px;
+    bottom:207px;
     height:0px;
 }
 

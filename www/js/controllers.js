@@ -247,7 +247,7 @@ $scope.textoBusqueda = "";
 
 
       $scope.listTitle = "Favoritos"
-      console.log($scope.day);
+
 
 
       //Funcion de callback llamada cuando los datos se han cargado
@@ -441,11 +441,11 @@ $scope.textoBusqueda = "";
   $scope.favorite = FavoriteService.get($scope.eventId);
 
       if($scope.favorite){
-        console.log("Favorito true: " + $scope.favorite);
+
         $scope.textoFavorito = "Favorito";
       }
       else{
-        console.log("Favorito false: " + $scope.favorite);
+
         $scope.textoFavorito = "No favorito";
       }
 

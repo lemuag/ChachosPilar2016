@@ -8,6 +8,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+
+      if (window.StatusBar) {
+          if (ionic.Platform.isAndroid()) {
+              StatusBar.backgroundColorByHexString('#035222');
+          } else {
+              StatusBar.styleLightContent();
+          }
+      }
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -142,15 +151,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           }
       })
 
-      .state('app.test', {
-          url: "/test",
-          views: {
-              'menuContent': {
-                  templateUrl: "templates/test.html",
-                  controller: 'testCtrl'
-              }
-          }
-      })
+
 
   ;
   // if none of the above states are matched, use this as the fallback

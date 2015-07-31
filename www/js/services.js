@@ -124,8 +124,7 @@ module.service('EventService',['$http','$q',function($http,$q){
 	//y retornar  a la funcion indicada
 	this.process  = function(category,day,return_function){
 	
-		//todo: procesamiento
-		console.log(category);
+
 		var previous_data = new Array();
 		if(day!= -1){
 			//Partimos de los datos de solo un día
@@ -160,7 +159,7 @@ module.service('EventService',['$http','$q',function($http,$q){
 
 			//Para finalizar, se llamada a la funcion de retorno
 			//con el resultado
-			console.log("Datos procesados. Retornando...");
+
 			return_function(final_data);
 		}
 		else{
@@ -254,13 +253,12 @@ module.service('EventService',['$http','$q',function($http,$q){
 
 		if(is_data_loaded){
 			//todo: procesamiento
-			console.log("Datos ya cargados en memoria.");
+
 			this.process(category,day,return_function);
 			//return_function(data);
 		}
 		else{
 			//todo: procesamiento
-			console.log("Hay que cargar los datos, llamando a loadData.");
 			current_category = category;
 			current_day = day;
 			self.loadData("getList",return_function);
