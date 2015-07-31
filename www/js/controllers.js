@@ -639,23 +639,30 @@ $scope.textoBusqueda = "";
 
 })
 
-.controller('infoCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
+.controller('infoCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading,$ionicScrollDelegate){
 
 
 var groups = [false,false,false,false,false];
 
+
+        $scope.openLink = function(link){
+            window.open(link, "_system");
+        }
  $scope.toggleGroup = function(id){
 
 
-  var i;
+  /*var i;
   for(i=0;i<groups.length;i++){
     if(i!=id){
        groups[i] = false;
-    }
-    else{
+    }*/
+    //else{
       groups[id] = !groups[id];
-    }
-  }
+    //}
+  //}
+     $ionicScrollDelegate.resize()
+     //$ionicScrollDelegate.scrollTop(true);
+
 
  };
 

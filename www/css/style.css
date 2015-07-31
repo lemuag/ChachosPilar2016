@@ -275,3 +275,22 @@ body .overflow-scroll {
     font-size:130%;
 
 }
+
+.imagenInfo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    max-width:100%;
+
+}
+
+.barraBusqueda{
+    background-color:#d6f8d6 !important;
+
+
+}
+
+.letraNegra{
+    color:black !important;
+}

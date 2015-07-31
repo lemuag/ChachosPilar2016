@@ -15,9 +15,9 @@
     </ion-nav-bar>
     <ion-content class="guide-background ">
 
-        <form ng-submit="buscar()" ng-show="buscarVisible" class="search">
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
+        <form ng-submit="buscar()" ng-show="buscarVisible" class="search" ng-cloak>
+            <label class="item item-input  barraBusqueda" >
+                <i class="icon ion-search placeholder-icon letraNegra"></i>
                 <input type="search" ng-model="$parent.filtro" placeholder="Buscar por título y/o lugar">
             </label>
         </form>
