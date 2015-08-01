@@ -37,6 +37,18 @@
   },
   {
     "isSeparator": false,
+    "id": 91203,
+    "title": "Paseos a los niñ@s en la Narria de la Zaragozana",
+    "day": "12",
+    "hour": "11:00-12:00",
+    "place_text": "Parque Miguel Servet",
+    "place_long":"-0.412571",
+    "place_lat":"42.1369258",
+    "category": "infantil",
+    "description": "Sin descripción."
+  },
+  {
+    "isSeparator": false,
     "id": 1204,
     "title": "Parque infantil “Huesca Leyenda Viva”",
     "day": "12",
@@ -157,18 +169,6 @@
   },
   {
     "isSeparator": false,
-    "id": 1214,
-    "title": "Programa de radio Fiestas de San Lorenzo",
-    "day": "12",
-    "hour": "12:30 – 14:00",
-    "place_text": "Porches de Galicia",
-    "place_long": "-0.4083103",
-    "place_lat": "42.1366931",
-    "category": "otros",
-    "description": "Organiza Onda Cero Huesca."
-  },
-  {
-    "isSeparator": false,
     "id": 1215,
     "title": "Concentración de Charangas",
     "day": "12",
@@ -206,14 +206,14 @@
   {
     "isSeparator": false,
     "id": 1218,
-    "title": "Charanga Los Sidras",
+    "title": "Pasacalles hacia la Plaza de Toros",
     "day": "12",
     "hour": "17:30",
-    "place_text": "Salida: Local Peña Recreativa La Parrilla",
+    "place_text": "Sin definir.",
     "place_long": "-0.4135679",
     "place_lat": "42.1405255",
     "category": "conciertos",
-    "description": "Local Peña Recreativa La Parrilla – Plaza de Toros."
+    "description": "Peñas Recreativas Oscenses."
   },
   {
     "isSeparator": false,
@@ -278,6 +278,18 @@
       "Enrique Ponce",
       "Julián López \"El Juli\""
     ]
+  },
+  {
+    "isSeparator": false,
+    "id": 91223,
+    "title": "Paseos a los niños y las niñas en la Narria en La Zaragozana",
+    "day": "12",
+    "hour": "18:30 - 19:30",
+    "place_text": "Parque Miguel Servet",
+    "place_long": "-0.412571",
+    "place_lat": "42.1369258",
+    "category": "infantil",
+    "description": "Sin descripción."
   },
   {
     "isSeparator": false,

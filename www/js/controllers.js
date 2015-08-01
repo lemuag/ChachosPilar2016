@@ -639,7 +639,7 @@ $scope.textoBusqueda = "";
 
 })
 
-.controller('infoCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading,$ionicScrollDelegate){
+.controller('infoCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading,$ionicScrollDelegate,$timeout){
 
 
 var groups = [false,false,false,false,false];
@@ -651,16 +651,12 @@ var groups = [false,false,false,false,false];
  $scope.toggleGroup = function(id){
 
 
-  /*var i;
-  for(i=0;i<groups.length;i++){
-    if(i!=id){
-       groups[i] = false;
-    }*/
-    //else{
       groups[id] = !groups[id];
-    //}
-  //}
-     $ionicScrollDelegate.resize()
+     $timeout(function(){
+         //timeout para que de tiempo a renderizarse
+         $ionicScrollDelegate.resize();
+     },300);
+
      //$ionicScrollDelegate.scrollTop(true);
 
 

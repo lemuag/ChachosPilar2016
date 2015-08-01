@@ -197,6 +197,7 @@
     "category": "conciertos",
     "description": "De la Peña Recreativa 10 de Agosto."
   },
+
   {"isSeparator":false,
     "id": 1020,
     "title": "Pasacalles - Charanga Riau - Riau",
@@ -218,6 +219,17 @@
 "place_lat":"42.1394466",
     "category": "conciertos",
     "description": "De la Peña Recreativa Los 30."
+  },
+  {"isSeparator":false,
+    "id": 91021,
+    "title": "Pasacalles - Charanga Plin Floy",
+    "day": "10",
+    "hour": "12:45",
+    "place_text":"Barrio Casco Viejo",
+    "place_long":"-0.4081943",
+    "place_lat":"42.138683",
+    "category": "conciertos",
+    "description": "Organiza Peña Recreativa Alegría Laurentina"
   },
   {"isSeparator":false,
     "id": 1022,
@@ -254,14 +266,14 @@
   },
   {"isSeparator":false,
     "id": 1025,
-    "title": "Pasacalles - Charanga Los Sidras.",
+    "title": "Pasacalles hacia la Plaza de Toros",
     "day": "10",
     "hour": "17:30",
-    "place_text":"Salida: Local Peña Recreativa La Parrilla",
-"place_long":"-0.4135679",
-"place_lat":"42.1405255",
+    "place_text":"Sin definir",
+"place_long":"0",
+"place_lat":"0",
     "category": "conciertos",
-    "description": "Local Peña Recreativa La Parrilla – Plaza de Toros. Pasacalles. Charanga Los\nSidras."
+    "description": "Charangas Peñas Recreativas Oscenses"
   },
   {"isSeparator":false,
     "id": 1026,
@@ -494,17 +506,6 @@
     "place_lat":"42.1366931",
     "category": "conciertos",
     "description": "Porches de Galicia – Plaza de Santo Domingo. Organiza Peña Recreativa Zoiti."
-  },
-  {"isSeparator":false,
-    "id": 1048,
-    "title": "Pasacalles - Charanga Plin Floy",
-    "day": "10",
-    "hour": "00:45",
-    "place_text":"Barrio Casco Viejo",
-"place_long":"-0.4081943",
-"place_lat":"42.138683",
-    "category": "conciertos",
-    "description": "Organiza Peña Recreativa Alegría Laurentina."
   },
   {"isSeparator":false,
     "id": 1049,
