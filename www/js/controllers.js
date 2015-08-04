@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout,$state) {
-  
+
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/dias.html', {
@@ -9,6 +9,10 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+
+
+
+
 
         $scope.goMain = function(){
             $state.go('app.main');
@@ -40,7 +44,28 @@ angular.module('starter.controllers', [])
 
 
 .controller('GuideCtrl',["$scope","$stateParams","$state","$http","EventService",
-  function($scope,$stateParams,$state,$http,EventService,$ionicLoading){
+  function($scope,$stateParams,$state,$http,EventService){
+
+      $scope.add = function() {
+          var alarmTime = new Date();
+          alarmTime.setMinutes(alarmTime.getSeconds() + 5);
+          cordova.plugins.notification.local.schedule({
+              id: "1234",
+              date: alarmTime,
+              message:"Retransmisión en directo de la primera actuación de los Danzantes de Huesca",
+              title: "Evento a las 8:15",
+              autoCancel: true,
+          });
+
+
+          };
+
+
+
+
+
+
+
 //Controlador de pantalla Main, que es la de inicio.
 
 $scope.filtro = "";
@@ -68,6 +93,7 @@ $scope.buscar = function(){
 }
 
 $scope.toggleSearch = function(){
+    //$scope.add();
 $scope.buscarVisible = !$scope.buscarVisible;
 
 }
@@ -432,12 +458,119 @@ $scope.textoBusqueda = "";
 
 
     })
-    .controller('EventDetailCtrl',function($scope,$stateParams,$compile,EventService,FavoriteService,$ionicLoading){
+    .controller('EventDetailCtrl',function($scope,$stateParams,$compile,EventService,FavoriteService,$ionicLoading,NotificationService,$ionicModal,$ionicPopup,$timeout){
 
-  //Controlador de pantalla de detalle de evento
-  $scope.eventId = parseInt($stateParams.eventId);
 
-  //Se obtiene si es favorito
+       //Controlador de pantalla de detalle de evento
+        $scope.eventId = parseInt($stateParams.eventId);
+
+        //Miramos si hay reminder
+        $scope.hasReminder = false;
+
+        //Comprobamos si tiene reminder, solo en Android
+        if (ionic.Platform.isAndroid()) {
+            NotificationService.isScheduled($scope.eventId,function(has){
+
+                $scope.hasReminder = has;
+
+                /*if(has){
+                cordova.plugins.notification.local.get($scope.eventId, function (notifications) {
+                    var current = new Date();
+                    var programada = notifications.date;
+                    $scope.hasReminder = (programada.getTime() >= current.getTime());
+                });
+                }*/
+               /* NotificationService.isTriggered($scope.eventId,function(triggered){
+                        //Se ha triggereado y estaba programada, se cancela
+                        NotificationService.removeReminder($scope.eventId);
+                        $scope.hasReminder = false;
+
+                });*/
+            });
+        }
+
+
+        //Devuelve cierto si ya ha pasado el evento indicado
+        $scope.hasPassed = function(event){
+            //Se saca la hora y el minuto
+            var time = event["hour"];
+
+            var day = event["day"];
+            var hour = getHour(time);
+            var minute = getMinute(time);
+
+            //Si la hora es las 24, se suma un dia y serán las 0:00
+            //Si no lo es, se queda como esta, ya que a partir de las 0:01 esta marcado
+            //en los datos como siguiente dia
+            if(hour==24){
+                day++;
+                hour = 0;
+            }
+
+
+            var alarmTime = new Date(2015, 7, day, hour, minute, 0, 0);
+            var now = new Date();
+            return alarmTime.getTime()<=now.getTime();
+
+        }
+
+
+        //Devuelve la hora dada una cadena de hora
+        var getHour = function(hour_text){
+            dosPuntos = hour_text.indexOf(":");
+            if(dosPuntos> -1) {
+                var hora = hour_text.substr(0, dosPuntos);
+                return hora;
+            }
+            return undefined;
+        }
+
+        //Devuelve el minuto dada una cadena de hora
+        var getMinute = function(hour_text){
+            dosPuntos = hour_text.indexOf(":");
+            if(dosPuntos> -1) {
+                var minutos = hour_text.substr(dosPuntos +1,dosPuntos +1 +2);
+                return minutos
+            }
+            return undefined;
+        }
+
+        $scope.showDialogoAlarma = function() {
+            $scope.data = {}
+
+            $scope.choice = {choice: 0};
+
+            // An elaborate, custom popup
+            var myPopup = $ionicPopup.show({
+                templateUrl: 'templates/dias.html',
+                title: '<b>¿Con cuánto tiempo quieres que te avise?</b>',
+                scope: $scope,
+                buttons: [
+                    { text: 'Cancelar' },
+                    {
+                        text: '<b>Confirmar</b>',
+                        type: 'button-positive',
+                        onTap: function(e) {
+
+                            //Programamos la alarma
+                            var exit = NotificationService.addReminder($scope.eventId,$scope.choice.choice);
+                            $ionicLoading.show({ template: "Recordatorio programado.", noBackdrop: true, duration: 1000});
+                         return true;
+
+                        }
+                    }
+                ]
+            });
+            myPopup.then(function(res) {
+              $scope.hasReminder = res;
+            });
+        };
+
+
+
+
+
+        //Se obtiene si es favorito
   $scope.favorite = FavoriteService.get($scope.eventId);
 
       if($scope.favorite){
@@ -460,8 +593,28 @@ $scope.textoBusqueda = "";
 
 
 
+        //Alterna el estado del recordatorio
+        $scope.toggleReminder = function(){
+
+            if($scope.hasReminder){
+                //Se elimina el recordatorio
+                NotificationService.removeReminder($scope.eventId);
+                $ionicLoading.show({ template: 'Recordatorio eliminado', noBackdrop: true, duration: 1000 });
+                $scope.hasReminder = false;
+            }
+            else{
+                //Se añade un recordatorio
+               $scope.showDialogoAlarma();
+            }
+
+
+
+        }
+
+
       $scope.launchMap = function(){
         //https://www.google.com/maps/preview/@-15.623037,18.388672,8z
+       //$scope.showPopup();
         window.open("http://maps.google.com/maps?q=loc:" + $scope.event.place_lat +"," + $scope.event.place_long , "_system");
       }
 
@@ -623,8 +776,25 @@ $scope.textoBusqueda = "";
 .controller('MainCtrl',function($scope,$stateParams,$state,EventService,FavoriteService,$ionicLoading){
 
 
+        $scope.buscarVisible = false;
 
-  $scope.openGuide = function(){
+
+        $scope.toggleSearch = function(){
+            //$scope.add();
+            $scope.buscarVisible = !$scope.buscarVisible;
+
+        }
+
+        $scope.buscar = function(){
+
+            $state.go('app.searchList', {term:$scope.filtro});
+            $scope.buscarVisible = false;
+            $scope.filtro = "";
+        }
+
+
+
+        $scope.openGuide = function(){
     $state.go('app.guide');
   };
   $scope.openFavorites = function(){

@@ -1,5 +1,22 @@
 <ion-view view-title="Ver evento" ng-init="init()">
+
+  <ion-nav-bar class="bar-balanced colorSanLorenzo">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+
+
+    <ion-nav-buttons side="right">
+
+
+      <button ng-class="{'ion-ios-bell': hasReminder, 'ion-ios-bell-outline': !hasReminder}" class="button button-icon button-clear ion-ios-bell" ng-click="toggleReminder()" ng-show="!hasPassed(event)"></button>
+
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
   <ion-content class="description-background">
+
+
     <div class="list card">
 
   <div class="item elemento-lista-eventos">

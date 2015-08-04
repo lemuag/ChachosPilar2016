@@ -2,12 +2,24 @@
   of the app -->
   <ion-view view-title="San Lorenzo 2015">
 
+      <ion-nav-buttons side="right">
+          <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()"></button>
+              <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+              </button>
+      </ion-nav-buttons>
   <ion-content class="main-background" >
+
+      <form ng-submit="buscar()" ng-show="buscarVisible" class="search" ng-cloak>
+          <label class="item item-input  barraBusqueda" >
+              <i class="icon ion-search placeholder-icon letraNegra"></i>
+              <input type="search" ng-model="$parent.filtro" placeholder="Buscar por título y/o lugar" ng-focus="offTeclado()" ng-blur="onTeclado()">
+          </label>
+      </form>
 
 
 
 </ion-content>
-      <div class="footer">
+      <div class="footer" >
 
           <ul class="list">
               <li class="item main-list-item item-icon-left"  ng-click="openGuide()">
