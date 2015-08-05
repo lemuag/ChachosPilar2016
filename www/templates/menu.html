@@ -1,57 +1,57 @@
+<!--
+Vista del menu lateral (drawer)
+-->
 <ion-side-menus enable-menu-with-back-views="true">
-  
-
-  <!--Contenido de la pagina central (no menu lateral) -->
-  <ion-side-menu-content>
-    <ion-nav-bar class="bar-balanced colorSanLorenzo">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
 
 
-      <ion-nav-buttons side="right">
-     
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
-        </button>
-      </ion-nav-buttons>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-balanced colorSanLorenzo">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
 
-    </ion-nav-bar>
-    <!-- Esto parece ser la vista principal -->
-    <!-- Si, luego en el app.js se especifica que esto 
-    se rellenara con otro template -->
 
-    <ion-nav-view name="menuContent"></ion-nav-view>
+            <ion-nav-buttons side="right">
 
-  </ion-side-menu-content>
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
 
-  <!--Contenido del menu lateral-->
-  <ion-side-menu side="right">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Menú</h1>
+        </ion-nav-bar>
 
-    </ion-header-bar>
 
-    <!-- ion-content es para listas con scroll -->
-    <ion-content >
-      <ion-list>
-      <ion-item menu-close href="#/app/main" class="item-icon-left">
-          <span class="icon ion-home"></span>Inicio
-        </ion-item>
-      <ion-item menu-close ng-click="goGuide()" class="item-icon-left">
-          <span class="icon ion-ios-paper"></span>Programa
-        </ion-item>
-        <ion-item menu-close  ng-click="goFavList()" class="item-icon-left">
-          <span class="icon ion-star"></span>Favoritos
-        </ion-item>
-        <ion-item menu-close ng-click="goPhones()" class="item-icon-left">
-          <span class="icon ion-ios-telephone"></span>Teléfonos
-        </ion-item>
-        <ion-item menu-close ng-click="goInfo()" class="item-icon-left">
-          <span class="icon ion-information-circled"></span>Sobre las fiestas
-        </ion-item>
-        <ion-item menu-close ng-click="goAbout()" class="item-icon-left">
-          <span class="icon ion-iphone"></span>Acerca de la app
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <!--Contenido del menu lateral-->
+    <ion-side-menu side="right">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Menú</h1>
+
+        </ion-header-bar>
+
+        <!-- ion-content es para listas con scroll -->
+        <ion-content>
+            <ion-list>
+                <ion-item menu-close href="#/app/main" class="item-icon-left">
+                    <span class="icon ion-home"></span>Inicio
+                </ion-item>
+                <ion-item menu-close ng-click="goGuide()" class="item-icon-left">
+                    <span class="icon ion-ios-paper"></span>Programa
+                </ion-item>
+                <ion-item menu-close ng-click="goFavList()" class="item-icon-left">
+                    <span class="icon ion-star"></span>Favoritos
+                </ion-item>
+                <ion-item menu-close ng-click="goPhones()" class="item-icon-left">
+                    <span class="icon ion-ios-telephone"></span>Teléfonos
+                </ion-item>
+                <ion-item menu-close ng-click="goInfo()" class="item-icon-left">
+                    <span class="icon ion-information-circled"></span>Sobre las fiestas
+                </ion-item>
+                <ion-item menu-close ng-click="goAbout()" class="item-icon-left">
+                    <span class="icon ion-iphone"></span>Acerca de la app
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
 </ion-side-menus>

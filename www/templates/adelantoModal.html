@@ -1,30 +1,32 @@
 
+<!--
+Contenido del modal mostrado para elegir el adelanto de un recordatorio.
+-->
+<div class="row">
 
-          <div class="row">
+  <div class="col">
+      <ion-radio ng-model="choice.choice" ng-value="0">0m</ion-radio>
+  </div>
+  <div class="col">
+      <ion-radio ng-model="choice.choice" ng-value="5">5m</ion-radio>
+  </div>
+  <div class="col">
+      <ion-radio ng-model="choice.choice" ng-value="15">15m</ion-radio>
+  </div>
+</div>
 
-              <div class="col">
-                  <ion-radio ng-model="choice.choice" ng-value="0">0m</ion-radio>
-              </div>
-              <div class="col">
-                  <ion-radio ng-model="choice.choice" ng-value="5">5m</ion-radio>
-              </div>
-              <div class="col">
-                  <ion-radio ng-model="choice.choice" ng-value="15">15m</ion-radio>
-              </div>
-          </div>
+<div class="row">
 
-          <div class="row">
-
-              <div class="col">
-                  <ion-radio ng-model="choice.choice" ng-value="30">30m</ion-radio>
-              </div>
-              <div class="col">
-                  <ion-radio ng-model="choice.choice" ng-value="60">1h</ion-radio>
-              </div>
-              <div class="col">
-                  <ion-radio ng-model="choice.choice" ng-value="120">2h</ion-radio>
-              </div>
-          </div>
+  <div class="col">
+      <ion-radio ng-model="choice.choice" ng-value="30">30m</ion-radio>
+  </div>
+  <div class="col">
+      <ion-radio ng-model="choice.choice" ng-value="60">1h</ion-radio>
+  </div>
+  <div class="col">
+      <ion-radio ng-model="choice.choice" ng-value="120">2h</ion-radio>
+  </div>
+</div>
 
 
 

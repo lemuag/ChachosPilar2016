@@ -1,24 +1,27 @@
+<!--
+Vista de telefonos de interes
+-->
 <ion-view view-title="Teléfonos" ng-init="init()">
-  <ion-content class="has-header">
-    <ion-list>
+    <ion-content class="has-header">
+        <ion-list>
 
-<div ng-repeat="section in phones">
+            <div ng-repeat="section in phones">
 
-  <div class="item item-divider" ng-if="section.phones.length >0 ">
-    <!--Cabecera de día -->
-    {{section.name}}
-  </div>
+                <div class="item item-divider" ng-if="section.phones.length >0 ">
+                    <!--Cabecera de día -->
+                    {{section.name}}
+                </div>
 
-  <div ng-repeat="contact in section.phones" class="item item-button-right" >
-    <strong class="tituloEvento">{{contact.title}}</strong> <br/>
-    {{contact.phone}}
-    <button class="button button-positive" ng-click="call(contact.phone)">
-      <i class="icon ion-ios-telephone"></i>
-    </button>
-  </div>
+                <div ng-repeat="contact in section.phones" class="item item-button-right">
+                    <strong class="tituloEvento">{{contact.title}}</strong> <br/>
+                    {{contact.phone}}
+                    <button class="button button-positive" ng-click="call(contact.phone)">
+                        <i class="icon ion-ios-telephone"></i>
+                    </button>
+                </div>
 
-</div>
+            </div>
 
-    </ion-list>
-  </ion-content>
+        </ion-list>
+    </ion-content>
 </ion-view>

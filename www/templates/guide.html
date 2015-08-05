@@ -1,5 +1,6 @@
-<!--This view shows the main list of days. It is the main screen
-  of the app -->
+<!--
+Vista de guia, que muestra las categorias y dias disponibles.
+-->
 <ion-view view-title="Programa">
     <ion-nav-bar class="bar-balanced colorSanLorenzo ">
         <ion-nav-back-button>
@@ -15,8 +16,8 @@
     </ion-nav-bar>
     <ion-content class="guide-background ">
 
-        <form ng-submit="buscar()" ng-show="buscarVisible" class="search ng-cloak" >
-            <label class="item item-input  barraBusqueda" >
+        <form ng-submit="buscar()" ng-show="buscarVisible" class="search ng-cloak">
+            <label class="item item-input  barraBusqueda">
                 <i class="icon ion-search placeholder-icon letraNegra"></i>
                 <input type="search" ng-model="$parent.filtro" placeholder="Buscar por título y/o lugar">
             </label>
@@ -27,9 +28,7 @@
                 Programa por días:
             </div>
             <div class="item  item-text-wrap " style="padding:5px; align:center; ">
-                <!--<button class="button button-block button-large button-balanced colorSanLorenzo" ng-click="openDay(-1)">
-                 <span class="icon ion-calendar"  ng-click="openList()"></span> Todos los días
-               </button>-->
+
 
                 <div class="row" style="margin-top: -10px; align:center;">
 
@@ -105,45 +104,45 @@
             </div>
 
 
-        <div class="item item-divider">
-            Programa por categorías
-        </div>
+            <div class="item item-divider">
+                Programa por categorías
+            </div>
 
-        <div class="item item-text-wrap">
-            <div class="row" style="margin-top: -30px;">
+            <div class="item item-text-wrap">
+                <div class="row" style="margin-top: -30px;">
 
 
-                <div class="col">
-                    <button class="button button-block button-large button-balanced colorSanLorenzo"
-                            ng-click="openCategory('conciertos')">
-                        <span class="categoryLabel">Conciertos</span>
-                    </button>
+                    <div class="col">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openCategory('conciertos')">
+                            <span class="categoryLabel">Conciertos</span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openCategory('infantil')">
+                            <span class="categoryLabel">Infantil</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="col">
-                    <button class="button button-block button-large button-balanced colorSanLorenzo"
-                            ng-click="openCategory('infantil')">
-                        <span class="categoryLabel">Infantil</span>
-                    </button>
+                <div class="row" style="margin-top: -30px;">
+
+
+                    <div class="col">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openCategory('toros')">
+                            <span class="categoryLabel">Toros</span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openCategory('otros')">
+                            <span class="categoryLabel">Otros</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="row" style="margin-top: -30px;">
-
-
-                <div class="col">
-                    <button class="button button-block button-large button-balanced colorSanLorenzo"
-                            ng-click="openCategory('toros')">
-                        <span class="categoryLabel">Toros</span>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="button button-block button-large button-balanced colorSanLorenzo"
-                            ng-click="openCategory('otros')">
-                        <span class="categoryLabel">Otros</span>
-                    </button>
-                </div>
-            </div>
         </div>
-</div>
         </div>
         </div>
 
