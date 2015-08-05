@@ -1,6 +1,6 @@
 {
   "name": "San Lorenxo 2015",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Guia de fiestas San Lorenzo 2015 en Huesca",
   "dependencies": {
     "gulp": "^3.5.6",

@@ -1,87 +1,84 @@
 <ion-view view-title="Ver evento" ng-init="init()">
 
-  <ion-nav-bar class="bar-balanced colorSanLorenzo">
-    <ion-nav-back-button>
-    </ion-nav-back-button>
+    <ion-nav-bar class="bar-balanced colorSanLorenzo">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
 
 
-    <ion-nav-buttons side="right">
+        <ion-nav-buttons side="right">
 
 
-      <button ng-class="{'ion-ios-bell': hasReminder, 'ion-ios-bell-outline': !hasReminder}" class="button button-icon button-clear ion-ios-bell" ng-click="toggleReminder()" ng-show="!hasPassed(event)"></button>
+            <button ng-class="{'ion-ios-bell': hasReminder, 'ion-ios-bell-outline': !hasReminder}"
+                    class="button button-icon button-clear ion-ios-bell" ng-click="toggleReminder()"
+                    ng-show="!hasPassed(event) && isAndroid()"></button>
 
-      <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
-    </ion-nav-buttons>
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+        </ion-nav-buttons>
 
-  </ion-nav-bar>
-  <ion-content class="description-background">
-
-
-    <div class="list card">
-
-  <div class="item elemento-lista-eventos">
-  <div class="row">
-            <div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
-            <div class="col"> <span class="tituloDescripcion">{{event.title}}</span>
-            <br/>
+    </ion-nav-bar>
+    <ion-content class="description-background">
 
 
+        <div class="list card">
 
-    <span class="horaDescripcion"><span  class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
-    <br/>
-     </i><span class="horaDescripcion"><span  class="icon ion-location"></span>   {{event.place_text}}</span></div>
+            <div class="item elemento-lista-eventos">
+                <div class="row">
+                    <div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
+                    <div class="col"><span class="tituloDescripcion">{{event.title}}</span>
+                        <br/>
+
+
+                        <span class="horaDescripcion"><span class="icon ion-calendar"></span>   Día {{event.day}} - {{event.hour}}</span>
+                        <br/>
+                        </i><span class="horaDescripcion"><span class="icon ion-location"></span>   {{event.place_text}}</span>
+                    </div>
+                </div>
+
+
             </div>
-    
 
-  </div>
- 
-  <div class="item item-body">
+            <div class="item item-body">
     <span>
       {{event.description}}
 
     </span>
 
-  </div>
-  <div class="item item-body" ng-show="event.bullfighters != undefined">
+            </div>
+            <div class="item item-body" ng-show="event.bullfighters != undefined">
     <span>
       Toreros:
-     <button  ng-repeat="person in event.bullfighters" class="button button-block">{{person}}</button>
+     <button ng-repeat="person in event.bullfighters" class="button button-block">{{person}}</button>
       
     </span>
 
-  </div>
-      <div class="row">
-        <div class="col" ng-click="launchMap()" ng-show="event.place_long!='0'"><button class="button button-block button-balanced colorSanLorenzo">
-          <span class="icon ion-map"></span> Ver mapa
-        </button>
+            </div>
+            <div class="row">
+                <div class="col" ng-click="launchMap()" ng-show="event.place_long!='0'">
+                    <button class="button button-block button-balanced colorSanLorenzo">
+                        <span class="icon ion-map"></span> Ver mapa
+                    </button>
+                </div>
+                <div class="col" ng-click="alert('No hay información sobre el lugar de este evento')"
+                     ng-hide="event.place_long!='0'">
+                    <button class="button button-block disabled button-balanced colorSanLorenzo">
+                        <span class="icon ion-map"></span> Ver mapa
+                    </button>
+                </div>
+                <div class="col" ng-click="favoriteEvent()">
+                    <button class="button button-block button-balanced fav-button colorSanLorenzo">
+
+                        <img ng-show="!isFav(event.id)" class="fav-star-central" src="img/icon-fav-off.png"></span>
+                        <img ng-show="isFav(event.id)" class="fav-star-central" src="img/icon-fav.png"></span>
+
+                        {{ textoFavorito }}
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+
+
         </div>
-        <div class="col" ng-click="alert('No hay información sobre el lugar de este evento')" ng-hide="event.place_long!='0'"><button class="button button-block disabled button-balanced colorSanLorenzo">
-          <span class="icon ion-map"></span> Ver mapa
-        </button>
-        </div>
-        <div class="col" ng-click="favoriteEvent()"><button class="button button-block button-balanced fav-button colorSanLorenzo">
-
-          <img ng-show="!isFav(event.id)" class="fav-star-central" src="img/icon-fav-off.png"></span>
-          <img ng-show="isFav(event.id)" class="fav-star-central" src="img/icon-fav.png"></span>
-
-          {{ textoFavorito }}
-        </button>
-        </div>
-        </div>
-        <div class="row">
-
-        </div>
-
-  <!--<div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#" ng-click="favoriteEvent()">
-      <img ng-show="isFav(event.id)" class="fav-star-left" src="img/fav.png">
-      <img ng-hide="isFav(event.id)" class="fav-star-left" src="img/fav-off.png">
-      <span class="fav-text">{{ textoFavorito }}</span>
-
-    </a>
-   
-  </div>-->
-
-</div>
-  </ion-content>
+    </ion-content>
 </ion-view>
