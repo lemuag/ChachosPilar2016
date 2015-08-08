@@ -1,6 +1,12 @@
 
 /**
  * Servicio de notificaciones. Se encarga de gestionar los recordatorios.
+ *
+ * Copyright (C) <2015> <Ismael Rodríguez Hernández>
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 services.service('NotificationService', ['EventService', '$state', function (EventService, $state) {
 

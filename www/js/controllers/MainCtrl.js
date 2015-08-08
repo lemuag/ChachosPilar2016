@@ -1,5 +1,12 @@
 /**
  * Controlador de la pagina principal de presentacion.
+ *
+ *
+ * Copyright (C) <2015> <Ismael Rodríguez Hernández>
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 controllers.controller('MainCtrl', ["$scope","$stateParams","$state",function ($scope, $stateParams, $state) {
 

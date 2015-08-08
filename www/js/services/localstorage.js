@@ -1,5 +1,6 @@
 /**
  * Servicio para guardar objetos en LocalStorage de forma sencilla.
+ * Copyright Ionic Framework Team.
  */
 services.factory('$localstorage', ['$window', function ($window) {
     return {

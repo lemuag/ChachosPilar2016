@@ -1,6 +1,12 @@
 
 /**
  * Servicio para la gestión de la carga de eventos.
+ *
+ * Copyright (C) <2015> <Ismael Rodríguez Hernández>
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 services.service('EventService', ['$http', '$q', function ($http, $q) {
 

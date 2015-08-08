@@ -1,6 +1,12 @@
 
 /**
  * Controlador de la lista de favoritos.
+ *
+ * Copyright (C) <2015> <Ismael Rodríguez Hernández>
+ * All rights reserved.
+ *
+ * This software may be modified and distributed under the terms
+ * of the BSD license.  See the LICENSE file for details.
  */
 controllers.controller('FavListCtrl', ["$scope","$stateParams","$state","EventService","FavoriteService","$ionicLoading",
     function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoading) {
