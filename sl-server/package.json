@@ -1,0 +1,26 @@
+{
+  "name": "stw3",
+  "version": "1.0.0",
+  "description": "Practica 3 de stw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ismael Rodríguez Hernández",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.2",
+    "cookies": "^0.6.1",
+    "crypto": "0.0.3",
+    "express": "^4.13.4",
+    "express-rate-limit": "^2.4.0",
+    "formidable": "^1.0.17",
+    "keygrip": "^1.0.1",
+    "mongodb": "^1.4.7",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.7.0",
+    "nodemailer": "^2.5.0"
+  }
+}
