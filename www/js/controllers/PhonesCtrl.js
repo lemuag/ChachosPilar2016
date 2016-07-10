@@ -8,7 +8,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('phonesCtrl', ["$scope",function ($scope) {
+controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
 
     //Telefonos de emergencias
     var emergencias = {

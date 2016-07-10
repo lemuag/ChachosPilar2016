@@ -16,6 +16,7 @@ Julio-Agosto 2015.
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -36,6 +37,8 @@ Julio-Agosto 2015.
     Scripts de mi aplicacion
     ------------------------
     -->
+
+    <script src="lib/ionic-native-transitions/dist/ionic-native-transitions.min.js"></script>
 
     <!-- Fichero de declaracion de modulos-->
     <script src="js/modules.js"></script>
@@ -59,7 +62,10 @@ Julio-Agosto 2015.
     <script src="js/services/EventService.js"></script>
     <script src="js/services/FavoriteService.js"></script>
     <script src="js/services/NotificationService.js"></script>
+    <script src="js/services/UpdateService.js"></script>
     <script src="js/services/localstorage.js"></script>
+
+
 
 
 

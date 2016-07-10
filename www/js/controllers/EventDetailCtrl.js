@@ -8,21 +8,29 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","EventService","FavoriteService","$ionicLoading","NotificationService","$ionicModal","$ionicPopup",
-    function ($scope, $stateParams, $compile, EventService, FavoriteService, $ionicLoading, NotificationService, $ionicModal, $ionicPopup) {
+controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","EventService","FavoriteService","$ionicLoading","NotificationService","$ionicModal","$ionicPopup","$http",
+    function ($scope, $stateParams, $compile, EventService, FavoriteService, $ionicLoading, NotificationService, $ionicModal, $ionicPopup,$http) {
 
 
         $scope.eventId = parseInt($stateParams.eventId); //Id del evento
 
 
-        //Llamada tras obtener datos de evento
-        this.afterLoad = function (data) {
-            $scope.event = data;
+        $scope.eventPeople = undefined;
+        $http.get("http://192.168.1.184:8889/events/fav/"+ $scope.eventId)
+        .then(function(response){
+          $scope.eventPeople= response.data.count;
+        })
+        .catch(function(error){
 
-        };
+        });
+
 
         //Obtenemos los datos del evento
-        EventService.get($scope.eventId, this.afterLoad);
+        EventService.get($scope.eventId)
+          .then(function(data){
+
+          $scope.event = data;
+          });
 
         //Se obtiene si es favorito
         $scope.favorite = FavoriteService.get($scope.eventId);
@@ -188,15 +196,26 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
 
             if (!$scope.favorite) {
                 //Se pone como favorito
+                //$http.get('http://192.168.1.37:4567/dofav/' + $scope.eventId);
+                if($scope.eventPeople!=undefined){
+                  $scope.eventPeople++;
+                }
+
                 FavoriteService.add($scope.eventId);
                 $scope.textoFavorito = "Favorito";
-                $ionicLoading.show({template: 'Añadido a favoritos', noBackdrop: true, duration: 1000});
+                //$ionicLoading.show({template: 'Añadido a favoritos', noBackdrop: true, duration: 1000});
+
+
             }
             else {
                 //Se quita de favoritos
+                  //$http.get('http://192.168.1.37:4567/unfav/' + $scope.eventId);
                 FavoriteService.remove($scope.eventId);
+                if($scope.eventPeople!=undefined){
+                  $scope.eventPeople--;
+                }
                 $scope.textoFavorito = "No favorito";
-                $ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 1000});
+                //$ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 1000});
             }
             $scope.favorite = !$scope.favorite;
         };

@@ -8,8 +8,8 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","EventService","FavoriteService","$ionicLoading","$ionicScrollDelegate",
-    function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoading, $ionicScrollDelegate) {
+controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","EventService","FavoriteService","$ionicLoading","$ionicScrollDelegate","$http",
+    function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoading, $ionicScrollDelegate,$http) {
 
 
 
@@ -54,20 +54,15 @@ controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","Event
             cat_parameter = "todas";
         }
 
-
-        //Funcion de callback llamada cuando los datos se han cargado
-        this.afterLoad = function (data) {
-
-            //Muestra solo los datos del primer dia, para evitar sobrecarga cuando hay muchos eventos.
-            $scope.allEvents = data;
-            $scope.current_day = 0;
-            $scope.events = [data[0]];
-            $ionicLoading.hide();
-
-        };
-
         //Se obtienen los datos
-        EventService.getList(cat_parameter, day_parameter, this.afterLoad);
+        EventService.getList(cat_parameter, day_parameter)
+        .then(function(data){
+          //Muestra solo los datos del primer dia, para evitar sobrecarga cuando hay muchos eventos.
+          $scope.allEvents = data;
+          $scope.current_day = 0;
+          $scope.events = [data[0]];
+          $ionicLoading.hide();
+        })
 
 
         /** Declaración de funciones **/
@@ -109,11 +104,13 @@ controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","Event
             var current = FavoriteService.get(id);
             if (current) {
                 FavoriteService.remove(id);
-                $ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 1000});
+                $ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 700});
+                  //$http.get('http://192.168.1.37:4567/unfav/' + id);
             }
             else {
                 FavoriteService.add(id);
-                $ionicLoading.show({template: 'Añadido a favoritos', noBackdrop: true, duration: 1000});
+                $ionicLoading.show({template: 'Añadido a favoritos', noBackdrop: true, duration: 700});
+                //$http.get('http://192.168.1.37:4567/dofav/' + id);
             }
         };
 

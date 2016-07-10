@@ -1,8 +1,8 @@
 
 /**
- * Servicio para la gestión de la carga de eventos.
+ * Servicio para la gestión de la carga de eventos y listas de eventos.
  *
- * Copyright (C) <2015> <Ismael Rodríguez Hernández>
+ * Copyright (C) <2016> <Ismael Rodríguez Hernández>
  * All rights reserved.
  *
  * This software may be modified and distributed under the terms
@@ -10,8 +10,6 @@
  */
 services.service('EventService', ['$http', '$q', function ($http, $q) {
 
-    //Notas. Al refrescar se pierde porque se guarda en la memoria del navegador.
-    //De todas formas en ionic no debería refrescarse, así que se consigue guardar.
 
     var self = this;
 
@@ -37,9 +35,8 @@ services.service('EventService', ['$http', '$q', function ($http, $q) {
 
 
     /*** FUNCIONES PRIVADAS ***/
-        //Se encarga de, una vez cargados los datos, obtener la lista pedida
-        //y retornar  a la funcion indicada
-    this.process = function (category, day, return_function) {
+    //Se encarga de, una vez cargados los datos, obtener la lista pedida
+    this.extractList = function (category, day) {
 
 
         var previous_data = new Array();
@@ -74,19 +71,18 @@ services.service('EventService', ['$http', '$q', function ($http, $q) {
 
             }
             //Se devuelven los de la categoria indicada
-            return_function(final_data);
+            return final_data;
         }
         else {
             //No hay categoría, no se filtra nada.
-            return_function(previous_data);
+            return previous_data;
         }
         return data;
 
     };
 
     //Se encarga de, una vez cargados los datos, obtener el evento especifico indicado
-    //y retornar  a la funcion indicada
-    this.find = function (id, return_function) {
+    this.find = function (id) {
 
         var i = 0;
         var j = 0;
@@ -105,22 +101,26 @@ services.service('EventService', ['$http', '$q', function ($http, $q) {
             i++;
 
         }
-        return_function(result);
+        return result;
 
     };
 
 
-    //Se encarga de cargar los datos y, segun el modo,
-    //realizar las operaciones necesarias.
-    //mode: "getList", "get".
-    //Segun el caso llamará a una funcion u otra al obtener los datos,
-    //y le pasa la función return_function para poder avisar al controlador
-    //que ha pedido el servicio.
-    this.loadData = function (mode, return_function) {
+
+    /**
+     * Carga eventos, bien de caché o de ficheros.
+    */
+    this.loadEvents = function() {
+
+      var returnedPromise = $q.defer();
 
 
-        var deferred = $q.defer();
 
+      if(is_data_loaded){
+        returnedPromise.resolve(data);
+
+      }
+      else{
         var promises = [
             $http.get('appdata/8.json'),
             $http.get('appdata/9.json'),
@@ -132,58 +132,48 @@ services.service('EventService', ['$http', '$q', function ($http, $q) {
             $http.get('appdata/15.json')
         ];
 
-        //Cuando se hayan cargado todos, se procesa segun el caso
         $q.all(promises).then(function (resp) {
+
+
             var i;
             for (i = 0; i < resp.length; i++) {
                 data.push(resp[i].data);
             }
-            is_data_loaded = true;
-            if (mode == "getList") {
-                self.process(current_category, current_day, return_function);
-            }
-            else if (mode == "get") {
-                self.find(current_id, return_function);
-            }
 
+            is_data_loaded = true;
+
+            returnedPromise.resolve(data);
 
         });
+      }
 
-    };
 
+      return returnedPromise.promise;
+
+    }
 
     /**FUNCIONES OFRECIDAS AL USUARIO */
 
     /* Devuelve la lista de eventos para categoria y dia indicados */
-    this.getList = function (category, day, return_function) {
+    this.getList = function (category, day) {
+        return this.loadEvents() //Carga los eventos, o de memoria o de ficheros
+          .then(function(events){
 
-        if (is_data_loaded) {
-
-            //Datos cargados, procesamos directamente
-            this.process(category, day, return_function);
-
-        }
-        else {
-            //Datos no cargados, se cargan primero
-            current_category = category;
-            current_day = day;
-            self.loadData("getList", return_function);
-        }
+              //Se obtiene la lista pedida
+              return self.extractList(category,day);
+          });
 
     };
 
     //Se encarga de la carga de solo un evento
-    this.get = function (id, return_function) {
+    this.get = function (id) {
 
-        if (is_data_loaded) {
-            //Datos cargados, procesamos directamente
-            self.find(id, return_function);
-        }
-        else {
-            //Datos no cargados, se cargan primero
-            current_id = id;
-            self.loadData("get", return_function);
-        }
+        return this.loadEvents()
+          .then(function(events){
+            return event = self.find(id);
+
+          });
+
     };
 
 

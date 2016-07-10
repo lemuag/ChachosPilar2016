@@ -1,7 +1,7 @@
 <!--
 Vista de menu principal
 -->
-  <ion-view view-title="San Lorenzo 2015">
+  <ion-view view-title="San Lorenzo 2016">
 
       <ion-nav-buttons side="right">
           <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()"></button>
@@ -23,7 +23,7 @@ Vista de menu principal
       <div class="footer" >
 
           <ul class="list">
-              <li class="item main-list-item item-icon-left"  ng-click="openGuide()">
+              <li class="item main-list-item item-icon-left"  ng-click="openGuide()" transitiontype="flip" direction="left" go-native>
                   <span class="icon ion-home"></span> PROGRAMA
               </li>
               <li class="item main-list-item item-icon-left"  ng-click="openFavorites()">

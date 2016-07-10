@@ -15,7 +15,13 @@ function addSession(uuid){
 }
 
 function getFav(eventId){
-  return Fav.find({_id:eventId});
+  return Fav.findOne({_id:eventId})
+  .then(function(response){
+    if(response==null){
+      return {"_id":parseInt(eventId),"count":0};
+    }
+    return response;
+  });
 }
 
 function addFav(eventId){

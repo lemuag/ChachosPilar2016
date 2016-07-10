@@ -18,7 +18,7 @@ services.service('UpdateService', ['$http', '$q', function ($http, $q) {
 
 
     self.update = function(){
-      return $http.get('http://192.168.1.41:8889/events/version')
+      return $http.get('http://192.168.1.184:8889/events/version')
         .then(function(data){
 
           var serverVersion = data.data.version;
@@ -40,7 +40,7 @@ services.service('UpdateService', ['$http', '$q', function ($http, $q) {
 
       var promises = [];
       for(var i = 8; i <= 15; i++){
-          promises.push($http.get('http://192.168.1.41:8889/events/day/'+i));
+          promises.push($http.get('http://192.168.1.184:8889/events/day/'+i));
       }
 
       return $q.all(promises).then(function (responses) {

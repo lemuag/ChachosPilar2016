@@ -8,10 +8,12 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('MainCtrl', ["$scope","$stateParams","$state",function ($scope, $stateParams, $state) {
+controllers.controller('MainCtrl', ["$scope","$stateParams","$state","UpdateService",function ($scope, $stateParams, $state,UpdateService) {
 
 
     $scope.buscarVisible = false;
+
+    UpdateService.update();
 
 
     //Alterna la visiblidad de la busqueda

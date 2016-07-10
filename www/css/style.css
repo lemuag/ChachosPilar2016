@@ -42,7 +42,7 @@ overflow: initial;
 
 }
 
-@media screen and (max-width: 400px) { 
+@media screen and (max-width: 400px) {
 .tituloLista{
     overflow: initial;
     white-space: initial;
@@ -90,14 +90,14 @@ overflow: initial;
 }
 
 .littleDay{
-	font-size:70%;   
+	font-size:70%;
 }
 .categoryLabel{
 	font-size:75%;
 }
 .button-day {
     line-height: 1em;
-    
+
 }
 
 .card .item-text-wrap{
@@ -208,7 +208,7 @@ background-color: #f00;
   background: url(../img/albahaca.png);
    background-position: right bottom; /*Positioning*/
    background-repeat: no-repeat;
-  
+
 }
 
 .description-background {
@@ -302,4 +302,10 @@ body .overflow-scroll {
 
 .letraNegra{
     color:black !important;
+}
+
+.textoPersonas{
+  color:black;
+  width:100%;
+  text-align:center;
 }

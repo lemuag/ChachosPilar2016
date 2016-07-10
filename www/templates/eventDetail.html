@@ -51,7 +51,7 @@ Vista de detalle de evento.
     <span>
       Toreros:
      <button ng-repeat="person in event.bullfighters" class="button button-block">{{person}}</button>
-      
+
     </span>
 
             </div>
@@ -77,8 +77,8 @@ Vista de detalle de evento.
                     </button>
                 </div>
             </div>
-            <div class="row">
-
+            <div class="row text-center" ng-if="eventPeople!=undefined">
+                <p class="textoPersonas text-center">{{eventPeople}} persona<span ng-if="eventPeople!=1">s</span> lo ha<span ng-if="eventPeople!=1">n</span> marcado como favorito.</p>
             </div>
 
 

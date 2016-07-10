@@ -8,7 +8,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-services.service('FavoriteService', ['$localstorage', function ($localstorage) {
+services.service('FavoriteService', ['$localstorage','$http', function ($localstorage,$http) {
 
     /**
      * La lista de favoritos se implementa en base a $localstorage.
@@ -23,6 +23,10 @@ services.service('FavoriteService', ['$localstorage', function ($localstorage) {
 
     //Añade como favorito un evento
     this.add = function (id) {
+
+        //Se envia peticion HTTP (despreocuparse de resultado)
+        $http.put('http://192.168.1.184:8889/events/fav/' + id);
+
         //Se añade al almacen clave-valor
         $localstorage.set('fav' + id, 1);
 
@@ -37,6 +41,11 @@ services.service('FavoriteService', ['$localstorage', function ($localstorage) {
 
     //Elimina el favorito de un evento
     this.remove = function (id) {
+
+
+        //Se envia peticion HTTP (despreocuparse de resultado)
+        $http.delete('http://192.168.1.184:8889/events/fav/' + id);
+
         //Se elimina del almacén clave-valor
         $localstorage.set('fav' + id, 0);
 

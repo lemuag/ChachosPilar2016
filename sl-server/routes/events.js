@@ -142,14 +142,21 @@ router.get("/popular/:limit",queryLimit,function(req,res){
 */
 router.get("/fav/:eventId",queryLimit,function(req,res){
 
+  var id = req.params.eventId;
+  if(id>=800 && id <= 1600){
+    database.getFav(id).
+    then(function(success){
+      return res.send(success);
+    })
+    .catch(function(error){
+      return res.status(500).send("Internal server error");
+    })
+  }
+  else{
+    return res.status(400).send("Bad request");
+  }
 
-  database.getFav(req.params.eventId).
-  then(function(success){
-    return res.send(success);
-  })
-  .catch(function(error){
-    return res.status(500).send("Internal server error");
-  })
+
 
 
 
