@@ -27,7 +27,7 @@ controllers.controller('GuideCtrl', ["$scope", "$stateParams", "$state", "$http"
         /** Abre una categoria **/
         $scope.openCategory = function (c) {
 
-            $state.go('app.eventList', {category: c});
+            $state.go('app.eventList', {category: c,day:8});
         };
 
 

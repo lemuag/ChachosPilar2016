@@ -8,8 +8,8 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","EventService","FavoriteService","$ionicLoading","NotificationService","$ionicModal","$ionicPopup","$http",
-    function ($scope, $stateParams, $compile, EventService, FavoriteService, $ionicLoading, NotificationService, $ionicModal, $ionicPopup,$http) {
+controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","EventService","FavoriteService","$ionicLoading","NotificationService","$ionicModal","$ionicPopup","$http","$cordovaToast",
+    function ($scope, $stateParams, $compile, EventService, FavoriteService, $ionicLoading, NotificationService, $ionicModal, $ionicPopup,$http,$cordovaToast) {
 
 
         $scope.eventId = parseInt($stateParams.eventId); //Id del evento
@@ -131,7 +131,8 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
         $scope.showDialogoAlarma = function () {
             $scope.data = {};
 
-            $scope.choice = {choice: 0};
+            $scope.time = 60;
+
 
             // An elaborate, custom popup
             var myPopup = $ionicPopup.show({
@@ -146,12 +147,15 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
                         onTap: function (e) {
 
                             //Programamos la alarma
-                            var exit = NotificationService.addReminder($scope.eventId, $scope.choice.choice);
-                            $ionicLoading.show({
-                                template: "Recordatorio programado.",
-                                noBackdrop: true,
-                                duration: 1000
-                            });
+                            var exit = NotificationService.addReminder($scope.eventId, $scope.time);
+                            if (ionic.Platform.isAndroid()) {
+                              $cordovaToast.showShortBottom('Recordatorio programado');
+                            }
+                            else{
+                              $ionicLoading.show({template: 'Recordatorio programado', noBackdrop: true, duration: 700});
+                            }
+
+
                             return true;
 
                         }
@@ -170,7 +174,13 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
             if ($scope.hasReminder) {
                 //Se elimina el recordatorio
                 NotificationService.removeReminder($scope.eventId);
-                $ionicLoading.show({template: 'Recordatorio eliminado', noBackdrop: true, duration: 1000});
+                if (ionic.Platform.isAndroid()) {
+                  $cordovaToast.showShortBottom('Recordatorio eliminado');
+                }
+                else{
+                  $ionicLoading.show({template: 'Recordatorio eliminado', noBackdrop: true, duration: 700});
+                }
+                
                 $scope.hasReminder = false;
             }
             else {

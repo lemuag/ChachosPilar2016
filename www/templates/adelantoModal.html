@@ -3,30 +3,41 @@
 Contenido del modal mostrado para elegir el adelanto de un recordatorio.
 -->
 <div class="row">
+  <div class="col"> <!-- Columna izquierda -->
+    <div class="row" style="width:100%;">
+      <button class="button button-block button-calm" ng-class="{'active':time==0}" ng-mousedown="time=0">
+        0m
+      </button>
+    </div>
+    <div class="row" style="width:100%;">
+      <button class="button button-block button-calm" ng-class="{'active':time==15}" ng-mousedown="time=15">
+        15m
+      </button>
+    </div>
+    <div class="row" style="width:100%;">
+      <button class="button button-block button-calm" ng-class="{'active':time==60}" ng-mousedown="time=60">
+        1h
+      </button>
+    </div>
 
-  <div class="col">
-      <ion-radio ng-model="choice.choice" ng-value="0">0m</ion-radio>
   </div>
-  <div class="col">
-      <ion-radio ng-model="choice.choice" ng-value="5">5m</ion-radio>
+
+  <div class="col"> <!-- Columna derecha -->
+    <div class="row" style="width:100%;">
+      <button class="button button-block button-calm" ng-class="{'active':time==5}" ng-mousedown="time=5">
+        5m
+      </button>
+    </div>
+    <div class="row" style="width:100%;">
+      <button class="button button-block button-calm" ng-class="{'active':time==30}" ng-mousedown="time=30">
+        30m
+      </button>
+    </div>
+    <div class="row" style="width:100%;">
+      <button class="button button-block button-calm" ng-class="{'active':time==120}" ng-mousedown="time=120">
+        2h
+      </button>
+    </div>
   </div>
-  <div class="col">
-      <ion-radio ng-model="choice.choice" ng-value="15">15m</ion-radio>
-  </div>
+
 </div>
-
-<div class="row">
-
-  <div class="col">
-      <ion-radio ng-model="choice.choice" ng-value="30">30m</ion-radio>
-  </div>
-  <div class="col">
-      <ion-radio ng-model="choice.choice" ng-value="60">1h</ion-radio>
-  </div>
-  <div class="col">
-      <ion-radio ng-model="choice.choice" ng-value="120">2h</ion-radio>
-  </div>
-</div>
-
-
-

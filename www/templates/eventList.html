@@ -4,42 +4,90 @@ Vista de lista de eventos.
 <ion-view view-title="{{listTitle}}">
 	<ion-content scroll-y="true">
 
-		<ion-list>
-			<div class="row" style="margin:0px" ng-if="hayCat">
-				<div class="col">
-					<button ng-class="{'disabled': current_day<=0}" class="button button-block button-large button-balanced colorSanLorenzo boton-filtro" ng-click="previousDay()"><< Anterior</button>
-				</div>
 
-				<div class="col">
-					<button ng-class="{'disabled': current_day>=7}"class="button button-block button-large button-balanced colorSanLorenzo boton-filtro" ng-click="nextDay()">Siguiente >></button>
-				</div>
+		<div class="row">
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia " ng-class="{'active':day==8}" ng-click="setDay(8)">
+				<span>	8</span>
+				</button>
+			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==9}" ng-click="setDay(9)">
+				<span>	9</span>
+				</button>
+
 
 			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==10}" ng-click="setDay(10)">
+				<span>	10</span>
+				</button>
+
+
+			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==11}" ng-click="setDay(11)">
+				<span>	11</span>
+				</button>
+
+
+			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==12}" ng-click="setDay(12)">
+					<span>12</span>
+				</button>
+
+
+			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==13}" ng-click="setDay(13)">
+				<span>	13</span>
+				</button>
+
+
+			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==14}" ng-click="setDay(14)">
+			<span>		14</span>
+				</button>
+
+
+			</div>
+			<div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==15}" ng-click="setDay(15)">
+				<span>	15</span>
+				</button>
+
+
+			</div>
+		</div>
+		<ion-list>
+
 			<!-- Importante, el array events debe estar ordenado -->
 
-				<!-- Cabecera de día, solo cuando se mira por categoría -->
-				<div class="item item-divider tituloDia " ng-if="hayCat">
-		          Día {{events[0].day}}
-		    </div>
+			<!-- Cabecera de día, solo cuando se mira por categoría -->
+			<div class="item item-divider tituloDia " ng-if="hayCat">
+				Día {{events[0].day}}
+			</div>
 
-		    <!-- Listado de eventos de ese día -->
-				<div  ng-repeat="event in events" class="item elemento-lista-eventos"  ng-click="displayEvent(event.id)">
+			<!-- Listado de eventos de ese día -->
+			<div  ng-repeat="event in events" class="item elemento-lista-eventos"  ng-click="displayEvent(event.id)">
 
-					<div class="row">
-  						<div class="col col-20"><img ng-src="img/{{::event.category}}.png" class="left-image"></div>
-  						<div class="col">
-  							<div>
+				<div class="row">
+					<div class="col col-20"><img ng-src="img/{{::event.category}}.png" class="left-image"></div>
+					<div class="col">
+						<div>
 
-								<img  class="fav-star" ng-src="img/fav-{{isFav(event.id)}}.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
-							</div>
-							<span class="tituloLista">{{::event.title}}</span>
-							<br/>
-							<span class="horaLista"><span   class="icon ion-calendar"></span>   Día {{::event.day}} - {{::event.hour}}</span>
-							<br/><span class="horaLista"><span  class="icon ion-location"></span>   {{::event.place_text}}</span>
+							<img  class="fav-star" ng-src="img/fav-{{isFav(event.id)}}.png" ng-click="toggleFav(event.id); $event.stopPropagation();">
+						</div>
+						<span class="tituloLista">{{::event.title}}</span>
+						<br/>
+						<span class="horaLista"><span   class="icon ion-calendar"></span>   Día {{::event.day}} - {{::event.hour}}</span>
+						<br/><span class="horaLista"><span  class="icon ion-location"></span>   {{::event.place_text}}</span>
 
-  						</div>
 					</div>
 				</div>
+			</div>
 
 			<button class="button button-block button-stable boton-subir" ng-click="subir()"><span class="icon ion-arrow-up-a"></span>Subir</button>
 		</ion-list>

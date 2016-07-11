@@ -110,6 +110,7 @@ overflow: initial;
 }
 
 
+
 .right-back-image{
     max-width:100%;
     max-height:100px;
@@ -323,4 +324,28 @@ body .overflow-scroll {
   color:black;
   width:100%;
   text-align:center;
+}
+
+.div-dia{
+  padding:3px;
+
+}
+
+.button-dia{
+  width:100%;
+  border-color: #00722d !important;
+  background-color: white !important;
+}
+
+.button-dia span{
+color:black;
+
+
+
+
+}
+.button-dia.active {
+font-style: bold !important;
+background-color: #00c800 !important;
+
 }

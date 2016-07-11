@@ -8,7 +8,7 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-services.service('FavoriteService', ['$localstorage','$http', function ($localstorage,$http) {
+services.service('FavoriteService', ['$localstorage','$http','$cordovaToast','$ionicLoading', function ($localstorage,$http,$cordovaToast,$ionicLoading) {
 
     /**
      * La lista de favoritos se implementa en base a $localstorage. Hay un par clave-valor
@@ -26,10 +26,18 @@ services.service('FavoriteService', ['$localstorage','$http', function ($localst
         $http.put('http://sanlorenzo.ismaelrh.com:8889/events/fav/' + id);
 
 
+
         list.push(id); //Se añade a lista en memoria y se guarda
         $localstorage.setObject('favList', {
             list: list
         });
+
+        if (ionic.Platform.isAndroid()) {
+          $cordovaToast.showShortBottom('Añadido a favoritos');
+        }
+        else{
+          $ionicLoading.show({template: 'Añadido a favoritos', noBackdrop: true, duration: 700});
+        }
 
     };
 
@@ -47,6 +55,13 @@ services.service('FavoriteService', ['$localstorage','$http', function ($localst
             $localstorage.setObject('favList', {
                 list: list
             });
+        }
+
+        if (ionic.Platform.isAndroid()) {
+          $cordovaToast.showShortBottom('Eliminado de favoritos');
+        }
+        else{
+          $ionicLoading.show({template: 'Eliminado de favoritos', noBackdrop: true, duration: 700});
         }
 
     };
