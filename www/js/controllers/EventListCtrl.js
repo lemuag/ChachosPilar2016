@@ -59,7 +59,7 @@ function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoa
   EventService.getList(cat_parameter, day_parameter)
   .then(function(data){
     //Muestra solo los datos del primer dia, para evitar sobrecarga cuando hay muchos eventos.
-    console.log(data);
+
 
     $scope.events = data[0];
     $ionicLoading.hide();

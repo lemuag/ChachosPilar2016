@@ -349,3 +349,17 @@ font-style: bold !important;
 background-color: #00c800 !important;
 
 }
+
+
+.adelanto-button{
+  border-color: #71c0f8 !important;
+  background-color: white !important;
+}
+
+.adelanto-button span{
+  color: black;
+}
+
+.adelanto-button.active{
+  background-color: #a8dbff !important;
+}

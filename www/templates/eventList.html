@@ -66,9 +66,7 @@ Vista de lista de eventos.
 			<!-- Importante, el array events debe estar ordenado -->
 
 			<!-- Cabecera de día, solo cuando se mira por categoría -->
-			<div class="item item-divider tituloDia " ng-if="hayCat">
-				Día {{events[0].day}}
-			</div>
+	
 
 			<!-- Listado de eventos de ese día -->
 			<div  ng-repeat="event in events" class="item elemento-lista-eventos"  ng-click="displayEvent(event.id)">
