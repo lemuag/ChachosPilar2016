@@ -8,18 +8,30 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('FavListCtrl', ["$scope","$stateParams","$state","EventService","FavoriteService","$ionicLoading",
-    function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoading) {
+controllers.controller('FavListCtrl', ["$scope","$stateParams","$state","EventService","FavoriteService","$ionicLoading","$q",
+    function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoading,$q) {
 
 
-        //Funcion de callback llamada cuando los datos se han cargado
-        this.afterLoad = function (data) {
-            $scope.events = data;
-        };
 
 
         //Se obtienen los datos
-        EventService.getList("todas", -1, this.afterLoad);
+
+
+        var favList = FavoriteService.getList();
+        var promises = [];
+        for(var i = 0; i < favList.length; i++){
+          promises.push(EventService.getOne(favList[i]));
+        }
+
+        $q.all(promises)
+          .then(function(results){
+            $scope.events = [[],[],[],[],[],[],[],[]];
+            for(var j = 0; j< results.length;j++){
+              var index = results[j].day - 8;
+              $scope.events[index].push(results[j]);
+            }
+          });
+
 
 
         //Devuelve cierto si hay favoritos en el dia indicado
@@ -68,7 +80,6 @@ controllers.controller('FavListCtrl', ["$scope","$stateParams","$state","EventSe
             var current = FavoriteService.get(id);
             if (current) {
                 FavoriteService.remove(id);
-                $ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 1000});
             }
             else {
                 FavoriteService.add(id);

@@ -38,7 +38,7 @@ var sendWarningMail = function(req,res,next){
 //Limitador de poner 20 favoritos cada hora
 var favLimiter = new RateLimit({
   windowMs: 60*60*1000, // 1 hour
-  max: 20,
+  max: 9999999, //poner a 20
   delayMs: 0,
   handler: sendWarningMail
 });
@@ -47,7 +47,7 @@ var favLimiter = new RateLimit({
 //Limitador de quitar 20 favoritos cada hora
 var unfavLimiter = new RateLimit({
   windowMs: 60*60*1000, // 1 hour
-  max: 20,
+  max: 9999999, //poner a 20
   delayMs: 0,
   handler: sendWarningMail
 });
@@ -56,21 +56,21 @@ var unfavLimiter = new RateLimit({
 //Limitador de consulta de versión -> 5 cada minuto
 var newSessionLimit = new RateLimit({
   windowMs: 1*60*1000, // 1 minute
-  max: 5, // limit each IP
+  max: 9999999, // poner a 5
   delayMs: 0 // disable delaying - full speed until the max limit is reached
 });
 
 //Limitador de actualizaciones de datos -> 20 archivos por minuto
 var updateLimit = new RateLimit({
   windowMs: 1*60*1000, // 1 minute
-  max: 20, // limit each IP
+  max: 9999999, // poner a 20
   delayMs: 0 // disable delaying - full speed until the max limit is reached
 });
 
 //Limitador de resto de consultas -> 60 por minuto
 var queryLimit = new RateLimit({
   windowMs: 1*60*1000, // 1 minute
-  max: 60, // limit each IP
+  max: 9999999, // poner a 60
   delayMs: 0 // disable delaying - full speed until the max limit is reached
 });
 

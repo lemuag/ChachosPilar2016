@@ -12,21 +12,17 @@ Vista de resultados de búsqueda.
 
         <ion-list ng-show="hayResultados()">
             <!-- Importante, el array events debe estar ordenado -->
-            <div ng-repeat="day in ::events">
-                <div class="item item-divider tituloDia " ng-if="day.length >0 ">
-                    <!--Cabecera de día -->
-                    Día {{day[0].day}}
-                </div>
+
 
                 <!-- Listado de eventos de ese día -->
-                <div ng-repeat="event in ::day" class="item elemento-lista-eventos" ng-click="displayEvent(event.id)">
+                <div collection-repeat="event in all()" class="item elemento-lista-eventos" ng-click="displayEvent(event.id)">
 
                     <div class="row">
                         <div class="col col-20"><img src="img/{{event.category}}.png" class="left-image"></div>
                         <div class="col">
                             <div>
-                                <img class="fav-star" ng-src="img/fav-{{isFav(event.id)}}.png"
-                                     ng-click="toggleFav(event.id); $event.stopPropagation();">
+                                <!--<img class="fav-star" ng-src="img/fav-{{isFav(event.id)}}.png"
+                                     ng-click="toggleFav(event.id); $event.stopPropagation();">-->
                             </div>
                             <span class="tituloLista">{{event.title}}</span>
                             <br/>
@@ -38,7 +34,7 @@ Vista de resultados de búsqueda.
                     </div>
 
                 </div>
-            </div>
+
         </ion-list>
         <div class="card" ng-hide="hayResultados()">
             <div class="item item-text-wrap">

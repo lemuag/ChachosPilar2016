@@ -49,40 +49,40 @@ controllers.controller('SearchListCtrl', ["$scope","$stateParams","$state","Even
 
         //Funcion de callback llamada cuando los datos se han cargado
         //Se encarga de filtrar y poner en $scope.events los eventos que coinciden con la busqueda
-        this.afterLoad = function (data) {
-            $scope.events = new Array;
-            $ionicLoading.hide();
-            //Realiza el filtrado
-            var day = 0;
-            for (day = 0; day < data.length; day++) {
-                var ev = 0;
-                $scope.events.push([]);
-                for (ev = 0; ev < data[day].length; ev++) {
-                    //Aqui se mira cada evento
 
-                    var has = 0;
-                    var i = 0;
-                    while (i < $scope.termArray.length) {
-                        var title = standarize(data[day][ev].title);
-                        var place = standarize(data[day][ev].place_text);
-                        if (title.indexOf($scope.termArray[i]) > -1 || place.indexOf($scope.termArray[i]) > -1) {
-                            has++;
-                        }
-                        i++
-                    }
-                    if (has == $scope.termArray.length) {
-                        $scope.events[day].push(data[day][ev]);
-                        hayResultados = true;
-                        $scope.numberOfResults++;
-                    }
-                }
-            }
-
-        };
 
 
         //Se obtienen los datos
-        EventService.getList("todas", -1, this.afterLoad);
+        EventService.getAll().then(function(data){
+          $scope.events = new Array;
+          $ionicLoading.hide();
+          //Realiza el filtrado
+          var day = 0;
+          for (day = 0; day < data.length; day++) {
+              var ev = 0;
+              $scope.events.push([]);
+              for (ev = 0; ev < data[day].length; ev++) {
+                  //Aqui se mira cada evento
+
+                  var has = 0;
+                  var i = 0;
+                  while (i < $scope.termArray.length) {
+                      var title = standarize(data[day][ev].title);
+                      var place = standarize(data[day][ev].place_text);
+                      if (title.indexOf($scope.termArray[i]) > -1 || place.indexOf($scope.termArray[i]) > -1) {
+                          has++;
+                      }
+                      i++
+                  }
+                  if (has == $scope.termArray.length) {
+                      $scope.events[day].push(data[day][ev]);
+                      hayResultados = true;
+                      $scope.numberOfResults++;
+                  }
+              }
+          }
+        });
+
 
         //Devuelve true si hay resultados
         $scope.hayResultados = function () {
@@ -101,6 +101,18 @@ controllers.controller('SearchListCtrl', ["$scope","$stateParams","$state","Even
             return FavoriteService.get(id);
         };
 
+
+        $scope.all = function(){
+
+          var array = [];
+          for(var i = 0; i < $scope.events.length; i++){
+            var day = $scope.events[i];
+            for(var j = 0; j < day.length;j++){
+              array.push(day[j]);
+            }
+          }
+          return array;
+        }
         //Alterna el favorito de un evento.
         $scope.toggleFav = function (id) {
             var current = FavoriteService.get(id);

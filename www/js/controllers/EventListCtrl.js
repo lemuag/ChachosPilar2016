@@ -60,7 +60,7 @@ controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","Event
           //Muestra solo los datos del primer dia, para evitar sobrecarga cuando hay muchos eventos.
           $scope.allEvents = data;
           $scope.current_day = 0;
-          $scope.events = [data[0]];
+          $scope.events = data[0];
           $ionicLoading.hide();
         })
 
@@ -75,7 +75,7 @@ controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","Event
         //Carga datos del siguiente dia
         $scope.nextDay = function () {
             $scope.current_day++;
-            $scope.events = [$scope.allEvents[$scope.current_day]];
+            $scope.events = $scope.allEvents[$scope.current_day];
             $ionicScrollDelegate.resize()
 
         };
@@ -83,7 +83,7 @@ controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","Event
         //Carga datos del dia anterior
         $scope.previousDay = function () {
             $scope.current_day--;
-            $scope.events = [$scope.allEvents[$scope.current_day]];
+            $scope.events = $scope.allEvents[$scope.current_day];
             $ionicScrollDelegate.resize()
         };
 
@@ -99,12 +99,28 @@ controllers.controller('EventListCtrl', ["$scope","$stateParams","$state","Event
         };
 
 
+
+         $scope.getItemHeight = function(item, index) {
+            //Make evenly indexed items be 10px taller, for the sake of example
+            //console.log(item);
+
+            //return  95 + (item.title.length + item.place_text.length)*0.5
+            //console.log(window.screen.width);
+            var width = window.screen.width;
+            if(width>400){
+              return 140;
+            }
+            return 120;
+
+            //return (index % 2) === 0 ? 50 : 60;
+          };
+
         //Alterna el favorito de un evento
         $scope.toggleFav = function (id) {
             var current = FavoriteService.get(id);
             if (current) {
                 FavoriteService.remove(id);
-                $ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 700});
+                //$ionicLoading.show({template: 'Borrado de favoritos', noBackdrop: true, duration: 700});
                   //$http.get('http://192.168.1.37:4567/unfav/' + id);
             }
             else {

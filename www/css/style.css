@@ -106,8 +106,23 @@ overflow: initial;
 
 .left-image{
     max-width:100%;
-    max-height:100px;
+    max-height:70px;
 }
+
+
+.right-back-image{
+    max-width:100%;
+    max-height:100px;
+    float: right;
+    z-index:-1;
+}
+
+.item-back{
+  background-repeat: no-repeat;
+  background-position: right;
+  height:100%;
+}
+
 
 
 
@@ -121,7 +136,7 @@ overflow: initial;
 
 
 .fav-star-central {
-    max-width: 25px;
+    max-width: 20px;
     padding-top:8px;
     padding-bottom:0px;
     margin-top:0px;
@@ -129,7 +144,7 @@ overflow: initial;
 }
 .fav-star {
     max-width: 70px;
-    max-height:40px;
+    max-height:35px;
     float: right;
     border:10px;
 

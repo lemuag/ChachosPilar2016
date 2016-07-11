@@ -8,12 +8,21 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('MainCtrl', ["$scope","$stateParams","$state","UpdateService",function ($scope, $stateParams, $state,UpdateService) {
+controllers.controller('MainCtrl', ["$scope","$stateParams","$state","UpdateService","$ionicPlatform",function ($scope, $stateParams, $state,UpdateService,$ionicPlatform) {
 
 
     $scope.buscarVisible = false;
 
-    UpdateService.update();
+    $ionicPlatform.ready(function() {
+
+        UpdateService.initializeData()
+          .then(function(){
+            UpdateService.update();
+          })
+
+    });
+
+
 
 
     //Alterna la visiblidad de la busqueda

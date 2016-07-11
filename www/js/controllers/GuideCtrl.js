@@ -7,9 +7,11 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('GuideCtrl', ["$scope", "$stateParams", "$state", "$http", "EventService",
-    function ($scope, $stateParams, $state, $http, EventService) {
+controllers.controller('GuideCtrl', ["$scope", "$stateParams", "$state", "$http", "EventService","UpdateService",
+    function ($scope, $stateParams, $state, $http, EventService,UpdateService) {
 
+
+    $scope.lastUpdated = UpdateService.lastUpdated;
 
         $scope.filtro = ""; //Filtro de busqueda
         $scope.buscarVisible = false; //Indica si la barra de busqueda es visible

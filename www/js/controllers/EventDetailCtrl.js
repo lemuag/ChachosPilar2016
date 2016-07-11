@@ -16,7 +16,7 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
 
 
         $scope.eventPeople = undefined;
-        $http.get("http://192.168.1.184:8889/events/fav/"+ $scope.eventId)
+        $http.get("http://sanlorenzo.ismaelrh.com:8889/events/fav/"+ $scope.eventId)
         .then(function(response){
           $scope.eventPeople= response.data.count;
         })
@@ -96,7 +96,7 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
             }
 
 
-            var alarmTime = new Date(2015, 7, day, hour, minute, 0, 0);
+            var alarmTime = new Date(2016, 7, day, hour, minute, 0, 0);
             var now = new Date();
             return alarmTime.getTime() <= now.getTime();
 
