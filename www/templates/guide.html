@@ -3,15 +3,17 @@ Vista de guia, que muestra las categorias y dias disponibles.
 -->
 <ion-view view-title="Programa">
     <ion-nav-bar class="bar-balanced colorSanLorenzo ">
+
+
+
+      <ion-nav-buttons side="left">
+      </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()"></button>
+        </ion-nav-buttons>
+
         <ion-nav-back-button>
         </ion-nav-back-button>
-
-
-        <ion-nav-buttons side="right">
-            <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
-                </button>
-        </ion-nav-buttons>
 
     </ion-nav-bar>
     <ion-content class="guide-background ">
