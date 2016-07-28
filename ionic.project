@@ -1,4 +1,11 @@
 {
   "name": "San Lorenzo",
-  "app_id": "044025bd"
+  "app_id": "044025bd",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
 }

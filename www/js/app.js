@@ -25,6 +25,8 @@ app
             if (window.StatusBar) {
                 if (ionic.Platform.isAndroid()) {
                     StatusBar.backgroundColorByHexString('#035222');
+                    window.plugins.headerColor.tint("#035222");
+
                 } else {
                     StatusBar.styleLightContent();
                 }
@@ -55,9 +57,11 @@ app
                 $ionicConfigProvider.scrolling.jsScrolling(false);
             }
             else {
-
+              $ionicConfigProvider.scrolling.jsScrolling(true);
             }
         }
+
+
 
         $ionicNativeTransitionsProvider.setDefaultOptions({
             duration: 300, // in milliseconds (ms), default 400,

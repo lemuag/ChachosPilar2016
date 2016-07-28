@@ -10,10 +10,13 @@ Vista de detalle de evento.
 
         <ion-nav-buttons side="right">
 
-
+          <button ng-if="isAndroid()"
+                  class="button button-icon button-clear ion-android-share-alt" ng-click="share()"
+                  ></button>
             <button ng-class="{'ion-ios-bell': hasReminder, 'ion-ios-bell-outline': !hasReminder}"
                     class="button button-icon button-clear ion-ios-bell" ng-click="toggleReminder()"
-                    ng-show="!hasPassed(event)"></button>
+                    ng-if="!hasPassed(event) && isAndroid()"></button>
+
         </ion-nav-buttons>
 
     </ion-nav-bar>
@@ -75,6 +78,8 @@ Vista de detalle de evento.
                     </button>
                 </div>
             </div>
+
+
             <div class="row text-center" ng-if="eventPeople!=undefined">
                 <p class="textoPersonas text-center">{{eventPeople}} persona<span ng-if="eventPeople!=1">s</span> lo ha<span ng-if="eventPeople!=1">n</span> marcado como favorito.</p>
             </div>

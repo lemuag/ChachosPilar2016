@@ -8,19 +8,25 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('MainCtrl', ["$scope","$stateParams","$state","UpdateService","$ionicPlatform",function ($scope, $stateParams, $state,UpdateService,$ionicPlatform) {
+controllers.controller('MainCtrl', ["$scope","$stateParams","$state","UpdateService","$ionicPlatform","$cordovaFile",function ($scope, $stateParams, $state,UpdateService,$ionicPlatform,$cordovaFile) {
 
 
     $scope.buscarVisible = false;
 
     $ionicPlatform.ready(function() {
 
+
+    
+
         UpdateService.initializeData()
           .then(function(){
             UpdateService.update();
           })
 
+
+
     });
+
 
 
 

@@ -93,7 +93,7 @@ overflow: initial;
 	font-size:70%;
 }
 .categoryLabel{
-	font-size:75%;
+	font-size:80%;
 }
 .button-day {
     line-height: 1em;
@@ -144,8 +144,8 @@ overflow: initial;
 
 }
 .fav-star {
-    max-width: 70px;
-    max-height:35px;
+    max-width: 73px;
+    max-height:38px;
     float: right;
     border:10px;
 

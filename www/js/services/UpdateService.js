@@ -10,6 +10,12 @@
 */
 services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','$localstorage', function ($http, $q,$cordovaFile,EventService,$localstorage) {
 
+  /**
+  * NOTA: por temas de compatibilidad con versiones de Android menor a la 5,
+  * el programa actualizado se guarda en localStorage, no en ficheros.
+  * Las funciones estan pensadas para ficheros, pero han sido adaptadas
+  * para trabajar de momento con localStorage.
+  */
 
   var self = this;
 
@@ -24,18 +30,18 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
   self.initializeData = function(){
 
     //Si no es Android, terminamos aquí, pues no se copia ningún fichero.
-    if (!ionic.Platform.isAndroid()) {
-      return $q.when(true);
-    }
-
 
     var initialized = $localstorage.get('initialized', false);
     if(!initialized){
       console.log("Initializing data... copying from local storage");
       return updateFromLocalFiles()
       .then(function(response){
-        $localstorage.set('initialized',true)
-      });
+        $localstorage.set('initialized',true);
+        console.log("Datos inicializados desde localStorage");
+      })
+      .catch(function(error){
+        console.log(JSON.stringify(error));
+      })
     }
     else{
       console.log("Data already initialized");
@@ -49,11 +55,6 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
   */
   self.update = function(){
 
-
-    //Si no es Android, terminamos aquí, pues no se actualizan datos.
-    if (!ionic.Platform.isAndroid()) {
-      return $q.when(true);
-    }
 
     //1.- Leer versión actual programa
     return readCurrentVersion()
@@ -83,7 +84,8 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
           var promiseArray = [];
           //4.- Se guardan los ficheros
           for(var i = 0; i < responses.length;i++){
-            promiseArray.push(saveJSONtoFile('programa-dia'+(i+8)+'.json',responses[i].data));
+
+            promiseArray.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
           }
 
           //5.- Una vez guardados todos, se actualiza la versión actual
@@ -110,8 +112,9 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
   /**
   * Guarda asíncronamente un objeto como JSON en un fichero.
   */
-  function saveJSONtoFile(fileName,json){
-    return $cordovaFile.writeFile(cordova.file.dataDirectory,fileName,JSON.stringify(json),true);
+  function saveJSONtoFile(fileName,object){
+     $localstorage.set(fileName,JSON.stringify(object));
+     return $q.when(true);
   }
 
   /**
@@ -119,21 +122,19 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
   * Si no hay datos, devuelve -1.
   */
   function readCurrentVersion(){
-    return $cordovaFile.readAsText(cordova.file.dataDirectory, "versionPrograma.json")
-    .then(function(success){
-      var v = JSON.parse(success);
-      return v.version;
-    })
-    .catch(function(error){
-      return -1;
-    })
+
+    var v = JSON.parse($localstorage.get("versionPrograma",'{"version":-1}'));
+
+    console.log("read version " + v.version);
+    return $q.when(v.version);
+
   }
 
   /**
   * Actualiza asíncronamente la versión de los datos de programa actuales.
   */
   function saveCurrentVersion(newVersion){
-    return saveJSONtoFile("versionPrograma.json",{"version":newVersion});
+    return saveJSONtoFile("versionPrograma",{"version":newVersion});
   }
 
   /**
@@ -178,13 +179,18 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
     return $q.all(promises)
     .then(function(responses){
 
+
+
       var savePromises = [];
       //Se guarda cada uno de los archivos obtenidos
       for(var i = 0; i < responses.length; i++){
-        savePromises.push(saveJSONtoFile('programa-dia'+(i+8)+'.json',responses[i].data));
+        savePromises.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
       }
 
       return $q.all(savePromises);
+
+    })
+    .catch(function(error){
 
     })
 

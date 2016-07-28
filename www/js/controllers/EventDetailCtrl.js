@@ -8,8 +8,8 @@
  * This software may be modified and distributed under the terms
  * of the BSD license.  See the LICENSE file for details.
  */
-controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","EventService","FavoriteService","$ionicLoading","NotificationService","$ionicModal","$ionicPopup","$http","$cordovaToast",
-    function ($scope, $stateParams, $compile, EventService, FavoriteService, $ionicLoading, NotificationService, $ionicModal, $ionicPopup,$http,$cordovaToast) {
+controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","EventService","FavoriteService","$ionicLoading","NotificationService","$ionicModal","$ionicPopup","$http","$cordovaToast","$cordovaSocialSharing",
+    function ($scope, $stateParams, $compile, EventService, FavoriteService, $ionicLoading, NotificationService, $ionicModal, $ionicPopup,$http,$cordovaToast,$cordovaSocialSharing) {
 
 
         $scope.eventId = parseInt($stateParams.eventId); //Id del evento
@@ -180,7 +180,7 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
                 else{
                   $ionicLoading.show({template: 'Recordatorio eliminado', noBackdrop: true, duration: 700});
                 }
-                
+
                 $scope.hasReminder = false;
             }
             else {
@@ -235,5 +235,11 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
             return ionic.Platform.isAndroid();
         }
 
+
+
+        $scope.share = function(){
+          $cordovaSocialSharing.share("🎉 " + $scope.event.title + ".\n🕗 Día " + $scope.event.day + " a las " + $scope.event.hour + ".\n📍 " + $scope.event.place_text
+          + ".\n\nDescárgate la App de San Lorenzo 2016 en http://bit.ly/2agzaQF",$scope.event.title);
+        }
 
     }]);

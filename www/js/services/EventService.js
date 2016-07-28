@@ -8,7 +8,7 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('EventService', ['$http', '$q','$cordovaFile', function ($http, $q,$cordovaFile) {
+services.service('EventService', ['$http', '$q','$cordovaFile','$localstorage', function ($http, $q,$cordovaFile,$localstorage) {
 
 
   var self = this;
@@ -129,26 +129,16 @@ services.service('EventService', ['$http', '$q','$cordovaFile', function ($http,
       var promises = [];
       for(var i = 8; i <=15;i++){
 
-        if (ionic.Platform.isAndroid()) { //Si es android, de storage actualizable
-          promises.push($cordovaFile.readAsText(cordova.file.dataDirectory, 'programa-dia' + i + '.json'));
-        }
-        else{ //Si no, de appdata, el que viene con APK
-          promises.push($http.get("appdata/" + i + ".json"));
-        }
+          promises.push($q.when(JSON.parse($localstorage.get('programa-dia' + i,"[]"))));
+
       }
 
 
       return $q.all(promises).then(function (resp) {
 
-
         var i;
         for (i = 0; i < resp.length; i++) {
-          if(!ionic.Platform.isAndroid()){
-            data.push(resp[i].data);
-          }
-          else{
-            data.push(JSON.parse(resp[i]));
-          }
+            data.push(resp[i]);
 
         }
 
