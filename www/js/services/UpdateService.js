@@ -33,18 +33,18 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
 
     var initialized = $localstorage.get('initialized', false);
     if(!initialized){
-      console.log("Initializing data... copying from local storage");
+      //console.log("Initializing data... copying from local storage");
       return updateFromLocalFiles()
       .then(function(response){
         $localstorage.set('initialized',true);
-        console.log("Datos inicializados desde localStorage");
+        //console.log("Datos inicializados desde localStorage");
       })
       .catch(function(error){
-        console.log(JSON.stringify(error));
+        //console.log(JSON.stringify(error));
       })
     }
     else{
-      console.log("Data already initialized");
+    //  console.log("Data already initialized");
       return $q.when(true);
     }
 
@@ -75,7 +75,7 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
       var serverVersion = response.data.version;
       //Si la del servidor es mayor -> se actualiza
       if(serverVersion>currentVersion){
-        console.log("UPDATING. Current version: " + currentVersion + ", server version: " + serverVersion);
+      //  console.log("UPDATING. Current version: " + currentVersion + ", server version: " + serverVersion);
 
         //3.- Se obtienen ficheros nuevos
         return getNewFilesFromServer()
@@ -102,7 +102,7 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
         }); //Update files
       }
       else{
-        console.log("No need to update, same version " + serverVersion + " - " + currentVersion);
+        //console.log("No need to update, same version " + serverVersion + " - " + currentVersion);
         return $q.when(false); //Not updated -> false
       }
     });
@@ -125,7 +125,7 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
 
     var v = JSON.parse($localstorage.get("versionPrograma",'{"version":-1}'));
 
-    console.log("read version " + v.version);
+    //console.log("read version " + v.version);
     return $q.when(v.version);
 
   }
@@ -162,7 +162,7 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
   function updateFromLocalFiles(){
 
 
-    console.log("Actualizando desde ficheros locales...");
+    //console.log("Actualizando desde ficheros locales...");
     //Se obtienen todos los ficheros, y cada uno de ellos se va guardando en el storage de Android
     var promises = [
       $http.get("appdata/8.json"),
