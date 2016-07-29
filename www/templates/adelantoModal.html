@@ -5,17 +5,17 @@ Contenido del modal mostrado para elegir el adelanto de un recordatorio.
 <div class="row">
   <div class="col"> <!-- Columna izquierda -->
     <div class="row" style="width:100%;">
-      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time==0}" ng-mousedown="time=0">
+      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time.time==0}" ng-mousedown="time.time=0">
         <span>0m</span>
       </button>
     </div>
     <div class="row" style="width:100%;">
-      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time==15}" ng-mousedown="time=15">
+      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time.time==15}" ng-mousedown="time.time=15">
         <span>15m</span>
       </button>
     </div>
     <div class="row" style="width:100%;">
-      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time==60}" ng-mousedown="time=60">
+      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time.time==60}" ng-mousedown="time.time=60">
         <span>1h</span>
       </button>
     </div>
@@ -24,17 +24,17 @@ Contenido del modal mostrado para elegir el adelanto de un recordatorio.
 
   <div class="col"> <!-- Columna derecha -->
     <div class="row" style="width:100%;">
-      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time==5}" ng-mousedown="time=5">
+      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time.time==5}" ng-mousedown="time.time=5">
         <span>5m</span>
       </button>
     </div>
     <div class="row" style="width:100%;">
-      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time==30}" ng-mousedown="time=30">
+      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time.time==30}" ng-mousedown="time.time=30">
         <span>30m</span>
       </button>
     </div>
     <div class="row" style="width:100%;">
-      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time==120}" ng-mousedown="time=120">
+      <button class="button button-block button-calm adelanto-button" ng-class="{'active':time.time==120}" ng-mousedown="time.time=120">
         <span>2h</span>
       </button>
     </div>

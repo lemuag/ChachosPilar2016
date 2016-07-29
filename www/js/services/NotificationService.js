@@ -12,7 +12,7 @@ services.service('NotificationService', ['EventService', '$state','$cordovaLocal
 
 
   var month = 7; //Es uno menos, 7 es Agosto
-  var year = 2015;
+  var year = 2016;
 
   var self = this;
 
@@ -34,7 +34,7 @@ services.service('NotificationService', ['EventService', '$state','$cordovaLocal
 
   //Cancela una notificacion
   this.removeReminder = function (id) {
-    $cordovaLocalNotification.cancel(id, function () {
+    cordova.plugins.notification.local.cancel(id, function () {
       // Se cancela la notificacion
     });
   };
@@ -42,7 +42,7 @@ services.service('NotificationService', ['EventService', '$state','$cordovaLocal
 
   //Llama a la funcion callback con el resultado true o false de si está definido el recordatorio
   this.isScheduled = function (id, callback) {
-    $cordovaLocalNotification.isPresent(id, callback);
+    cordova.plugins.notification.local.isPresent(id, callback);
   };
 
 
@@ -97,13 +97,15 @@ services.service('NotificationService', ['EventService', '$state','$cordovaLocal
     var MS_PER_MINUTE = 60000;
     var finalAlarmTime = new Date(alarmTime.getTime() - adelanto * MS_PER_MINUTE);
 
-    finalAlarmTime = new Date();
-    finalAlarmTime.setSeconds(finalAlarmTime.getSeconds() + 3);
+    console.log("Adelanto: " + adelanto);
+    console.log("Alaarma: " + finalAlarmTime);
+    //finalAlarmTime = new Date();
+    //finalAlarmTime.setSeconds(finalAlarmTime.getSeconds() + 3);
 
     var notificationObject = {id:data.id, at: finalAlarmTime, icon:"res://icon.png",smallIcon:"res://ic_stat_notification.png"};
 
     var version = parseFloat(ionic.Platform.version());
-    
+
     if(version>=4.1){ //Multiline notification
       notificationObject.title= "Evento a las " + hour + ":" + minute;
       notificationObject.text=  event.title + "\n🕗 " + hour + ":" + minute + "\n📍 " + event.place_text;

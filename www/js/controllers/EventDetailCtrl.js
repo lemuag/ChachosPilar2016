@@ -131,7 +131,8 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
         $scope.showDialogoAlarma = function () {
             $scope.data = {};
 
-            $scope.time = 60;
+            $scope.time = {time:60};
+
 
 
             // An elaborate, custom popup
@@ -147,7 +148,7 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
                         onTap: function (e) {
 
                             //Programamos la alarma
-                            var exit = NotificationService.addReminder($scope.eventId, $scope.time);
+                            var exit = NotificationService.addReminder($scope.eventId, $scope.time.time);
                             if (ionic.Platform.isAndroid()) {
                               $cordovaToast.showShortBottom('Recordatorio programado');
                             }

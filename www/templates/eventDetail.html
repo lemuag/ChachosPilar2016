@@ -23,6 +23,7 @@ Vista de detalle de evento.
     <ion-content class="description-background">
 
 
+
         <div class="list card">
 
             <div class="item elemento-lista-eventos">
@@ -57,7 +58,7 @@ Vista de detalle de evento.
 
             </div>
             <div class="row">
-                <div class="col" ng-click="launchMap()" ng-show="event.place_long!='0'">
+                <div class="col" ng-click="launchMap()" ng-show="event.place_long && event.place_long!=0">
                     <button class="button button-block button-balanced colorSanLorenzo">
                         <span class="icon ion-map"></span> Ver mapa
                     </button>
