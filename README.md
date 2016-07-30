@@ -16,7 +16,7 @@ Funcionalidades:
 * Visualización de popularidad de cada evento.
 
 
-![Visualización de un evento](http://i.imgur.com/kW9GWUn.png)
+![Visualización de un evento](http://i.imgur.com/OlDZDID.jpg)
 
 ## Tecnologías
 
