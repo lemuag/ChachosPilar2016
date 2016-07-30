@@ -272,8 +272,9 @@
     "place_long": "-0.4079146",
     "place_lat": "42.14033",
     "category": "toros",
-    "description": "Seis toros de las ganaderías de José Murube, para PAQUIRRI, CAYETANO y JOSÉ GARRIDO. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "description": "Seis toros de las ganaderías de José Murube. Organiza Albahaca y Plata, S.L.",
+    "cancelled": false,
+    "bullfighters": ["Francisco Rivera “Paquirri”", "Cayetano", "José Garrido"]
   },
   {
     "id": 1223,

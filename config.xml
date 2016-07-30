@@ -33,4 +33,5 @@
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions#0.6.5" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0" />
     <plugin name="cordova-plugin-headercolor" spec="https://github.com/tomloprod/cordova-plugin-headercolor" />
+    <plugin name="cordova-plugin-device" spec="~1.1.2" />
 </widget>

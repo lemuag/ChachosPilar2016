@@ -260,8 +260,9 @@
     "place_long": "-0.4079146",
     "place_lat": "42.14033",
     "category": "toros",
-    "description": "Ocho toros de la ganadería Albarreal, para EDUARDO GALLO, DANIEL CUEVAS, IMANOL SÁNCHEZ y BORJA JIMÉNEZ. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "description": "Ocho toros de la ganadería Albarreal. Organiza Albahaca y Plata, S.L.",
+    "cancelled": false,
+    "bullfighters": ["Eduardo Gallo", "Daniel Cuevas", "Imanol Sánchez", "Borja Jiménez"]
   },
   {
     "id": 1322,

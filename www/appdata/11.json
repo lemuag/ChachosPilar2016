@@ -392,8 +392,9 @@
     "place_long": "-0.4079146",
     "place_lat": "42.14033",
     "category": "toros",
-    "description": "Seis toros de la ganadería de Núñez de Tarifa, para EL FANDI, A. TALAVANTE y ROCA REY. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "description": "Seis toros de la ganadería de Núñez de Tarifa. Organiza Albahaca y Plata, S.L.",
+    "cancelled": false,
+    "bullfighters": ["David Fandila “El Fandi”", "Alejandro Talavante", "Andrés Roca Rey"]
   },
   {
     "id": 1133,

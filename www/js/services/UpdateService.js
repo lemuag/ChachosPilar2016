@@ -8,7 +8,8 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','$localstorage', function ($http, $q,$cordovaFile,EventService,$localstorage) {
+services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','$localstorage','$cordovaDevice',
+ function ($http, $q,$cordovaFile,EventService,$localstorage,$cordovaDevice) {
 
   /**
   * NOTA: por temas de compatibilidad con versiones de Android menor a la 5,
@@ -28,6 +29,9 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
   * incluido en el APK al storage de Android.
   */
   self.initializeData = function(){
+
+
+
 
     //Si no es Android, terminamos aquí, pues no se copia ningún fichero.
 
@@ -63,8 +67,14 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
 
       currentVersion = version;
 
+
+      var uuid = "unknown";
+      if(ionic.Platform.isAndroid()){
+        uuid = $cordovaDevice.getUUID();
+      }
+      
       //2.- Se obtiene versión del servidor
-      return $http.get('http://sanlorenzo.ismaelrh.com:8889/events/version')
+      return $http.get('http://sanlorenzo.ismaelrh.com:8889/events/version?uuid=' + uuid);
 
     })
 

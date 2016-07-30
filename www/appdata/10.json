@@ -308,8 +308,9 @@
     "place_long": "-0.4079146",
     "place_lat": "42.14033",
     "category": "toros",
-    "description": "Seis toros de la ganadería de Charo de Llen, para J.J. PADILLA, J.M. MANZANARES y LÓPEZ SIMÓN. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "description": "Seis toros de la ganadería de Charo de Llen. Organiza Albahaca y Plata, S.L.",
+    "cancelled": false,
+    "bullfighters": ["Juan José Padilla","José María Manzanares","López Simón"]
   },
   {
     "id": 1026,
