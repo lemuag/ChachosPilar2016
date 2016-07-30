@@ -37,6 +37,12 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
 
     var initialized = $localstorage.get('initialized', false);
     if(!initialized){
+
+      //Borramos los favoritos si es la primera vez que se ejecuta -> para no conflictos con version de año pasado
+      $localstorage.setObject('favList', {
+          list: []
+      });
+
       //console.log("Initializing data... copying from local storage");
       return updateFromLocalFiles()
       .then(function(response){
@@ -72,7 +78,7 @@ services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','
       if(ionic.Platform.isAndroid()){
         uuid = $cordovaDevice.getUUID();
       }
-      
+
       //2.- Se obtiene versión del servidor
       return $http.get('http://sanlorenzo.ismaelrh.com:8889/events/version?uuid=' + uuid);
 

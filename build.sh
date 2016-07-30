@@ -7,4 +7,4 @@ rm -rf platforms/android/build/outputs/apk/*.apk
 cordova build --release android
 cd platforms/android/build/outputs/apk
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore sanLorenzo15.keystore android-release-unsigned.apk sanLorenzo15
-~/android-sdk-linux/build-tools/22.0.1/zipalign -v 4 android-release-unsigned.apk sanLorenzo15_signed.apk
+~/android-sdk-linux/build-tools/24.0.0/zipalign -v 4 android-release-unsigned.apk sanLorenzo16_signed.apk
