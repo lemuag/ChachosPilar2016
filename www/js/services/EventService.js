@@ -8,7 +8,7 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('EventService', ['$http', '$q','$cordovaFile','$localstorage', function ($http, $q,$cordovaFile,$localstorage) {
+services.service('EventService', ['$http', '$q','$localstorage', function ($http, $q,$localstorage) {
 
 
   var self = this;

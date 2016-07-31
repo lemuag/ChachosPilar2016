@@ -8,8 +8,8 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('UpdateService', ['$http', '$q','$cordovaFile','EventService','$localstorage','$cordovaDevice',
- function ($http, $q,$cordovaFile,EventService,$localstorage,$cordovaDevice) {
+services.service('UpdateService', ['$http', '$q','EventService','$localstorage','$cordovaDevice',
+ function ($http, $q,EventService,$localstorage,$cordovaDevice) {
 
   /**
   * NOTA: por temas de compatibilidad con versiones de Android menor a la 5,
