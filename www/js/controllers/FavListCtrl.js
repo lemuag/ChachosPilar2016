@@ -28,7 +28,10 @@ controllers.controller('FavListCtrl', ["$scope","$stateParams","$state","EventSe
             $scope.events = [[],[],[],[],[],[],[],[]];
             for(var j = 0; j< results.length;j++){
               var index = results[j].day - 8;
-              $scope.events[index].push(results[j]);
+              if(results[j]){
+                $scope.events[index].push(results[j]);
+              }
+              
             }
           });
 
