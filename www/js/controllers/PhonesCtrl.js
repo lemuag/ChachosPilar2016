@@ -37,7 +37,7 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
             },
             {
                 "title": "Cruz Roja",
-                "phone": "974 221 186"
+                "phone": "974 222 222"
             },
         ]
     };

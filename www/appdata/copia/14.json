@@ -261,7 +261,8 @@
     "place_lat": "42.14033",
     "category": "toros",
     "description": "Seis toros de la ganadería de Benítez Cubero. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["Andy Cartagena", "Leonardo Hernández", "Lea Vicens"]
   },
   {
     "id": 1422,

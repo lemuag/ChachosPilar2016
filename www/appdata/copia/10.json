@@ -185,8 +185,8 @@
     "day": 10,
     "hour": "12:30",
     "place_text": "Plaza Navarra",
-    "place_long": "-0.408866",
-    "place_lat": "42.13619",
+    "place_long": "-0.4111729",
+    "place_lat": "42.135964",
     "category": "conciertos",
     "description": "Pasacalles. Charanga Riau - Riau, de la Peña Recreativa Zoiti.",
     "cancelled": false
@@ -239,7 +239,7 @@
     "description": "Sin descripción.",
     "cancelled": false
   },
-  {
+{
     "id": 1048,
     "title": "Concentración Antitaurina",
     "day": 10,
@@ -321,7 +321,8 @@
     "place_lat": "42.14033",
     "category": "toros",
     "description": "Seis toros de la ganadería de Charo de Llen. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["Juan José Padilla","José María Manzanares","López Simón"]
   },
   {
     "id": 1026,
