@@ -58,17 +58,12 @@ Vista de detalle de evento.
 
             </div>
             <div class="row">
-                <div class="col" ng-click="launchMap()" ng-show="event.place_long && event.place_long!=0">
-                    <button class="button button-block button-balanced colorSanLorenzo">
+                <div class="col" ng-click="(event.place_long && event.place_long.length > 0) && launchMap()">
+                    <button ng-disabled="!event.place_long || event.place_long.length == 0"class="button button-block button-balanced colorSanLorenzo">
                         <span class="icon ion-map"></span> Ver mapa
                     </button>
                 </div>
-                <div class="col" ng-click="alert('No hay información sobre el lugar de este evento')"
-                     ng-hide="event.place_long!='0'">
-                    <button class="button button-block disabled button-balanced colorSanLorenzo">
-                        <span class="icon ion-map"></span> Ver mapa
-                    </button>
-                </div>
+
                 <div class="col" ng-click="favoriteEvent()">
                     <button class="button button-block button-balanced fav-button colorSanLorenzo">
 
