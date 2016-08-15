@@ -68,7 +68,19 @@
     "place_long": "-0.408639",
     "place_lat": "42.14072",
     "category": "otros",
-    "description": "Desde el balcón principal del Palacio Municipal, lectura del pregón y disparo del cohete anunciador del comienzo de las fiestas. Cabalgata Pregón de Fiestas. Con salida desde la plaza de la Catedral, recorrerá Coso Alto y Porches de Galicia y finalizará en la plaza de Navarra. Participarán la Banda de Música de Huesca y las Peñas Recreativas Oscenses.",
+    "description": "Desde el balcón principal del Palacio Municipal, lectura del pregón y disparo del cohete anunciador del comienzo de las fiestas.",
+    "cancelled": false
+  },
+  {
+    "id": 933,
+    "title": "Cabalgata Pregón de Fiestas.",
+    "day": 9,
+    "hour": "12:00",
+    "place_text": "Salida: Plaza de la Catedral",
+    "place_long": "-0.408639",
+    "place_lat": "42.14072",
+    "category": "otros",
+    "description": "Con salida desde la plaza de la Catedral, recorrerá Coso Alto y Porches de Galicia y finalizará en la plaza de Navarra. Participarán la Banda de Música de Huesca y las Peñas Recreativas Oscenses.",
     "cancelled": false
   },
   {
@@ -96,6 +108,18 @@
     "cancelled": false
   },
   {
+    "id": 934,
+    "title": "Fiesta Pachito",
+    "day": 9,
+    "hour": "13:30 - 17:30",
+    "place_text": "Plaza San Antonio",
+    "place_long": "-0.407615",
+    "place_lat": "42.135143",
+    "category": "conciertos",
+    "description": "Organizan: Peñas Recreativas Alegría Laurentina, Los 30 y Los Que Faltaban.",
+    "cancelled": false
+  },
+  {
     "id": 908,
     "title": "Pasacalles",
     "day": 9,
@@ -105,18 +129,6 @@
     "place_lat": "42.136219",
     "category": "conciertos",
     "description": "Pasacalles hacia la Plaza de Toros. Charangas Peñas Recreativas Oscenses.",
-    "cancelled": false
-  },
-  {
-    "id": 909,
-    "title": "Agrupación Folclórica Santa Cecilia",
-    "day": 9,
-    "hour": "17:30",
-    "place_text": "Residencia “Nuestra Señora de la Merced”",
-    "place_long": "-0.409174",
-    "place_lat": "42.143521",
-    "category": "conciertos",
-    "description": "Sin descripción.",
     "cancelled": false
   },
   {
@@ -374,7 +386,7 @@
   {
     "id": 931,
     "title": "Ante Todo Mucha Calma",
-    "day": 9,
+    "day": 10,
     "hour": "01:30",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",
@@ -386,7 +398,7 @@
   {
     "id": 932,
     "title": "Feel The Beat",
-    "day": 9,
+    "day": 10,
     "hour": "03:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

@@ -29,7 +29,7 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
             },
             {
                 "title": "Protección Civil",
-                "phone": "974 221 540"
+                "phone": "974 216 868"
             },
             {
                 "title": "Bomberos",

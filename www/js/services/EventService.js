@@ -8,7 +8,7 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('EventService', ['$http', '$q','$localstorage', function ($http, $q,$localstorage) {
+services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',function ($http, $q,$localstorage,$rootScope) {
 
 
   var self = this;
@@ -109,7 +109,15 @@ services.service('EventService', ['$http', '$q','$localstorage', function ($http
 
   this.reloadData = function(){
     is_data_loaded = false;
-    this.loadEvents();
+    this.loadEvents()
+    .then(function(data){
+      // firing an event downwards
+
+      $rootScope.$broadcast('dataReloaded', {
+      });
+
+    })
+
   }
 
   /**
@@ -125,11 +133,14 @@ services.service('EventService', ['$http', '$q','$localstorage', function ($http
     }
     else{
 
+      data = [];
+
 
       var promises = [];
       for(var i = 8; i <=15;i++){
 
-          promises.push($q.when(JSON.parse($localstorage.get('programa-dia' + i,"[]"))));
+          var read = $localstorage.get('programa-dia' + i,"[]");
+          promises.push($q.when(JSON.parse(read)));
 
       }
 
@@ -139,8 +150,11 @@ services.service('EventService', ['$http', '$q','$localstorage', function ($http
         var i;
         for (i = 0; i < resp.length; i++) {
             data.push(resp[i]);
+          
 
         }
+
+
 
         is_data_loaded = true;
 

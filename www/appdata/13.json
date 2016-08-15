@@ -51,7 +51,7 @@
     "id": 1304,
     "title": "Parque infantil",
     "day": 13,
-    "hour": "11:00 - 13:30",
+    "hour": "11:30 - 13:30",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -121,7 +121,7 @@
   },
   {
     "id": 1310,
-    "title": "Programa laurentino",
+    "title": "Programa laurentino Radio Huesca",
     "day": 13,
     "hour": "12:20-14:30",
     "place_text": "Hotel Abba Huesca",
@@ -261,13 +261,14 @@
     "place_lat": "42.140539",
     "category": "toros",
     "description": "Ocho toros de la ganadería Albarreal. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["Eduardo Gallo","Daniel Cuevas","Imanol Sánchez","Borja Jiménez"]
   },
   {
     "id": 1322,
     "title": "Parque infantil",
     "day": 13,
-    "hour": "18:00 - 19:30",
+    "hour": "18:00 - 20:00",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -324,8 +325,20 @@
     "cancelled": false
   },
   {
+    "id": 1348,
+    "title": "Agrupación Folclórica el Moral (Tenerife)",
+    "day": 13,
+    "hour": "19:30",
+    "place_text": "Barrio San José - Centro Cultural del Matadero",
+    "place_long": "-0.414754",
+    "place_lat": "42.136389",
+    "category": "otros",
+    "description": "Pasacalles.",
+    "cancelled": false
+  },
+  {
     "id": 1327,
-    "title": "Noche \u0026 Zangania",
+    "title": "Noche & Zangania",
     "day": 13,
     "hour": "20:00",
     "place_text": "Parque Miguel Servet",
@@ -407,18 +420,7 @@
     "description": "Pasacalles.",
     "cancelled": false
   },
-  {
-    "id": 1346,
-    "title": "Amaral y Copiloto",
-    "day": 13,
-    "hour": "22:30",
-    "place_text": "Recinto de Peñas Recreativas",
-    "place_long": "-0.399907",
-    "place_lat": "42.131015",
-    "category": "conciertos",
-    "description": "Entrada anticipada por 18€, taquilla por 25€. Menores de 9 años gratis. Apto para todos los públicos.",
-    "cancelled": false
-  },
+
   {
     "id": 1334,
     "title": "Fuegos Artificiales",
@@ -479,6 +481,19 @@
     "description": "Pasacalles. Charanga La Unión, de la Peña Recreativa La Parrilla.",
     "cancelled": false
   },
+  {
+    "id": 1349,
+    "title": "Copiloto",
+    "day": 13,
+    "hour": "24:00",
+    "place_text": "Recinto de Peñas Recreativas",
+    "place_long": "-0.399907",
+    "place_lat": "42.131015",
+    "category": "conciertos",
+    "description": "Parte del concierto AMARAL + COPILOTO. Entrada anticipada por 18€, taquilla por 25€. Menores de 9 años gratis. Apto para todos los públicos.",
+    "cancelled": false
+  },
+
   {
     "id": 1340,
     "title": "Orquesta “Sabor Sabor”",
@@ -542,7 +557,7 @@
   {
     "id": 1345,
     "title": "Grupo Los 30",
-    "day": 13,
+    "day": 14,
     "hour": "00:30",
     "place_text": "Porches de Galicia",
     "place_long": "-0.408189",
@@ -552,9 +567,22 @@
     "cancelled": false
   },
   {
+    "id": 1346,
+    "title": "Amaral",
+    "day": 14,
+    "hour": "01:00",
+    "place_text": "Recinto de Peñas Recreativas",
+    "place_long": "-0.399907",
+    "place_lat": "42.131015",
+    "category": "conciertos",
+    "description": "Parte del concierto AMARAL + COPILOTO. Entrada anticipada por 18€, taquilla por 25€. Menores de 9 años gratis. Apto para todos los públicos.",
+    "cancelled": false
+  },
+
+  {
     "id": 1347,
     "title": "Diego Aguas (Dj Set)",
-    "day": 13,
+    "day": 14,
     "hour": "03:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

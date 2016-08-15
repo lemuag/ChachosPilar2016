@@ -6,7 +6,7 @@ Vista de menu principal
       <ion-nav-buttons side="right">
           <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()"></button>
       </ion-nav-buttons>
-  <ion-content class="main-background" >
+  <ion-content class="main-background" scroll="false" >
 
       <form ng-submit="buscar()" ng-show="buscarVisible" class="search ng-cloak">
           <label class="item item-input  barraBusqueda" >
@@ -14,6 +14,25 @@ Vista de menu principal
               <input type="search" ng-model="$parent.filtro" placeholder="Buscar por título y/o lugar" ng-focus="offTeclado()" ng-blur="onTeclado()">
           </label>
       </form>
+
+
+        <div class="list ahoraMismoLista" >
+
+      <div class="item item-divider">
+        <i class="ion-android-time"></i> &nbsp; Ahora mismo...
+      </div>
+
+  <div ng-repeat="event in current |limitTo:5 "class="item ahoraMismo" ng-click="displayEvent(event.id)" ng-show="current.length>0">
+       <span class="ahoraMismoText">{{event.title}}</span>
+        <span class="badge badge-assertive ahoraMismoBadge">{{event.startHour}}</span>
+  </div>
+  <div ng-show="current.length==0" style="text-align:center;">
+      <span class="ahoraMismoTextCentro">Ningún evento en estos momentos</span>
+  </div>
+
+
+</div>
+
 
 
 

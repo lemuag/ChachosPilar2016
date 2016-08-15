@@ -84,7 +84,7 @@ services.service('NotificationService', ['EventService', '$state','$cordovaLocal
     //Si la hora es las 24, se suma un dia y serán las 0:00
     //Si no lo es, se queda como esta, ya que a partir de las 0:01 esta marcado
     //en los datos como siguiente dia
-    if (hour == 24) {
+    if (hour == 24 || hour == "24") {
       day++;
       hour = 0;
     }

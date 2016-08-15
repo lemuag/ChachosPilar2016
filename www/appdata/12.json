@@ -51,7 +51,7 @@
     "id": 1204,
     "title": "Parque infantil",
     "day": 12,
-    "hour": "11:00 - 13:30",
+    "hour": "11:30 - 13:30",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -85,7 +85,7 @@
   },
   {
     "id": 1207,
-    "title": "\"Gran \"\"encierro\"\" infantil\"",
+    "title": "Gran “encierro” infantil",
     "day": 12,
     "hour": "11:30",
     "place_text": "Plaza San Lorenzo – Plaza de Toros",
@@ -133,7 +133,7 @@
   },
   {
     "id": 1211,
-    "title": "Programa laurentino",
+    "title": "Programa laurentino Radio Huesca",
     "day": 12,
     "hour": "12:20 - 14:30",
     "place_text": "Hotel Abba Huesca",
@@ -145,14 +145,14 @@
   },
   {
     "id": 1212,
-    "title": "Programa San Lorenzo",
+    "title": "Programa en directo “Especial Fiestas de San Lorenzo”",
     "day": 12,
     "hour": "12:30 - 13:30",
     "place_text": "Hotel Pedro I",
     "place_long": "-0.412787",
     "place_lat": "42.138884",
     "category": "otros",
-    "description": "Programa en directo “Especial Fiestas de San Lorenzo”. Organiza COPE Huesca.",
+    "description": "Organiza COPE Huesca.",
     "cancelled": false
   },
   {
@@ -169,7 +169,7 @@
   },
   {
     "id": 1214,
-    "title": "Programa San Lorenzo",
+    "title": "Programa radio “Huesca en la Onda”",
     "day": 12,
     "hour": "12:30 - 14:00",
     "place_text": "Porches de Galicia",
@@ -243,7 +243,7 @@
     "id": 1220,
     "title": "Parque infantil",
     "day": 12,
-    "hour": "18:00 - 19:30",
+    "hour": "18:00 - 20:00",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -273,7 +273,8 @@
     "place_lat": "42.140539",
     "category": "toros",
     "description": "Seis toros de las ganaderías de José Murube. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["Paquirri","Cayetano","José Garrido"]
   },
   {
     "id": 1223,
@@ -349,14 +350,14 @@
   },
   {
     "id": 1229,
-    "title": "Pedrá",
+    "title": "Pedrá (Tributo Extremoduro)",
     "day": 12,
     "hour": "22:00",
     "place_text": "Plaza San Antonio",
     "place_long": "-0.407615",
     "place_lat": "42.135143",
     "category": "conciertos",
-    "description": "Tributo Extremoduro. Organizan: Peñas Recreativas Alegría Laurentina, Los 30 y Los Que Faltaban.",
+    "description": "Organizan: Peñas Recreativas Alegría Laurentina, Los 30 y Los Que Faltaban.",
     "cancelled": false
   },
   {
@@ -494,7 +495,7 @@
   {
     "id": 1241,
     "title": "Pecker",
-    "day": 12,
+    "day": 13,
     "hour": "00:15",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",
@@ -506,7 +507,7 @@
   {
     "id": 1242,
     "title": "Dorian",
-    "day": 12,
+    "day": 13,
     "hour": "01:30",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",
@@ -517,8 +518,8 @@
   },
   {
     "id": 1243,
-    "title": "Me Dj\u0027s (Dj Set)",
-    "day": 12,
+    "title": "Me Dj's (Dj Set)",
+    "day": 13,
     "hour": "03:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

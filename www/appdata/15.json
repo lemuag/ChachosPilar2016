@@ -61,7 +61,7 @@
   },
   {
     "id": 1505,
-    "title": "Gran Parque Infanti",
+    "title": "Gran Parque Infantil Hinchables",
     "day": 15,
     "hour": "11:00 - 14:00",
     "place_text": "Barrio de Santo Domingo y San Martín (Parque de San Martín)",
@@ -121,7 +121,7 @@
   },
   {
     "id": 1510,
-    "title": "Gran Parque Infantil",
+    "title": "Gran Parque Infantil Hinchables",
     "day": 15,
     "hour": "18:00 - 20:00",
     "place_text": "Barrio de Santo Domingo y San Martín (Parque de San Martín)",
@@ -170,7 +170,7 @@
   {
     "id": 1514,
     "title": "Feel The Beat (Dj Set)",
-    "day": 15,
+    "day": 16,
     "hour": "01:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

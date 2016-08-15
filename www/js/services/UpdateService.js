@@ -47,14 +47,17 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       return updateFromLocalFiles()
       .then(function(response){
         $localstorage.set('initialized',true);
-        //console.log("Datos inicializados desde localStorage");
+
+          EventService.reloadData();
+
+
       })
       .catch(function(error){
-        //console.log(JSON.stringify(error));
+        console.log(JSON.stringify(error));
       })
     }
     else{
-    //  console.log("Data already initialized");
+
       return $q.when(true);
     }
 
@@ -112,13 +115,15 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
             .then(function(response){
               $localstorage.set('lastUpdated',Date.now());
               self.lastUpdated = Date.now();
+
               EventService.reloadData();
+
             })
           });
         }); //Update files
       }
       else{
-        //console.log("No need to update, same version " + serverVersion + " - " + currentVersion);
+
         return $q.when(false); //Not updated -> false
       }
     });
@@ -130,6 +135,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
   */
   function saveJSONtoFile(fileName,object){
      $localstorage.set(fileName,JSON.stringify(object));
+
      return $q.when(true);
   }
 
@@ -200,6 +206,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       var savePromises = [];
       //Se guarda cada uno de los archivos obtenidos
       for(var i = 0; i < responses.length; i++){
+
         savePromises.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
       }
 

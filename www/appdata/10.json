@@ -75,7 +75,7 @@
     "id": 1006,
     "title": "Parque infantil",
     "day": 10,
-    "hour": "11:00 - 13:30",
+    "hour": "11:30 - 13:30",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -133,19 +133,19 @@
   },
   {
     "id": 1011,
-    "title": "Programa Fiestas de San Lorenzo",
+    "title": "Programa en directo “Especial Fiestas de San Lorenzo”",
     "day": 10,
     "hour": "12:30 - 13:30",
     "place_text": "Hotel Pedro I",
     "place_long": "-0.412787",
     "place_lat": "42.138884",
     "category": "otros",
-    "description": "Programa en directo “Especial Fiestas de San Lorenzo”. Organiza COPE Huesca.",
+    "description": "Organiza COPE Huesca.",
     "cancelled": false
   },
   {
     "id": 1012,
-    "title": "Programa San Lorenzo",
+    "title": "Programa radio “Huesca en la Onda”",
     "day": 10,
     "hour": "12:30 - 14:00",
     "place_text": "Porches de Galicia",
@@ -181,7 +181,7 @@
   },
   {
     "id": 1015,
-    "title": "Charanga Riau – Riau",
+    "title": "Charanga Riau - Riau",
     "day": 10,
     "hour": "12:30",
     "place_text": "Plaza Navarra",
@@ -291,7 +291,7 @@
     "id": 1023,
     "title": "Parque infantil",
     "day": 10,
-    "hour": "18:00 - 19:30",
+    "hour": "18:00 - 20:00",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -301,14 +301,14 @@
   },
   {
     "id": 1024,
-    "title": "Gran Parque Infantil",
+    "title": "Gran Parque Infantil de Hinchables",
     "day": 10,
     "hour": "18:00 - 20:00",
     "place_text": "Barrio de la Encarnación (Avenida Martínez de Velasco)",
     "place_long": "-0.419276",
     "place_lat": "42.130752",
     "category": "infantil",
-    "description": "Gran Parque Infantil de Hinchables.",
+    "description": "Sin descripción.",
     "cancelled": false
   },
   {
@@ -321,7 +321,8 @@
     "place_lat": "42.140539",
     "category": "toros",
     "description": "Seis toros de la ganadería de Charo de Llen. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["J.J. Padilla", "J.M. Manzanares", "López Simón"]
   },
   {
     "id": 1026,
@@ -529,7 +530,7 @@
   },
   {
     "id": 1043,
-    "title": "Charanga Riau – Riau",
+    "title": "Charanga Riau - Riau",
     "day": 10,
     "hour": "24:00",
     "place_text": "Porches de Galicia – Plaza de Santo Domingo",
@@ -554,7 +555,7 @@
   {
     "id": 1045,
     "title": "Loquillo",
-    "day": 10,
+    "day": 11,
     "hour": "00:30",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",
@@ -566,7 +567,7 @@
   {
     "id": 1046,
     "title": "Grupo Los 30",
-    "day": 10,
+    "day": 11,
     "hour": "00:30",
     "place_text": "Porches de Galicia - Plaza Santo Domingo",
     "place_long": "-0.408189",
@@ -578,7 +579,7 @@
   {
     "id": 1047,
     "title": "Diego Aguas (Dj Set)",
-    "day": 10,
+    "day": 11,
     "hour": "02:30",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

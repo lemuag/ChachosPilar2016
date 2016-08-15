@@ -51,7 +51,7 @@
     "id": 1404,
     "title": "Parque infantil",
     "day": 14,
-    "hour": "11:00 - 13:30",
+    "hour": "11:30 - 13:30",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -169,7 +169,7 @@
   },
   {
     "id": 1414,
-    "title": "Programa laurentino",
+    "title": "Programa laurentino Radio Huesca",
     "day": 14,
     "hour": "12:20 - 14:30",
     "place_text": "Hotel Abba Huesca",
@@ -231,7 +231,7 @@
     "id": 1419,
     "title": "Parque infantil",
     "day": 14,
-    "hour": "18:00 - 19:30",
+    "hour": "18:00 - 20:00",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -241,7 +241,7 @@
   },
   {
     "id": 1420,
-    "title": "Gran Parque Infantil",
+    "title": "Gran Parque Infantil Hinchables",
     "day": 14,
     "hour": "18:00 - 20:00",
     "place_text": "Barrio de Santiago (Avenida Santo Cristo de los Milagros)",
@@ -261,7 +261,8 @@
     "place_lat": "42.140539",
     "category": "toros",
     "description": "Seis toros de la ganadería de Benítez Cubero. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["Andy Cartagena","Leonardo Hdez.","Lea Vicens"]
   },
   {
     "id": 1422,
@@ -422,7 +423,7 @@
   {
     "id": 1435,
     "title": "V Trobada de Gaiteros de Aragón",
-    "day": 14,
+    "day": 15,
     "hour": "00:30",
     "place_text": "Plaza Santo Domingo",
     "place_long": "-0.404929",
@@ -434,7 +435,7 @@
   {
     "id": 1436,
     "title": "Ilegales",
-    "day": 14,
+    "day": 15,
     "hour": "01:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",
@@ -446,7 +447,7 @@
   {
     "id": 1437,
     "title": "Feel The Beat (Dj Set)",
-    "day": 14,
+    "day": 15,
     "hour": "03:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

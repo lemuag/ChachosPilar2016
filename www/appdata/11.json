@@ -68,7 +68,7 @@
     "place_long": "-0.407942",
     "place_lat": "42.141132",
     "category": "otros",
-    "description": "Actuación.  Grupo Molto Vivace Vitoria – Gasteiz (Álava).",
+    "description": "Actuación.  Grupo Molto Vivace Vitoria - Gasteiz (Álava).",
     "cancelled": false
   },
   {
@@ -87,7 +87,7 @@
     "id": 1107,
     "title": "Parque infantil",
     "day": 11,
-    "hour": "11:00 - 13:30",
+    "hour": "11:30 - 13:30",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -131,18 +131,7 @@
     "description": "Actuación. Danzantes de Huesca y Banda de Música de Huesca.",
     "cancelled": false
   },
-  {
-    "id": 1111,
-    "title": "Molto Vivace",
-    "day": 11,
-    "hour": "12:00",
-    "place_text": "Residencia de Mayores “Sagrada Familia”",
-    "place_long": "-0.400542",
-    "place_lat": "42.141652",
-    "category": "otros",
-    "description": "Actuación. Grupo Molto Vivace Vitoria – Gasteiz (Álava).",
-    "cancelled": false
-  },
+
   {
     "id": 1112,
     "title": "Grupo Los 30",
@@ -192,6 +181,42 @@
     "cancelled": false
   },
   {
+    "id": 1111,
+    "title": "Grupo Molto Vivace",
+    "day": 11,
+    "hour": "12:00",
+    "place_text": "Barrio de la Encarnación (Avda. Martínez de Velasco, 69)",
+    "place_long": "-0.419276",
+    "place_lat": "42.130752",
+    "category": "otros",
+    "description": "Pasacalles por el barrio. Grupo Molto vivace Vitoria - Gasteiz (Álava)",
+    "cancelled": false
+  },
+  {
+    "id": 1157,
+    "title": "Agrupación Folclórica Santa Cecilia",
+    "day": 11,
+    "hour": "12:00",
+    "place_text": "Residencia “Nuestra Señora de la Merced”",
+    "place_long": "-0.409174",
+    "place_lat": "42.143521",
+    "category": "conciertos",
+    "description": "Sin descripción.",
+    "cancelled": false
+  },
+  {
+    "id": 1158,
+    "title": "Agrupación Folclórica Santa Cecilia",
+    "day": 11,
+    "hour": "12:00",
+    "place_text": "Residencia “Saturnino López Novoa”",
+    "place_long": "-0.4113778",
+    "place_lat": "42.1317097",
+    "category": "conciertos",
+    "description": "Actuación.",
+    "cancelled": false
+  },
+  {
     "id": 1116,
     "title": "Gigantes, Cabezudos y Caballicos",
     "day": 11,
@@ -217,7 +242,7 @@
   },
   {
     "id": 1118,
-    "title": "Programa laurentino",
+    "title": "Programa laurentino Radio Huesca",
     "day": 11,
     "hour": "12:20 - 14:30",
     "place_text": "Hotel Abba Huesca",
@@ -229,19 +254,19 @@
   },
   {
     "id": 1119,
-    "title": "Programa San Lorenzo",
+    "title": "Programa en directo “Especial Fiestas de San Lorenzo”",
     "day": 11,
     "hour": "12:30 - 13:30",
     "place_text": "Hotel Pedro I",
     "place_long": "-0.412787",
     "place_lat": "42.138884",
     "category": "otros",
-    "description": "Programa en directo “Especial Fiestas de San Lorenzo”. Organiza COPE Huesca.",
+    "description": "Organiza COPE Huesca.",
     "cancelled": false
   },
   {
     "id": 1120,
-    "title": "Programa San Lorenzo",
+    "title": "Programa radio “Huesca en la Onda”",
     "day": 11,
     "hour": "12:30 - 14:00",
     "place_text": "Porches de Galicia",
@@ -265,7 +290,7 @@
   },
   {
     "id": 1122,
-    "title": "Vermut",
+    "title": "Actuación de Vermut",
     "day": 11,
     "hour": "13:30",
     "place_text": "Local Peña Os Casaus",
@@ -289,7 +314,7 @@
   },
   {
     "id": 1124,
-    "title": "Actividades infantiles",
+    "title": "Hinchables y juegos infantiles",
     "day": 11,
     "hour": "17:30",
     "place_text": "Local Peña Os Casaus",
@@ -301,12 +326,12 @@
   },
   {
     "id": 1125,
-    "title": "Agrupación Folclórica Santa Cecilia",
+    "title": "Grupo Molto Vivace",
     "day": 11,
     "hour": "17:30",
-    "place_text": "Residencia de Mayores “Saturnino López Novoa”",
-    "place_long": "-0.409402",
-    "place_lat": "42.13209",
+    "place_text": "Residencia de Mayores “Sagrada Familia”",
+    "place_long": "-0.400542",
+    "place_lat": "42.141652",
     "category": "conciertos",
     "description": "Actuación.",
     "cancelled": false
@@ -363,7 +388,7 @@
     "id": 1130,
     "title": "Parque infantil",
     "day": 11,
-    "hour": "18:00 - 19:30",
+    "hour": "18:00 - 20:00",
     "place_text": "Parque Miguel Servet",
     "place_long": "-0.412571",
     "place_lat": "42.136926",
@@ -393,7 +418,8 @@
     "place_lat": "42.140539",
     "category": "toros",
     "description": "Seis toros de la ganadería de Núñez de Tarifa. Organiza Albahaca y Plata, S.L.",
-    "cancelled": false
+    "cancelled": false,
+    "bullfighters": ["El Fandi", "A. Talavante", "Roca Rey"]
   },
   {
     "id": 1133,
@@ -424,23 +450,11 @@
     "title": "Desastrosus Cirkus",
     "day": 11,
     "hour": "19:00",
-    "place_text": "Centro Cultural del Matadero",
-    "place_long": "-0.411543",
-    "place_lat": "42.134797",
+    "place_text": "Barrio San José - Centro Cultural del Matadero",
+    "place_long": "-0.414754",
+    "place_lat": "42.136389",
     "category": "otros",
     "description": "Actuación.",
-    "cancelled": false
-  },
-  {
-    "id": 1136,
-    "title": "Grupo Molto Vivace",
-    "day": 11,
-    "hour": "19:00",
-    "place_text": "Barrio de la Encarnación (Avda. Martínez de Velasco, 69)",
-    "place_long": "-0.419276",
-    "place_lat": "42.130752",
-    "category": "otros",
-    "description": "Pasacalles por el barrio. Grupo Molto Vivace Vitoria – Gasteiz (Álava).",
     "cancelled": false
   },
   {
@@ -488,7 +502,7 @@
     "place_long": "-0.412571",
     "place_lat": "42.136926",
     "category": "conciertos",
-    "description": "Grupo Folclóre San Lorenzo.",
+    "description": "Grupo Folclórico San Lorenzo.",
     "cancelled": false
   },
   {
@@ -553,7 +567,7 @@
   },
   {
     "id": 1146,
-    "title": "Lágrimas de san Lorenzo",
+    "title": "Lágrimas de San Lorenzo",
     "day": 11,
     "hour": "23:00",
     "place_text": "Parque Tecnológico Walqa",
@@ -650,7 +664,7 @@
   {
     "id": 1154,
     "title": "Grupo Los 30",
-    "day": 11,
+    "day": 12,
     "hour": "00:30",
     "place_text": "Plaza Alfonso I el Batallador",
     "place_long": "-1.817752",
@@ -662,7 +676,7 @@
   {
     "id": 1155,
     "title": "Marinah Ojos De Brujo",
-    "day": 11,
+    "day": 12,
     "hour": "01:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",
@@ -674,7 +688,7 @@
   {
     "id": 1156,
     "title": "Javimar (Dj Set)",
-    "day": 11,
+    "day": 12,
     "hour": "03:00",
     "place_text": "Recinto de Peñas Recreativas",
     "place_long": "-0.399907",

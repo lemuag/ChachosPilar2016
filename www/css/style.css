@@ -13,6 +13,49 @@ overflow: initial;
     white-space: initial;
 }
 
+
+.ahoraMismoLista{
+  margin:10px;
+    background:rgba(255,255,255,0.8);
+}
+
+.ahoraMismo{
+  padding: 5px;
+    background:rgba(255,255,255,0.8);
+
+}
+.ahoraMismoText{
+
+  font-size:0.8em;
+    background:rgba(255,255,255,0.0);
+
+
+
+}
+
+
+.ahoraMismoTextCentro{
+
+    font-size:1em;
+    background:rgba(255,255,255,0.0);
+
+
+
+
+}
+
+
+
+
+
+.ahoraMismoBadge{
+  position: absolute !important;
+  top: 5px !important;
+  font-size:0.8em;
+  padding:3px;
+  right:3px !important;
+}
+
 .tituloLista{
     overflow: initial;
     white-space: initial;
@@ -20,6 +63,7 @@ overflow: initial;
     color:#022e14;
     font-weight:bold;
 }
+
 .horaLista{
     overflow: initial;
     white-space: initial;
