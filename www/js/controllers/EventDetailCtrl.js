@@ -96,7 +96,7 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
             }
 
 
-            var alarmTime = new Date(2016, 7, day, hour, minute, 0, 0);
+            var alarmTime = new Date(2016, 9, day, hour, minute, 0, 0);
             var now = new Date();
             return alarmTime.getTime() <= now.getTime();
 
