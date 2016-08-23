@@ -13,14 +13,14 @@ services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',fu
 
   var self = this;
 
-  var start_day = 8; //Dia de inicio de las fiestas
-  var finish_day = 15; //Dia de fin de las fiestas
+  var start_day = 7; //Dia de inicio de las fiestas cambiado al Pilar 2160
+  var finish_day = 16; //Dia de fin de las fiestas cambiado al pilar 2015
 
   var is_data_loaded = false; //indica si los datos están en memoria
 
   //Constant values
   var DAYS_ALL = -1;
-  //Categorías disponibles: "todas","conciertos","toros","infantil","otros"
+  //Categorías disponibles: "todas","conciertos","comidas","infantil","otros"
   var CAT_ALL = "todas";
 
 
@@ -173,31 +173,36 @@ services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',fu
     .then(function(events){
 
       var index = 0;
-      if(id<900){ //dia 8
+       if(id<800){ //dia 7
         index = 0;
       }
-      else if(id< 1000){ //dia 9
+       else if(id<900){ //dia 8
         index = 1;
       }
-      else if(id < 1100){ //dia 10
+      else if(id< 1000){ //dia 9
         index = 2;
       }
-      else if(id < 1200){ //dia 11
+      else if(id < 1100){ //dia 10
         index = 3;
       }
-      else if(id < 1300){ //dia 12
+      else if(id < 1200){ //dia 11
         index = 4;
       }
-      else if(id < 1400){ //dia 13
+      else if(id < 1300){ //dia 12
         index = 5;
       }
-      else if(id < 1500){ //dia 14
+      else if(id < 1400){ //dia 13
         index = 6;
       }
-      else{ //dia 15
+      else if(id < 1500){ //dia 14
         index = 7;
       }
-
+      else if(id < 1600){ //dia 15
+        index = 7;
+      }
+      else{ //dia 16
+        index = 8;
+      }
       var dia = data[index];
 
       //Buscar el que tenga el id buscado
