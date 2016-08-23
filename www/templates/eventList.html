@@ -19,6 +19,13 @@ Vista de lista de eventos.
 
 
 		<div class="row">
+            <div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==7}" ng-click="setDay(7)">
+				<span>	7</span>
+				</button>
+
+
+			</div>
 			<div class="col col-12 div-dia">
 				<button class="button  button-small button-balanced button-dia " ng-class="{'active':day==8}" ng-click="setDay(8)">
 				<span>	8</span>
@@ -73,6 +80,13 @@ Vista de lista de eventos.
 
 
 			</div>
+            <div class="col col-12 div-dia">
+				<button class="button  button-small button-balanced button-dia" ng-class="{'active':day==16}" ng-click="setDay(16)">
+				<span>	16</span>
+				</button>
+
+
+			</div>
 		</div>
 		<ion-list>
 
@@ -98,7 +112,6 @@ Vista de lista de eventos.
 
 					</div>
 				</div>
-				
 			</div>
 			<div class="card" ng-if="events.length == 0">
 				<div class="item item-text-wrap">
