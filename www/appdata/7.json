@@ -1,0 +1,14 @@
+[
+  {
+    "id": 700,
+    "title": "Actuación en el pabellón Interpeñas",
+    "day": 7,
+    "hour": "23:00 - 03:00",
+    "place_text": "Pabellón Interpeñas",
+    "place_long": "-0,9360592291565827",
+    "place_lat": "41,62127594365257",
+    "category": "conciertos",
+    "description": "Actuación de Georgie Dann en el pabellón Interpeñas.",
+    "cancelled": false
+  }
+]
