@@ -104,7 +104,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
           //4.- Se guardan los ficheros
           for(var i = 0; i < responses.length;i++){
 
-            promiseArray.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
+            promiseArray.push(saveJSONtoFile('programa-dia'+(i+7),responses[i].data));
           }
 
           //5.- Una vez guardados todos, se actualiza la versión actual
@@ -160,12 +160,12 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
   }
 
   /**
-  * Obtiene asíncronamente el programa del día 8 al 15 del servidor web.
+  * Obtiene asíncronamente el programa del día 8 al 15 del servidor web. Cambio del 7 al 16
   */
   function getNewFilesFromServer(){
 
     var promises = [];
-    for(var i = 8; i <= 15; i++){
+    for(var i = 7; i <= 16; i++){
       promises.push($http.get('http://sanlorenzo.ismaelrh.com:8889/events/day/'+i));
     }
 
@@ -187,6 +187,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
     //console.log("Actualizando desde ficheros locales...");
     //Se obtienen todos los ficheros, y cada uno de ellos se va guardando en el storage de Android
     var promises = [
+       $http.get("appdata/7.json"),
       $http.get("appdata/8.json"),
       $http.get("appdata/9.json"),
       $http.get("appdata/10.json"),
@@ -195,6 +196,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       $http.get("appdata/13.json"),
       $http.get("appdata/14.json"),
       $http.get("appdata/15.json"),
+      $http.get("appdata/16.json"),
 
     ];
 
@@ -207,7 +209,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       //Se guarda cada uno de los archivos obtenidos
       for(var i = 0; i < responses.length; i++){
 
-        savePromises.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
+        savePromises.push(saveJSONtoFile('programa-dia'+(i+7),responses[i].data));
       }
 
       return $q.all(savePromises);
