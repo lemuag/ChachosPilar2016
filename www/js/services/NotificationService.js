@@ -11,7 +11,7 @@
 services.service('NotificationService', ['EventService', '$state','$cordovaLocalNotification', function (EventService, $state,$cordovaLocalNotification) {
 
 
-  var month = 7; //Es uno menos, 7 es Agosto
+  var month = 9; //Es uno menos, 9 es para Octubre
   var year = 2016;
 
   var self = this;
