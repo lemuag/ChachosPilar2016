@@ -23,7 +23,7 @@ services.service('FavoriteService', ['$localstorage','$http','$cordovaToast','$i
     this.add = function (id) {
 
         //Se envia peticion HTTP (despreocuparse de resultado)
-        $http.put('http://sanlorenzo.ismaelrh.com:8889/events/fav/' + id);
+        $http.put('http://sanlorenzo.ismaelrh.co:8889/events/fav/' + id);
 
 
 
@@ -46,7 +46,7 @@ services.service('FavoriteService', ['$localstorage','$http','$cordovaToast','$i
 
 
         //Se envia peticion HTTP (despreocuparse de resultado)
-        $http.delete('http://sanlorenzo.ismaelrh.com:8889/events/fav/' + id);
+        $http.delete('http://sanlorenzo.ismaelrh.co:8889/events/fav/' + id);
 
 
         var indice = list.indexOf(id);
