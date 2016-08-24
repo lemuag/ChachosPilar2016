@@ -1,12 +1,12 @@
 <!--
 Vista de menu principal
 -->
-  <ion-view view-title="San Lorenzo 2016">
+  <ion-view view-title="Chachos Pilar 2016">
 
       <ion-nav-buttons side="right">
           <button class="button button-icon button-clear ion-search" ng-click="toggleSearch()"></button>
       </ion-nav-buttons>
-  <ion-content class="main-background" scroll="false" >
+  <ion-content class="main-background" >
 
       <form ng-submit="buscar()" ng-show="buscarVisible" class="search ng-cloak">
           <label class="item item-input  barraBusqueda" >
@@ -16,40 +16,43 @@ Vista de menu principal
       </form>
 
 
-        <div class="list ahoraMismoLista" >
-
-      <div class="item item-divider">
-        <i class="ion-android-time"></i> &nbsp; Ahora mismo...
-      </div>
-
-  <div ng-repeat="event in current |limitTo:5 "class="item ahoraMismo" ng-click="displayEvent(event.id)" ng-show="current.length>0">
-       <span class="ahoraMismoText">{{event.title}}</span>
-        <span class="badge badge-assertive ahoraMismoBadge">{{event.startHour}}</span>
-  </div>
-  <div ng-show="current.length==0" style="text-align:center;">
-      <span class="ahoraMismoTextCentro">Ningún evento en estos momentos</span>
-  </div>
-
-
-</div>
-
-
-
 
 </ion-content>
       <div class="footer" >
+  <div class="item item-text-wrap">
+                <div class="row" style="margin-top: -5px;">
 
-          <ul class="list">
-              <li class="item main-list-item item-icon-left"  ng-click="openGuide()" transitiontype="flip" direction="left" go-native>
-                  <span class="icon ion-home"></span> PROGRAMA
-              </li>
-              <li class="item main-list-item item-icon-left"  ng-click="openFavorites()">
-                  <span class="icon ion-star"></span>FAVORITOS
-              </li><li class="item main-list-item item-icon-left" ng-click="openPhones()">
-              <span class="icon ion-ios-telephone"></span>TELÉFONOS DE INTERÉS
-          </li><li class="item main-list-item item-icon-left" ng-click="openInfo()">
-              <span class="icon ion-information-circled"></span>SOBRE LAS FIESTAS
-          </li>
-          </ul>
-      </div>
+
+                    <div class="col col-50">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openGuide()" transitiontype="flip" direction="left" go-native>
+                            <span class="icon ion-home"></span> Programa</span>
+                        </button>
+                    </div>
+                    <div class="col col-50">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openFavorites()">
+                            <span class="icon ion-star"></span><span> Favoritos</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: -5px;">
+
+
+                    <div class="col col-50">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                                ng-click="openPhones()">
+                            <span class="icon ion-ios-telephone"><span class="categoryLabel"> Teléfonos</span>
+                        </button>
+                    </div>
+                    <div class="col col-50">
+                        <button class="button button-block button-large button-balanced colorSanLorenzo"
+                               ng-click="openInfo()">
+                            <span class="icon ion-information-circled"></span><span> Info</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          
+          </div>
 </ion-view>
