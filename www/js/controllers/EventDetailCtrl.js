@@ -16,7 +16,7 @@ controllers.controller('EventDetailCtrl', ["$scope","$stateParams","$compile","E
 
 
         $scope.eventPeople = undefined;
-        $http.get("http://sanlorenzo.ismaelrh.com:8889/events/fav/"+ $scope.eventId)
+        $http.get("http://sanlorenzo.ismaelrh.com:88889/events/fav/"+ $scope.eventId)
         .then(function(response){
           $scope.eventPeople= response.data.count;
         })

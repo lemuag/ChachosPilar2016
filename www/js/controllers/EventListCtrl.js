@@ -39,7 +39,7 @@ function ($scope, $stateParams, $state, EventService, FavoriteService, $ionicLoa
   }
   else {
     day_parameter = -1;
-    $scope.day = 8; //Se empezará mostrando el 8
+    $scope.day = 7; //Se empezará mostrando el 8
     if (!cat_defined) {
       $scope.listTitle += " completo"
     }
