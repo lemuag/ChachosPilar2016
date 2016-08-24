@@ -101,7 +101,7 @@ overflow: initial;
 }
 
 .card .item-text-wrap{
-    background:rgba(255,255,255,0.95);
+    background:rgba(0,0,0,0);
 }
 
 .left-image{
@@ -183,7 +183,7 @@ overflow: initial;
   font-size:100%;
   font-weight:bold;
   text-align: center;
-    background:rgba(255,255,255,0.95);
+    background-color:rgba(0,0,0,0);
 }
 
 
@@ -214,21 +214,21 @@ background-color: #f00;
 
 
 .main-background {
-    background: url(../img/guide.jpg);
-    background-position: left top; /*Positioning*/
+    background: url(../img/mainfondo1.png);
+    background-position: left; /*Positioning*/
     background-repeat: no-repeat;
     background-size:100% 100%;
 
 }
 .guide-background {
-  background: url(../img/albahaca.png);
-   background-position: right bottom; /*Positioning*/
+  background: url(../img/mainfondo1.png);
+   background-position: bottom; /*Positioning*/
    background-repeat: no-repeat;
-
+background-size:100% 100%;
 }
 
 .description-background {
-  background-image: url(../img/albahaca.png);
+  background-image: url(../img/fondo1.png);
    background-position: right bottom; /*Positioning*/
    background-repeat: no-repeat;
 }
@@ -253,7 +253,7 @@ background-color: #f00;
 }
 
 .my-item-divider {
-    background-color: #eee;
+    background-color:rgba(0,0,0,0);
 }
 
 body .overflow-scroll {
@@ -275,7 +275,7 @@ body .overflow-scroll {
 }
 
 .semi-transparent{
-    background:rgba(255,255,255,0.95);
+    background:rgba(0,0,0,0);;
 }
 
 .boton-filtro{
@@ -334,7 +334,7 @@ body .overflow-scroll {
 .button-dia{
   width:100%;
   border-color: #3366cc !important;
-  background-color: white !important;
+  background-color:rgba(0,0,0,0); !important;
 }
 
 .button-dia span{
@@ -353,7 +353,7 @@ background-color: #3366cc !important;
 
 .adelanto-button{
   border-color: #71c0f8 !important;
-  background-color: white !important;
+  background-color: transparent!important;
 }
 
 .adelanto-button span{
