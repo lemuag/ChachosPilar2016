@@ -25,7 +25,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
   self.lastUpdated = $localstorage.get('lastUpdated',null);
 
   /**
-  * Si es la primera vez que se ejecuta la aplicación, copia el programa local
+  * Copia el programa local
   * incluido en el APK al storage de Android.
   */
   self.initializeData = function(){
@@ -33,10 +33,8 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
 
 
 
-    //Si no es Android, terminamos aquí, pues no se copia ningún fichero.
 
-    var initialized = $localstorage.get('initialized', false);
-    if(!initialized){
+
 
       //Borramos los favoritos si es la primera vez que se ejecuta -> para no conflictos con version de año pasado
       $localstorage.setObject('favList', {
@@ -46,7 +44,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       //console.log("Initializing data... copying from local storage");
       return updateFromLocalFiles()
       .then(function(response){
-        $localstorage.set('initialized',true);
+
 
           EventService.reloadData();
 
@@ -55,11 +53,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       .catch(function(error){
         console.log(JSON.stringify(error));
       })
-    }
-    else{
 
-      return $q.when(true);
-    }
 
   }
 
