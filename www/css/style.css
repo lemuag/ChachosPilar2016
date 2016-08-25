@@ -13,57 +13,13 @@ overflow: initial;
     white-space: initial;
 }
 
-
-.ahoraMismoLista{
-  margin:10px;
-    background:rgba(255,255,255,0.8);
-}
-
-.ahoraMismo{
-  padding: 5px;
-    background:rgba(255,255,255,0.8);
-
-}
-.ahoraMismoText{
-
-  font-size:0.8em;
-    background:rgba(255,255,255,0.0);
-
-
-
-}
-
-
-.ahoraMismoTextCentro{
-
-    font-size:1em;
-    background:rgba(255,255,255,0.0);
-
-
-
-
-}
-
-
-
-
-
-.ahoraMismoBadge{
-  position: absolute !important;
-  top: 5px !important;
-  font-size:0.8em;
-  padding:3px;
-  right:3px !important;
-}
-
 .tituloLista{
     overflow: initial;
     white-space: initial;
     font-size:100%;
-    color:#022e14;
+    color:#014300;
     font-weight:bold;
 }
-
 .horaLista{
     overflow: initial;
     white-space: initial;
@@ -126,11 +82,11 @@ overflow: initial;
 }
 
 .colorSanLorenzo{
-    background-color:#00722d !important;
+    background-color:#3366cc !important;
  }
 
 .colorSanLorenzo.activated {
-    background-color:#25b725 !important;
+    background-color:#00ccff !important;
 }
 
 .littleDay{
@@ -145,7 +101,7 @@ overflow: initial;
 }
 
 .card .item-text-wrap{
-    background:rgba(255,255,255,0.95);
+    background:rgba(0,0,0,0);
 }
 
 .left-image{
@@ -227,7 +183,7 @@ overflow: initial;
   font-size:100%;
   font-weight:bold;
   text-align: center;
-    background:rgba(255,255,255,0.95);
+    background-color:rgba(0,0,0,0);
 }
 
 
@@ -258,21 +214,21 @@ background-color: #f00;
 
 
 .main-background {
-    background: url(../img/guide.jpg);
-    background-position: left top; /*Positioning*/
+    background: url(../img/mainfondo1.png);
+    background-position: left; /*Positioning*/
     background-repeat: no-repeat;
     background-size:100% 100%;
 
 }
 .guide-background {
-  background: url(../img/albahaca.png);
-   background-position: right bottom; /*Positioning*/
+  background: url(../img/mainfondo1.png);
+   background-position: bottom; /*Positioning*/
    background-repeat: no-repeat;
-
+background-size:100% 100%;
 }
 
 .description-background {
-  background-image: url(../img/albahaca.png);
+  background-image: url(../img/fondo1.png);
    background-position: right bottom; /*Positioning*/
    background-repeat: no-repeat;
 }
@@ -297,7 +253,7 @@ background-color: #f00;
 }
 
 .my-item-divider {
-    background-color: #eee;
+    background-color:rgba(0,0,0,0);
 }
 
 body .overflow-scroll {
@@ -319,7 +275,7 @@ body .overflow-scroll {
 }
 
 .semi-transparent{
-    background:rgba(255,255,255,0.95);
+    background:rgba(0,0,0,0);;
 }
 
 .boton-filtro{
@@ -377,8 +333,8 @@ body .overflow-scroll {
 
 .button-dia{
   width:100%;
-  border-color: #00722d !important;
-  background-color: white !important;
+  border-color: #3366cc !important;
+  background-color:rgba(0,0,0,0); !important;
 }
 
 .button-dia span{
@@ -390,14 +346,14 @@ color:black;
 }
 .button-dia.active {
 font-style: bold !important;
-background-color: #00c800 !important;
+background-color: #3366cc !important;
 
 }
 
 
 .adelanto-button{
   border-color: #71c0f8 !important;
-  background-color: white !important;
+  background-color: transparent!important;
 }
 
 .adelanto-button span{

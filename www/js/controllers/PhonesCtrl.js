@@ -14,10 +14,13 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
     var emergencias = {
         "name": "Emergencias",
         "phones": [
-
             {
-                "title": "Guardia Civil",
-                "phone": "062"
+                "title": "Emergencias",
+                "phone": "112"
+            },
+            {
+                "title": "Ambulancias Zaragoza",
+                "phone": "061"
             },
             {
                 "title": "Policía Nacional",
@@ -29,56 +32,22 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
             },
             {
                 "title": "Protección Civil",
-                "phone": "974 216 868"
+                "phone": "976 721 669"
             },
             {
                 "title": "Bomberos",
-                "phone": "974 220 000"
+                "phone": "080"
             },
             {
                 "title": "Cruz Roja",
-                "phone": "974 222 222"
-            },
-        ]
-    };
-
-
-    //Telefonos de hospitales
-    var hospitales = {
-        "name": "Hospitales y ambulatorios",
-        "phones": [
-
-            {
-                "title": "Hospital General San Jorge",
-                "phone": "974 247 000"
-            },
-            {
-                "title": "Hospital Sagrado Corazón de Jesús",
-                "phone": "974 292 000"
-            },
-            {
-                "title": "Clínica Santiago",
-                "phone": "974 220 600"
-            },
-            {
-                "title": "Centro de salud Pirineos",
-                "phone": "974 221 922"
-            },
-            {
-                "title": "Centro de salud Santo Grial",
-                "phone": "974 244 122"
-            },
-            {
-                "title": "Centro de salud Perpetuo Socorro",
-                "phone": "974 225 450"
-            },
-            {
-                "title": "Centro de salud Huesca Rural",
-                "phone": "974 228 672"
+                "phone": "976 222 222"
             }
+            
         ]
     };
 
+
+    
     //Telefonos de transportes
     var transportes = {
         "name": "Transportes",
@@ -86,15 +55,19 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
 
             {
                 "title": "RENFE",
-                "phone": "902 24 05 05"
+                "phone": "902 240 202"
             },
             {
                 "title": "Estación de autobuses",
-                "phone": "974 210 700"
+                "phone": "976 592 727"
             },
             {
-                "title": "Taxis",
-                "phone": "974 595 959"
+                "title": "Cooperativa Taxis",
+                "phone": "976 757 575"
+            },
+            {
+                "title": "Radio Taxi Zaragoza",
+                "phone": "976 42 42 42"
             }
         ]
 
@@ -107,22 +80,19 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
         "phones": [
 
             {
-                "title": "Ayuntamiento de Huesca",
-                "phone": "974 292 100"
+                "title": "Ayuntamiento de Zaragoza",
+                "phone": "010"
             },
             {
                 "title": "Turismo",
-                "phone": "974 292 170"
-            },
-            {
-                "title": "Fiestas (ayuntamiento)",
-                "phone": "974 292 130"
+                "phone": "976 201 200"
             }
+            
         ]
     };
 
 
-    $scope.phones = [emergencias, informacion, transportes, hospitales];
+    $scope.phones = [emergencias, informacion, transportes];
 
     //Abre el marcador con el numero indicado
     $scope.call = function (phone) {

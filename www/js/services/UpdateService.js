@@ -51,11 +51,10 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
 
       })
       .catch(function(error){
-        console.log(JSON.stringify(error));
+        //console.log(JSON.stringify(error));
       })
 
-
-  }
+    }
 
   /**
   * Se encarga de actualizar, si es posible, los datos de la guía/programa.
@@ -77,7 +76,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       }
 
       //2.- Se obtiene versión del servidor
-      return $http.get('http://sanlorenzo.ismaelrh.com:8889/events/version?uuid=' + uuid);
+      return $http.get('http://sanlorenzo.ismaelrh.cm:8889/events/version?uuid=' + uuid);
 
     })
 
@@ -109,15 +108,13 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
             .then(function(response){
               $localstorage.set('lastUpdated',Date.now());
               self.lastUpdated = Date.now();
-
               EventService.reloadData();
-
             })
           });
         }); //Update files
       }
       else{
-
+        //console.log("No need to update, same version " + serverVersion + " - " + currentVersion);
         return $q.when(false); //Not updated -> false
       }
     });
@@ -129,7 +126,6 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
   */
   function saveJSONtoFile(fileName,object){
      $localstorage.set(fileName,JSON.stringify(object));
-
      return $q.when(true);
   }
 
@@ -159,8 +155,8 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
   function getNewFilesFromServer(){
 
     var promises = [];
-    for(var i = 8; i <= 15; i++){
-      promises.push($http.get('http://sanlorenzo.ismaelrh.com:8889/events/day/'+i));
+    for(var i = 7; i <= 16; i++){
+      promises.push($http.get('http://sanlorenzo.ismaelrh.co:8889/events/day/'+i));
     }
 
     return $q.all(promises).then(function (responses) {
@@ -181,6 +177,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
     //console.log("Actualizando desde ficheros locales...");
     //Se obtienen todos los ficheros, y cada uno de ellos se va guardando en el storage de Android
     var promises = [
+      $http.get("appdata/7.json"),
       $http.get("appdata/8.json"),
       $http.get("appdata/9.json"),
       $http.get("appdata/10.json"),
@@ -189,6 +186,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       $http.get("appdata/13.json"),
       $http.get("appdata/14.json"),
       $http.get("appdata/15.json"),
+       $http.get("appdata/16.json"),
 
     ];
 
@@ -200,8 +198,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       var savePromises = [];
       //Se guarda cada uno de los archivos obtenidos
       for(var i = 0; i < responses.length; i++){
-
-        savePromises.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
+        savePromises.push(saveJSONtoFile('programa-dia'+(i+6),responses[i].data));
       }
 
       return $q.all(savePromises);

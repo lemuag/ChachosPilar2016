@@ -8,19 +8,19 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',function ($http, $q,$localstorage,$rootScope) {
+services.service('EventService', ['$http', '$q','$localstorage', function ($http, $q,$localstorage) {
 
 
   var self = this;
 
-  var start_day = 8; //Dia de inicio de las fiestas
-  var finish_day = 15; //Dia de fin de las fiestas
+  var start_day = 7; //Dia de inicio de las fiestas
+  var finish_day = 16; //Dia de fin de las fiestas
 
   var is_data_loaded = false; //indica si los datos están en memoria
 
   //Constant values
   var DAYS_ALL = -1;
-  //Categorías disponibles: "todas","conciertos","toros","infantil","otros"
+  //Categorías disponibles: "todas","conciertos","comidas","infantil","remojos","otros"
   var CAT_ALL = "todas";
 
 
@@ -109,15 +109,7 @@ services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',fu
 
   this.reloadData = function(){
     is_data_loaded = false;
-    this.loadEvents()
-    .then(function(data){
-      // firing an event downwards
-
-      $rootScope.$broadcast('dataReloaded', {
-      });
-
-    })
-
+    this.loadEvents();
   }
 
   /**
@@ -133,14 +125,11 @@ services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',fu
     }
     else{
 
-      data = [];
-
 
       var promises = [];
-      for(var i = 8; i <=15;i++){
+      for(var i = 7; i <=16;i++){
 
-          var read = $localstorage.get('programa-dia' + i,"[]");
-          promises.push($q.when(JSON.parse(read)));
+          promises.push($q.when(JSON.parse($localstorage.get('programa-dia' + i,"[]"))));
 
       }
 
@@ -150,11 +139,8 @@ services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',fu
         var i;
         for (i = 0; i < resp.length; i++) {
             data.push(resp[i]);
-          
 
         }
-
-
 
         is_data_loaded = true;
 
@@ -173,29 +159,35 @@ services.service('EventService', ['$http', '$q','$localstorage', '$rootScope',fu
     .then(function(events){
 
       var index = 0;
-      if(id<900){ //dia 8
+        if(id<800){ //dia 7
         index = 0;
       }
-      else if(id< 1000){ //dia 9
+      if(id<900){ //dia 8
         index = 1;
       }
-      else if(id < 1100){ //dia 10
+      else if(id< 1000){ //dia 9
         index = 2;
       }
-      else if(id < 1200){ //dia 11
+      else if(id < 1100){ //dia 10
         index = 3;
       }
-      else if(id < 1300){ //dia 12
+      else if(id < 1200){ //dia 11
         index = 4;
       }
-      else if(id < 1400){ //dia 13
+      else if(id < 1300){ //dia 12
         index = 5;
       }
-      else if(id < 1500){ //dia 14
+      else if(id < 1400){ //dia 13
         index = 6;
       }
-      else{ //dia 15
+      else if(id < 1500){ //dia 14
         index = 7;
+      }
+        if(id<1600){ //dia 15
+        index = 8;
+      }
+      else{ //dia 16
+        index = 9;
       }
 
       var dia = data[index];
