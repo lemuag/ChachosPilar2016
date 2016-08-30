@@ -8,7 +8,7 @@
  * of the BSD license.  See the LICENSE file for details.
  */
 controllers.controller('GuideCtrl', ["$scope", "$stateParams", "$state", "$http", "EventService","UpdateService",
-    function ($scope, $stateParams, $state, $http, EventService,UpdateService) {
+    function ($scope, $stateParams, $state, $http, EventService, UpdateService) {
 
 
     $scope.lastUpdated = UpdateService.lastUpdated;

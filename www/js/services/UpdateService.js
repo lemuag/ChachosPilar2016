@@ -25,7 +25,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
   self.lastUpdated = $localstorage.get('lastUpdated',null);
 
   /**
-  * Si es la primera vez que se ejecuta la aplicación, copia el programa local
+  * Copia el programa local
   * incluido en el APK al storage de Android.
   */
   self.initializeData = function(){
@@ -33,10 +33,8 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
 
 
 
-    //Si no es Android, terminamos aquí, pues no se copia ningún fichero.
 
-    var initialized = $localstorage.get('initialized', false);
-    if(!initialized){
+
 
       //Borramos los favoritos si es la primera vez que se ejecuta -> para no conflictos con version de año pasado
       $localstorage.setObject('favList', {
@@ -46,19 +44,17 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       //console.log("Initializing data... copying from local storage");
       return updateFromLocalFiles()
       .then(function(response){
-        $localstorage.set('initialized',true);
-        //console.log("Datos inicializados desde localStorage");
+
+
+          EventService.reloadData();
+
+
       })
       .catch(function(error){
         //console.log(JSON.stringify(error));
       })
-    }
-    else{
-    //  console.log("Data already initialized");
-      return $q.when(true);
-    }
 
-  }
+    }
 
   /**
   * Se encarga de actualizar, si es posible, los datos de la guía/programa.
@@ -101,7 +97,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
           //4.- Se guardan los ficheros
           for(var i = 0; i < responses.length;i++){
 
-            promiseArray.push(saveJSONtoFile('programa-dia'+(i+8),responses[i].data));
+            promiseArray.push(saveJSONtoFile('programa-dia'+(i+6),responses[i].data));
           }
 
           //5.- Una vez guardados todos, se actualiza la versión actual
@@ -190,7 +186,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       $http.get("appdata/13.json"),
       $http.get("appdata/14.json"),
       $http.get("appdata/15.json"),
-       $http.get("appdata/16.json"),
+      $http.get("appdata/16.json")
 
     ];
 
@@ -202,7 +198,7 @@ services.service('UpdateService', ['$http', '$q','EventService','$localstorage',
       var savePromises = [];
       //Se guarda cada uno de los archivos obtenidos
       for(var i = 0; i < responses.length; i++){
-        savePromises.push(saveJSONtoFile('programa-dia'+(i+6),responses[i].data));
+        savePromises.push(saveJSONtoFile('programa-dia'+(i+7),responses[i].data));
       }
 
       return $q.all(savePromises);

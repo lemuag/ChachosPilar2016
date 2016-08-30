@@ -20,10 +20,10 @@ function ($scope, $stateParams, $state,UpdateService,$ionicPlatform,$cordovaFile
 
 
 
-        UpdateService.initializeData()
-          .then(function(){
-            UpdateService.update();
-          })
+        //Inicializar datos en cada ejecución
+        //De esta forma, se actualizarán datos en localstorage
+        //si se actualiza la app.
+        UpdateService.initializeData();
 
 
 

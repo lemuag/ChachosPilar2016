@@ -8,7 +8,7 @@
 * This software may be modified and distributed under the terms
 * of the BSD license.  See the LICENSE file for details.
 */
-services.service('EventService', ['$http', '$q','$localstorage', function ($http, $q,$localstorage) {
+services.service('EventService', ['$http', '$q','$localstorage', function ($http, $q, $localstorage) {
 
 
   var self = this;
@@ -127,7 +127,7 @@ services.service('EventService', ['$http', '$q','$localstorage', function ($http
 
 
       var promises = [];
-      for(var i = 7; i <=16;i++){
+      for(var i = 7; i <=16; i++){
 
           promises.push($q.when(JSON.parse($localstorage.get('programa-dia' + i,"[]"))));
 
@@ -159,13 +159,13 @@ services.service('EventService', ['$http', '$q','$localstorage', function ($http
     .then(function(events){
 
       var index = 0;
-        if(id<800){ //dia 7
+        if(id < 800){ //dia 7
         index = 0;
       }
-      if(id<900){ //dia 8
+      if(id < 900){ //dia 8
         index = 1;
       }
-      else if(id< 1000){ //dia 9
+      else if(id < 1000){ //dia 9
         index = 2;
       }
       else if(id < 1100){ //dia 10
@@ -183,7 +183,7 @@ services.service('EventService', ['$http', '$q','$localstorage', function ($http
       else if(id < 1500){ //dia 14
         index = 7;
       }
-        if(id<1600){ //dia 15
+        else if(id < 1600){ //dia 15
         index = 8;
       }
       else{ //dia 16

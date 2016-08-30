@@ -14,13 +14,13 @@ controllers.controller('AboutCtrl', ["$scope",function ($scope) {
 
     //Link a mail al creador
     $scope.mail = function (phone) {
-        window.open("mailto:ismaro.394@gmail.com", "_system");
+        window.open("mailto:gamu@askgamu.com", "_system");
     };
 
     //Link al twitter del creador
     $scope.twitter = function (phone) {
 
-        window.open("https://twitter.com/ismaro3", "_system");
+        window.open("https://twitter.com/lemuag", "_system");
     };
 
     //Link al github del creador

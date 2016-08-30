@@ -92,7 +92,7 @@ controllers.controller('PhonesCtrl', ["$scope",function ($scope) {
     };
 
 
-    $scope.phones = [emergencias, informacion, transportes];
+    $scope.phones = [informacion, transportes, emergencias];
 
     //Abre el marcador con el numero indicado
     $scope.call = function (phone) {
